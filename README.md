@@ -2,7 +2,7 @@
 FILMBOOK
 	
 ## Descripción: 
-Filmbook es una red social nacida para compartir unicamente contenido cinematografico con tus amigos, 		simple, rápida de todos y para todos. Sin exceso de contenido y facil de etender.
+Filmbook es una red social nacida para compartir unicamente contenido cinematografico con tus amigos, 		simple, rápida de todos y para todos. Sin exceso de contenido y fácil de entender.
 	
 - Funcionalidad pública: Cualquier usuario podrá consultar su timeline y visualizar los comententarios y 		  valoraciones de otros usuarios, además, existiran salas de debate donde los usuarios podran hacer           comentarios acerca de series/peliculas y una sección de noticias donde se mostrarán las peliculas 
 y series mas recientes.
