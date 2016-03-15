@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-    <title>Extras | Extras</title>
+<head>
+    <title>Perfil</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,15 +22,24 @@
     <link type="text/css" rel="stylesheet" href="styles/zabuto_calendar.min.css">
     <link type="text/css" rel="stylesheet" href="styles/pace.css">
     <link type="text/css" rel="stylesheet" href="styles/jquery.news-ticker.css">
-<style id="holderjs-style" type="text/css"></style>
-
-    </head>
+    <style id="holderjs-style" type="text/css"></style>
+</head>
     
-<body class=" pace-done"><div class="pace  pace-inactive"><div class="pace-progress" data-progress-text="100%" data-progress="99" style="width: 100%;">
-  <div class="pace-progress-inner"></div>
-</div>
-<div class="pace-activity"></div></div>
+<body>
     <div>
+        <!--BEGIN THEME SETTING-->
+        <div id="theme-setting">
+            <a href="#" data-toggle="dropdown" data-step="1" data-intro="&lt;b&gt;Many styles&lt;/b&gt; and &lt;b&gt;colors&lt;/b&gt; be created for you. Let choose one and enjoy it!"
+                data-position="left" class="btn-theme-setting"><i class="fa fa-cog"></i></a>
+            <div class="content-theme-setting">
+                <select id="list-style" class="form-control">
+                    <option value="style1">Flat Squared style</option>
+                    <option value="style2">Flat Rounded style</option>
+                    <option value="style3" selected="selected">Flat Border style</option>
+                </select>
+            </div>
+        </div>
+        <!--END THEME SETTING-->
         
         <!--BEGIN BACK TO TOP-->
         <a id="totop" href="#" style="display: none;"><i class="fa fa-angle-up"></i></a>
@@ -40,15 +49,12 @@
             <nav id="topbar" role="navigation" style="margin-bottom: 0;" data-step="3" class="navbar navbar-default navbar-static-top">
             <div class="navbar-header">
                 <button type="button" data-toggle="collapse" data-target=".sidebar-collapse" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-                <a id="logo" href="index.html" class="navbar-brand"><span class="fa fa-rocket"></span><span class="logo-text">KAdmin</span><span style="display: none" class="logo-text-icon">µ</span></a></div>
+                <a id="logo" href="index.html" class="navbar-brand"><span class="fa fa-rocket"></span><span class="logo-text">FilmBook</span><span style="display: none" class="logo-text-icon">µ</span></a></div>
             <div class="topbar-main"><a id="menu-toggle" href="#" class="hidden-xs"><i class="fa fa-bars"></i></a>
-                
+         
                 <form id="topbar-search" action="" method="" class="hidden-sm hidden-xs">
-                    <div class="input-icon right text-white"><a href="#"><i class="fa fa-search"></i></a><input type="text" placeholder="Search here..." class="form-control text-white"></div>
+                    <div class="input-icon right text-white"><a href="#"><i class="fa fa-search"></i></a><input type="text" placeholder="Busca aquí..." class="form-control text-white"/></div>
                 </form>
-                <div class="news-update-box hidden-xs"><span class="text-uppercase mrm pull-left text-white">News:</span>
-                    <div id="ticker-wrapper-1457868571862" class="ticker-wrapper has-js left"><div id="ticker-1457868571862" class="ticker"><div id="ticker-title-1457868571862" class="ticker-title"><span></span></div><div id="ticker-swipe-1457868571862" class="ticker-swipe" style="left: 20px; margin-left: 0px; display: none;"><span style="display: block;"><!-- --></span></div><p id="ticker-content-1457868571862" class="ticker-content" style="display: block; opacity: 1; left: 20px;">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque.</p></div></div>
-                </div>
                 <ul class="nav navbar navbar-top-links navbar-right mbn">
                     <li class="dropdown"><a data-hover="dropdown" href="#" class="dropdown-toggle"><i class="fa fa-bell fa-fw"></i><span class="badge badge-green">3</span></a>
                         
@@ -59,63 +65,16 @@
                     <li class="dropdown"><a data-hover="dropdown" href="#" class="dropdown-toggle"><i class="fa fa-tasks fa-fw"></i><span class="badge badge-yellow">8</span></a>
                         
                     </li>
-                    <li class="dropdown topbar-user"><a data-hover="dropdown" href="#" class="dropdown-toggle"><img src="images/avatar/48.jpg" alt="" class="img-responsive img-circle">&nbsp;<span class="hidden-xs">Robert John</span>&nbsp;<span class="caret"></span></a>
-                        <ul class="dropdown-menu dropdown-user pull-right">
-                            <li><a href="#"><i class="fa fa-user"></i>My Profile</a></li>
-                            <li><a href="#"><i class="fa fa-calendar"></i>My Calendar</a></li>
-                            <li><a href="#"><i class="fa fa-envelope"></i>My Inbox<span class="badge badge-danger">3</span></a></li>
-                            <li><a href="#"><i class="fa fa-tasks"></i>My Tasks<span class="badge badge-success">7</span></a></li>
-                            <li class="divider"></li>
-                            <li><a href="#"><i class="fa fa-lock"></i>Lock Screen</a></li>
-                            <li><a href="Login.html"><i class="fa fa-key"></i>Log Out</a></li>
-                        </ul>
+                    <li class="dropdown topbar-user"><a data-hover="dropdown" href="#" class="dropdown-toggle"><img src="http://k32.kn3.net/taringa/7/4/2/A/F/C/enri2323/05F.jpg" alt="" class="img-responsive img-circle"/>&nbsp;<span class="hidden-xs">Andrea Ortiz</span>&nbsp;<span class="caret"></span></a>
                     </li>
-                    <li id="topbar-chat" class="hidden-xs"><a href="javascript:void(0)" data-step="4" data-intro="<b>Form chat</b> keep you connecting with other coworker" data-position="left" class="btn-chat"><i class="fa fa-comments"></i><span class="badge badge-info">3</span></a></li>
+                    <li id="topbar-chat" class="hidden-xs"><a href="javascript:void(0)" data-step="4" data-intro="&lt;b&gt;Form chat&lt;/b&gt; keep you connecting with other coworker" data-position="left" class="btn-chat"><i class="fa fa-comments"></i><span class="badge badge-info">3</span></a></li>
                 </ul>
             </div>
-        </nav>
-            <!--BEGIN MODAL CONFIG PORTLET-->
-            <div id="modal-config" class="modal fade">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" data-dismiss="modal" aria-hidden="true" class="close">
-                                ×</button>
-                            <h4 class="modal-title">
-                                Modal title</h4>
-                        </div>
-                        <div class="modal-body">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend et nisl eget
-                                porta. Curabitur elementum sem molestie nisl varius, eget tempus odio molestie.
-                                Nunc vehicula sem arcu, eu pulvinar neque cursus ac. Aliquam ultricies lobortis
-                                magna et aliquam. Vestibulum egestas eu urna sed ultricies. Nullam pulvinar dolor
-                                vitae quam dictum condimentum. Integer a sodales elit, eu pulvinar leo. Nunc nec
-                                aliquam nisi, a mollis neque. Ut vel felis quis tellus hendrerit placerat. Vivamus
-                                vel nisl non magna feugiat dignissim sed ut nibh. Nulla elementum, est a pretium
-                                hendrerit, arcu risus luctus augue, mattis aliquet orci ligula eget massa. Sed ut
-                                ultricies felis.</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" data-dismiss="modal" class="btn btn-default">
-                                Close</button>
-                            <button type="button" class="btn btn-primary">
-                                Save changes</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-			<div class="common-modal modal fade" id="common-Modal1" tabindex="-1" role="dialog" aria-hidden="true">
-				<div class="modal-content">
-					<ul class="list-inline item-details">
-						<li><a href="http://themifycloud.com">Admin templates</a></li>
-						<li><a href="http://themescloud.org">Bootstrap themes</a></li>
-					</ul>
-				</div>
-			</div>
-            <!--END MODAL CONFIG PORTLET-->
+            </nav>  
         </div>
+        
         <!--END TOPBAR-->
+        
         <div id="wrapper">
             <!--BEGIN SIDEBAR MENU-->
             <nav id="sidebar" role="navigation" data-step="2" data-intro="Template has <b>many navigation styles</b>" data-position="right" class="navbar-default navbar-static-side" style="min-height: 100%;">
@@ -158,7 +117,7 @@
                     </li>
                     <li class="active"><a href="Extras.html"><i class="fa fa-gift fa-fw">
                         <div class="icon-bg bg-grey"></div>
-                    </i><span class="menu-title">Extras</span></a>
+                    </i><span class="menu-title">Perfil</span></a>
                       
                     </li>
                     <li><a href="Dropdown.html"><i class="fa fa-sitemap fa-fw">
@@ -181,7 +140,7 @@
                     </i><span class="menu-title">Animations</span></a></li>
                 </ul>
             </div>
-        </nav>
+            </nav>
           
           
             <div id="page-wrapper">
@@ -194,7 +153,7 @@
                     <ol class="breadcrumb page-breadcrumb pull-right">
                         <li><i class="fa fa-home"></i>&nbsp;<a href="dashboard.html">Home</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
                         <li class="hidden"><a href="#">Perfil</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
-                        <li class="active">Perfil/li>
+                        <li class="active">Perfil</li>
                     </ol>
                     <div class="clearfix">
                     </div>
@@ -203,26 +162,270 @@
                 <!--BEGIN CONTENT-->
                 <div class="page-content">
                     <div id="tab-general">
-                        <div class="row mbl">
-                            <div class="col-lg-12">
-                                
-                                            <div class="col-md-12">
-                                                <div id="area-chart-spline" style="width: 100%; height: 300px; display: none; padding: 0px; position: relative;">
-                                                <canvas class="flot-base" width="1059" height="300" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 1059px; height: 300px;"></canvas><div class="flot-text" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; font-size: smaller; color: rgb(84, 84, 84);"><div class="flot-x-axis flot-x1-axis xAxis x1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;"><div class="flot-tick-label tickLabel" style="position: absolute; top: 299px; left: 10px;">Jan</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 299px; left: 183px;">Feb</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 299px; left: 356px;">Mar</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 299px; left: 530px;">Apr</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 299px; left: 703px;">May</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 299px; left: 876px;">Jun</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 299px; left: 1049px;">Jul</div></div><div class="flot-y-axis flot-y1-axis yAxis y1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;"><div class="flot-tick-label tickLabel" style="position: absolute; top: 290px; left: 1px;">0</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 250px; left: 1px;">25</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 210px; left: 1px;">50</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 170px; left: 1px;">75</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 130px; left: 1px;">100</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 90px; left: 1px;">125</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 50px; left: 1px;">150</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 10px; left: 1px;">175</div></div></div><canvas class="flot-overlay" width="1059" height="300" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 1059px; height: 300px;"></canvas><div class="legend"><div style="position: absolute; width: 0px; height: 0px; top: 15px; right: 15px; opacity: 0.85; background-color: rgb(255, 255, 255);"> </div><table style="position:absolute;top:15px;right:15px;;font-size:smaller;color:#545454"><tbody><tr><td class="legendColorBox"><div style="border:1px solid #ccc;padding:1px"><div style="width:4px;height:0;border:5px solid #ffce54;overflow:hidden"></div></div></td><td class="legendLabel">Upload</td></tr><tr><td class="legendColorBox"><div style="border:1px solid #ccc;padding:1px"><div style="width:4px;height:0;border:5px solid #01b6ad;overflow:hidden"></div></div></td><td class="legendLabel">Download</td></tr></tbody></table></div></div>
+                                             <!--Primer recuadro-->
+                                             <div class="row mbl">
+                                                <div class="col-sm-8 col-md-8 col-lg-10">
+                                                    <div class="panel">
+                                                        <div class="panel-body">
+                                                            <div class="row">
+
+                                                                   <div class="col-md-8">
+                                                                       <img src="http://abdeelmaussa.com/wp-content/uploads/2014/08/perfil.png" alt="" title="" width="150" height="150">
+
+                                                                       <h1>Andrea Ortiz</h1>
+
+                                                                        <div class="form-group">
+                                                                           <div class="rating">
+                                                                                    <label for="quality-5">
+                                                                                        <i class="fa fa-star"></i>
+                                                                                    </label>
+                                                                                    <label for="quality-4">
+                                                                                        <i class="fa fa-star"></i>
+                                                                                    </label>
+                                                                                    <label for="quality-3">
+                                                                                        <i class="fa fa-star"></i>
+                                                                                    </label>
+                                                                                    <label for="quality-2">
+                                                                                        <i class="fa fa-star text-yellow"></i>
+                                                                                    </label>
+                                                                                    <label for="quality-1">
+                                                                                        <i class="fa fa-star text-yellow"></i>
+                                                                                    </label>
+                                                                                    Valoraciones de películas
+
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
-                                
-                            </div>
+                        
+                                            <!--Segundo recuadro -->
+                      
+                                                                                               
+                                                <div class="col-sm-6 col-md-3">
+                                                    <div class="panel profit db mbm">
+                                                        <div class="panel-body">
+                                                        <span class="task-item">Cinéfilos<small class="pull-right text-muted">40%</small>
+                                                            <div class="progress progress-sm">
+                                                                <div role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
+                                                                style="width: 40%;" class="progress-bar progress-bar-orange">
+                                                                <span class="sr-only">40% Complete (success)</span>
+                                                                </div>
+                                                            </div>
+                                                        </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
                             
-                        </div>
+                                                <div class="col-sm-6 col-md-3">
+                                                    <div class="panel income db mbm">
+                                                      <div class="panel-body">
+                                                        <span class="task-item">Aventureros<small class="pull-right text-muted">60%</small>
+                                                            <div class="progress progress-sm">
+                                                            <div role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                                                                 style="width: 60%;" class="progress-bar progress-bar-blue">
+                                                                <span class="sr-only">60% Complete (success)</span>
+                                                                </div>
+                                                            </div>
+                                                        </span>
+                                                        </div>
+                                                    </div>
+                                                </div>                                                   
+                                                <div class="col-sm-6 col-md-3">
+                                                    <div class="panel task db mbm">
+                                                        <div class="panel-body">
+                                                            <span class="task-item">Nerds<small class="pull-right text-muted">55%</small>
+                                                                <div class="progress progress-sm">
+                                                                <div role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"
+                                                                     style="width: 55%;" class="progress-bar progress-bar-green">
+                                                                    <span class="sr-only">55% Complete (success)</span>
+                                                                </div>
+                                                                </div>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+</div>
+
+                                                <div class="col-sm-6 col-md-3">
+                                                    <div class="panel visit db mbm">
+                                                         <div class="panel-body">
+                                                            <span class="task-item">Románticos<small class="pull-right text-muted">90%</small>
+                                                               <div class="progress progress-sm">
+                                                                <div role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"
+                                                                style="width: 90%;" class="progress-bar progress-bar-pink">
+                                                                <span class="sr-only">90% Complete (success)</span>
+                                                            </div>
+                                                            </div>
+                                                        </span>
+                                                    </div>
+                                                </div>
+</div>
+
+                                                <div class="col-sm-6 col-md-3">
+                                                    <div class="panel visit db mbm">
+                                                         <div class="panel-body">
+                                                            <span class="task-item">Normales<small class="pull-right text-muted">66%</small>
+                                                               <div class="progress progress-sm">
+                                                                <div role="progressbar" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"
+                                                                style="width: 66%;" class="progress-bar progress-bar-yellow">
+                                                                <span class="sr-only">66% Complete (success)</span>
+                                                            </div>
+                                                            </div>
+                                                        </span>
+                                                    </div>
+                                                </div>
+ </div>
+
+                                                <div class="col-sm-6 col-md-3">
+                                                    <div class="panel visit db mbm">
+                                                         <div class="panel-body">
+                                                            <span class="task-item">Oscuros<small class="pull-right text-muted">10%</small>
+                                                               <div class="progress progress-sm">
+                                                                <div role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"
+                                                                style="width: 10%;" class="progress-bar progress-bar-violet">
+                                                                <span class="sr-only">10% Complete (success)</span>
+                                                            </div>
+                                                            </div>
+                                                        </span>
+                                                    </div>
+                                                </div>
+</div>
+
+                                                <div class="col-sm-6 col-md-3">
+                                                    <div class="panel visit db mbm">
+                                                         <div class="panel-body">
+                                                            <span class="task-item">Graciosos<small class="pull-right text-muted">74%</small>
+                                                               <div class="progress progress-sm">
+                                                                <div role="progressbar" aria-valuenow="74" aria-valuemin="0" aria-valuemax="100"
+                                                                style="width: 74%;" class="progress-bar progress-bar-blue">
+                                                                <span class="sr-only">74% Complete (success)</span>
+                                                            </div>
+                                                            </div>
+                                                        </span>
+                                                    </div>
+                                                </div>
+</div>
+
+                                            <!--Tercer recuadro-->
+                                            
+                                                <div class="panel">
+                           <script type="text/javascript">
+                            //Ancho (en pixeles)
+                            var sliderwidth="1230px"
+                            //Alto
+                            var sliderheight="300px"
+                            //Velocidad 1-10
+                            var slidespeed=1
+                            //Color de fondo:
+                            slidebgcolor="#dedede"
+                            //Vinculos y enlaces de las imagenes
+                            var leftrightslide=new Array()
+                            var finalslide=''
+                                leftrightslide[0]='<a href="http://www.copertine-dvd.net/wp-content/uploads/2015/12/star-wars-vii-il-risveglio-della-forza-cover-vcd-front.jpg" title=" >> ETIQUETA"><img border="0" src="http://www.copertine-dvd.net/wp-content/uploads/2015/12/star-wars-vii-il-risveglio-della-forza-cover-vcd-front.jpg"></a>'
+                                leftrightslide[1]='<a href="http://bucket.clanacion.com.ar/anexos/fotos/cartelera/zoolander-2-c_6784gr.jpg" title="TITULO_ENTRADA >> ETIQUETA"><img border="0" src="http://bucket.clanacion.com.ar/anexos/fotos/cartelera/zoolander-2-c_6784gr.jpg"></a>'
+                                leftrightslide[2]='<a href="http://www.marketingdirecto.com/wp-content/uploads/2016/01/blancanieves.png" title="TITULO_ENTRADA >> ETIQUETA"><img border="0" src="http://www.marketingdirecto.com/wp-content/uploads/2016/01/blancanieves.png"></a>'
+                                leftrightslide[3]='<a href="http://www.clarin.com/extrashow/cine/Ant-Man-El-hombre-hormiga_PEL_5783.jpg" title="TITULO_ENTRADA >> ETIQUETA"><img border="0" src="http://www.clarin.com/extrashow/cine/Ant-Man-El-hombre-hormiga_PEL_5783.jpg"></a>'
+                                leftrightslide[4]='<a href="http://i2.wp.com/soundtrack-movie.com/wp-content/uploads/2015/11/Alvin-and-the-Chipmunks-4-Soundtrack.jpg" title="TITULO_ENTRADA >> ETIQUETA"><img border="0" src="http://i2.wp.com/soundtrack-movie.com/wp-content/uploads/2015/11/Alvin-and-the-Chipmunks-4-Soundtrack.jpg"></a>'
+                                leftrightslide[5]='<a href="http://lacovacha.mx/wp-content/uploads/2015/02/Batman-arkham-night-300x300.jpg" title="TITULO_ENTRADA >> ETIQUETA"><img border="0" src="http://lacovacha.mx/wp-content/uploads/2015/02/Batman-arkham-night-300x300.jpg"></a>'
+                                leftrightslide[6]='<a href="http://img.amazon.ca/images/I/51LarzbnjPL._SL500_AA300_.jpg" title="TITULO_ENTRADA >> ETIQUETA"><img border="0" src="http://img.amazon.ca/images/I/51LarzbnjPL._SL500_AA300_.jpg"></a>'
+                                leftrightslide[7]='<a href="http://t2.uccdn.com/images/7/3/7/img_como_conseguir_caratulas_para_peliculas_1737_300.jpg" title="TITULO_ENTRADA >> ETIQUETA"><img border="0" src="http://t2.uccdn.com/images/7/3/7/img_como_conseguir_caratulas_para_peliculas_1737_300.jpg"></a>'
+                                leftrightslide[8]='<a href="http://cdn04.cdn.justjared.com/wp-content/uploads/headlines/2016/02/deadpool-breaks-box-office-records.jpg" title="TITULO_ENTRADA >> ETIQUETA"><img border="0" src="http://cdn04.cdn.justjared.com/wp-content/uploads/headlines/2016/02/deadpool-breaks-box-office-records.jpg"></a>'
+
+                            var imagegap=""
+                            var slideshowgap=5
+                            var copyspeed=slidespeed
+                                leftrightslide='<nobr>'+leftrightslide.join(imagegap)+'</nobr>'
+                            var iedom=document.all||document.getElementById
+                            if (iedom)
+                                    document.write('<span id="temp" style="visibility:hidden;position:absolute;top:-100px;left:-9000px">'+leftrightslide+'</span>')
+                            var actualwidth=''
+                            var cross_slide, ns_slide
+
+                            function fillup(){
+                                if (iedom){
+                                    cross_slide=document.getElementById? document.getElementById("test2") : document.all.test2
+                                    cross_slide2=document.getElementById? document.getElementById("test3") : document.all.test3
+                                    cross_slide.innerHTML=cross_slide2.innerHTML=leftrightslide
+                                    actualwidth=document.all? cross_slide.offsetWidth : document.getElementById("temp").offsetWidth
+                                    cross_slide2.style.left=actualwidth+slideshowgap+"px"
+                                }
+                                else if (document.layers){
+                                    ns_slide=document.ns_slidemenu.document.ns_slidemenu2
+                                    ns_slide2=document.ns_slidemenu.document.ns_slidemenu3
+                                    ns_slide.document.write(leftrightslide)
+                                    ns_slide.document.close()
+                                    actualwidth=ns_slide.document.width
+                                    ns_slide2.left=actualwidth+slideshowgap
+                                    ns_slide2.document.write(leftrightslide)
+                                    ns_slide2.document.close()
+                                }
+                                lefttime=setInterval("slideleft()",30)
+                                }
+                            window.onload=fillup
+
+                            function slideleft(){
+                            if (iedom){
+                                if (parseInt(cross_slide.style.left)>(actualwidth*(-1)+8))
+                                    cross_slide.style.left=parseInt(cross_slide.style.left)-copyspeed+"px"
+                                else
+                                    cross_slide.style.left=parseInt(cross_slide2.style.left)+actualwidth+slideshowgap+"px"
+                                if (parseInt(cross_slide2.style.left)>(actualwidth*(-1)+8))
+                                    cross_slide2.style.left=parseInt(cross_slide2.style.left)-copyspeed+"px"
+                                else
+                                    cross_slide2.style.left=parseInt(cross_slide.style.left)+actualwidth+slideshowgap+"px"
+                                }
+                                else if (document.layers){
+                                    if (ns_slide.left>(actualwidth*(-1)+8))
+                                        ns_slide.left-=copyspeed
+                                    else
+                                        ns_slide.left=ns_slide2.left+actualwidth+slideshowgap
+                                    if (ns_slide2.left>(actualwidth*(-1)+8))
+                                        ns_slide2.left-=copyspeed
+                                    else
+                                        ns_slide2.left=ns_slide.left+actualwidth+slideshowgap
+                                }
+                            }
+                            if (iedom||document.layers){
+                                with (document){
+                                    document.write('<table border="0" cellspacing="0" cellpadding="0"><td>')
+                                    if (iedom){
+                                        write('<div style="position:relative;width:'+sliderwidth+';height:'+sliderheight+';overflow:hidden">')
+                                        write('<div style="position:absolute;width:'+sliderwidth+';height:'+sliderheight+';background-color:'+slidebgcolor+'" onmouseover="copyspeed=0" onmouseout="copyspeed=slidespeed">')
+                                        write('<div id="test2" style="position:absolute;left:0px;top:0px"></div>')
+                                        write('<div id="test3" style="position:absolute;left:-1000px;top:0px"></div>')
+                                        write('</div></div>')
+                                    }
+                                    else if (document.layers){
+                                        write('<ilayer width="+sliderwidth+" height="+sliderheight+" name="ns_slidemenu" bgcolor="+slidebgcolor+">')
+                                        write('<layer left="0" top="0" onmouseover="copyspeed=0" onmouseout="copyspeed=slidespeed" name="ns_slidemenu2"></layer>')
+                                        write('<layer left="0" top="0" onmouseover="copyspeed=0" onmouseout="copyspeed=slidespeed" name="ns_slidemenu3"></layer>')
+                                        write('</ilayer>')
+                                    }
+                                    document.write('</td></table>')
+                                }
+                            }
+                        </script>
+                         </div>
+                        
+                        
                     </div>
                 </div>
+              
                 <!--END CONTENT-->
                
             </div>
             <!--END PAGE WRAPPER-->
         </div>
     </div>
-    <script async="" src="//www.google-analytics.com/analytics.js"></script><script src="script/jquery-1.10.2.min.js"></script>
+                <div id="footer">
+                        <div class="copyright">
+                        <a href="http://urjc.es">2016 © FilmBook Production</a></div>
+                </div>
+    <script src="script/jquery-1.10.2.min.js"></script>
     <script src="script/jquery-migrate-1.2.1.min.js"></script>
     <script src="script/jquery-ui.js"></script>
     <script src="script/bootstrap.min.js"></script>
@@ -278,4 +481,7 @@
 </script>
 
 
-<div id="flotTip" style="display: none; position: absolute; z-index: 1040; padding: 0.4em 0.6em; border-radius: 0.5em; font-size: 0.8em; border: 1px solid rgb(17, 17, 17); white-space: nowrap; background: rgb(255, 255, 255);"></div></body></html>
+<div id="flotTip" style="display: none; position: absolute; z-index: 1040; padding: 0.4em 0.6em; border-radius: 0.5em; font-size: 0.8em; border: 1px solid rgb(17, 17, 17); white-space: nowrap; background: rgb(255, 255, 255);">
+</div>
+</body>
+</html>
