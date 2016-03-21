@@ -14,32 +14,27 @@
     <link type="text/css" rel="stylesheet" href="styles/main.css">
     <link type="text/css" rel="stylesheet" href="styles/style-responsive.css">
 </head>
-<body style="background: url('images/bg/bg.png') center center fixed;">
-    <div class="page-form">
+<body>
+     <div class="container">
+      <div class="col-lg-12">  
+       <div class="page-form">
         <div class="panel panel-blue">
             <div class="panel-body pan">
-                <form action="#" class="form-horizontal">
+                <form class="form-horizontal">
                 <div class="form-body pal">
-                    <div class="col-md-12 text-center">
-                        <h1 style="margin-top: -90px; font-size: 48px;">
-                            KAdmin</h1>
-                        <br />
-                    </div>
                     <div class="form-group">
                         <div class="col-md-3">
                             <img src="images/avatar/profile-pic.png" class="img-responsive" style="margin-top: -35px;" />
                         </div>
                         <div class="col-md-9 text-center">
                             <h1>
-                                Hold on, please.</h1>
+                                Login</h1>
                             <br />
-                            <p>
-                                Just sign in and we’ll send you on your way</p>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="inputName" class="col-md-3 control-label">
-                            Username:</label>
+                            Usuario:</label>
                         <div class="col-md-9">
                             <div class="input-icon right">
                                 <i class="fa fa-user"></i>
@@ -48,12 +43,20 @@
                     </div>
                     <div class="form-group">
                         <label for="inputPassword" class="col-md-3 control-label">
-                            Password:</label>
+                            Contraseña:</label>
                         <div class="col-md-9">
                             <div class="input-icon right">
                                 <i class="fa fa-lock"></i>
                                 <input id="inputPassword" type="text" placeholder="" class="form-control" /></div>
                         </div>
+                    </div>
+                    <div class="form-group mbn">
+                         <div class="col-md-offset-3 col-md-6">
+                             <div class="checkbox">
+                               <label>
+                                 <input tabindex="5" type="checkbox" />&nbsp; Recordarme</label>
+                             </div>
+                         </div>
                     </div>
                     <div class="form-group mbn">
                         <div class="col-lg-12" align="right">
@@ -62,22 +65,35 @@
                                     &nbsp;
                                 </div>
                                 <div class="col-lg-9">
-                                    <a href="Login.html" class="btn btn-default">Go back</a>&nbsp;&nbsp;
-                                    <button type="submit" class="btn btn-default">
-                                        Sign In</button>
+                                    <button type="submit" href="#" class="btn btn-default">Login</button>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                    <div class="form-group mbn">
+                        <div class="col-lg-12" align="left">
+                                <div class="col-lg-3">
+                                    &nbsp;
+                                </div>
+                                <div id="linea">
+                                    No tengo una cuenta. 
+                                    <a href="SignIn.html" onClick="$('#loginbox').hide(); $('#signupbox').show()">
+                                        Registrate aqui.
+                                    </a>
+                                </div>
                         </div>
                     </div>
                 </div>
                 </form>
             </div>
         </div>
-        <div class="col-lg-12 text-center">
+        <div class="col-lg-12 text-center" >
             <p>
-                Forgot Something ?
+                ¿Olvidaste algo?
             </p>
         </div>
+    </div>
+    </div>
     </div>
 </body>
 </html>
