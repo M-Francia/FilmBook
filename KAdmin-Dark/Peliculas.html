@@ -36,9 +36,14 @@
                 </form>
                 <ul class="nav navbar navbar-top-links navbar-right mbn">
                     <li class="dropdown"><a data-hover="dropdown" href="#" class="dropdown-toggle"><i class="fa fa-bell fa-fw"></i><span class="badge badge-green">3</span></a>
-                    <li class="dropdown topbar-user"><a data-hover="dropdown" class="dropdown-toggle"><img src="http://k32.kn3.net/taringa/7/4/2/A/F/C/enri2323/05F.jpg" alt="" class="img-responsive img-circle"/>&nbsp;<span class="hidden-xs">Nazaret García</span>&nbsp;<span class="caret"></span></a>
+                    </li>
+                    <li class="dropdown topbar-user">
+                       <a data-hover="dropdown" class="dropdown-toggle"><img src="http://k32.kn3.net/taringa/7/4/2/A/F/C/enri2323/05F.jpg" alt="" class="img-responsive img-circle"/>&nbsp;
+                       <span class="hidden-xs">Nazaret García</span>&nbsp;<span class="caret"></span>
+                       </a>
                         <ul class="dropdown-menu dropdown-user pull-right">
                             <li><a href="perfil.html"><i class="fa fa-user"></i>Mi Perfil</a></li>
+                            <li class="divider"></li>
                             <li><a href="Login.html"><i class="fa fa-lock"></i>Login</a></li>
                             <li><a href="SignIn.html"><i class="fa fa-key"></i>Registrarse</a></li>
                         </ul>
@@ -63,7 +68,7 @@
                         <div class="icon-bg bg-blue"></div>
                     </i><span class="menu-title">Perfil</span></a>    
                     </li>
-                    <li><a href="Peliculas.html"><i class="fa fa-film">
+                    <li><li class="active"><a href="Peliculas.html"><i class="fa fa-film">
                         <div class="icon-bg bg-pink"></div>
                     </i><span class="menu-title">Películas</span></a>     
                     </li>
@@ -96,110 +101,7 @@
                     <!--Comienzo del contenido-->
                     <div class="page-content">
                         <div id="tab-general">
-                            <!--Primera parte-->
-                            <div class="row mbl">
-                                <div class="col-lg-12">
-                                    <div class="panel">
-                                       <script type="text/javascript">
-                                        //Ancho (en pixeles)
-                                        var sliderwidth="1200px"
-                                        //Alto
-                                        var sliderheight="300px"
-                                        //Velocidad 1-10
-                                        var slidespeed=1
-                                        //Color de fondo:
-                                        slidebgcolor="#dedede"
-                                        //Vinculos y enlaces de las imagenes
-                                        var leftrightslide=new Array()
-                                        var finalslide=''
-                                            leftrightslide[0]='<a href="images/peliculas/star-wars.jpg" title="Star Wars VII"><img border="0" src="images/peliculas/star-wars.jpg"></a>'
-                                            leftrightslide[1]='<a href="images/peliculas/zoolander.jpg" title="Zoolander"><img border="0" src="images/peliculas/zoolander.jpg"></a>'
-                                            leftrightslide[2]='<a href="images/peliculas/blancanieves.png" title="Blancanieves"><img border="0" src="images/peliculas/blancanieves.png"></a>'
-                                            leftrightslide[3]='<a href="images/peliculas/ant-man.jpg" title="Ant-Man"><img border="0" src="images/peliculas/ant-man.jpg"></a>'
-                                            leftrightslide[4]='<a href="images/peliculas/alvin.jpg" title="Alvin y las ardillas"><img border="0" src="images/peliculas/alvin.jpg"></a>'
-                                            leftrightslide[5]='<a href="images/peliculas/batman.jpg" title="Batman"><img border="0" src="images/peliculas/batman.jpg"></a>'
-                                            leftrightslide[6]='<a href="images/peliculas/thebookofeli.jpg" title="The book of Eli"><img border="0" src="images/peliculas/thebookofeli.jpg"></a>'
-                                            leftrightslide[7]='<a href="images/peliculas/harry-potter.jpg" title="Harry Potter"><img border="0" src="images/peliculas/harry-potter.jpg"></a>'
-                                            leftrightslide[8]='<a href="images/peliculas/deadpool.jpg" title="Deadpool"><img border="0" src="images/peliculas/deadpool.jpg"></a>'
-
-                                        var imagegap=""
-                                        var slideshowgap=5
-                                        var copyspeed=slidespeed
-                                            leftrightslide='<nobr>'+leftrightslide.join(imagegap)+'</nobr>'
-                                        var iedom=document.all||document.getElementById
-                                        if (iedom)
-                                                document.write('<span id="temp" style="visibility:hidden;position:absolute;top:-100px;left:-9000px">'+leftrightslide+'</span>')
-                                        var actualwidth=''
-                                        var cross_slide, ns_slide
-
-                                        function fillup(){
-                                            if (iedom){
-                                                cross_slide=document.getElementById? document.getElementById("test2") : document.all.test2
-                                                cross_slide2=document.getElementById? document.getElementById("test3") : document.all.test3
-                                                cross_slide.innerHTML=cross_slide2.innerHTML=leftrightslide
-                                                actualwidth=document.all? cross_slide.offsetWidth : document.getElementById("temp").offsetWidth
-                                                cross_slide2.style.left=actualwidth+slideshowgap+"px"
-                                            }
-                                            else if (document.layers){
-                                                ns_slide=document.ns_slidemenu.document.ns_slidemenu2
-                                                ns_slide2=document.ns_slidemenu.document.ns_slidemenu3
-                                                ns_slide.document.write(leftrightslide)
-                                                ns_slide.document.close()
-                                                actualwidth=ns_slide.document.width
-                                                ns_slide2.left=actualwidth+slideshowgap
-                                                ns_slide2.document.write(leftrightslide)
-                                                ns_slide2.document.close()
-                                            }
-                                            lefttime=setInterval("slideleft()",30)
-                                            }
-                                        window.onload=fillup
-
-                                        function slideleft(){
-                                        if (iedom){
-                                            if (parseInt(cross_slide.style.left)>(actualwidth*(-1)+8))
-                                                cross_slide.style.left=parseInt(cross_slide.style.left)-copyspeed+"px"
-                                            else
-                                                cross_slide.style.left=parseInt(cross_slide2.style.left)+actualwidth+slideshowgap+"px"
-                                            if (parseInt(cross_slide2.style.left)>(actualwidth*(-1)+8))
-                                                cross_slide2.style.left=parseInt(cross_slide2.style.left)-copyspeed+"px"
-                                            else
-                                                cross_slide2.style.left=parseInt(cross_slide.style.left)+actualwidth+slideshowgap+"px"
-                                            }
-                                            else if (document.layers){
-                                                if (ns_slide.left>(actualwidth*(-1)+8))
-                                                    ns_slide.left-=copyspeed
-                                                else
-                                                    ns_slide.left=ns_slide2.left+actualwidth+slideshowgap
-                                                if (ns_slide2.left>(actualwidth*(-1)+8))
-                                                    ns_slide2.left-=copyspeed
-                                                else
-                                                    ns_slide2.left=ns_slide.left+actualwidth+slideshowgap
-                                            }
-                                        }
-                                        if (iedom||document.layers){
-                                            with (document){
-                                                document.write('<table border="0" cellspacing="0" cellpadding="0"><td>')
-                                                if (iedom){
-                                                    write('<div style="position:relative;width:'+sliderwidth+';height:'+sliderheight+';overflow:hidden">')
-                                                    write('<div style="position:absolute;width:'+sliderwidth+';height:'+sliderheight+';background-color:'+slidebgcolor+'" onmouseover="copyspeed=0" onmouseout="copyspeed=slidespeed">')
-                                                    write('<div id="test2" style="position:absolute;left:0px;top:0px"></div>')
-                                                    write('<div id="test3" style="position:absolute;left:-1000px;top:0px"></div>')
-                                                    write('</div></div>')
-                                                }
-                                                else if (document.layers){
-                                                    write('<ilayer width="+sliderwidth+" height="+sliderheight+" name="ns_slidemenu" bgcolor="+slidebgcolor+">')
-                                                    write('<layer left="0" top="0" onmouseover="copyspeed=0" onmouseout="copyspeed=slidespeed" name="ns_slidemenu2"></layer>')
-                                                    write('<layer left="0" top="0" onmouseover="copyspeed=0" onmouseout="copyspeed=slidespeed" name="ns_slidemenu3"></layer>')
-                                                    write('</ilayer>')
-                                                }
-                                                document.write('</td></table>')
-                                            }
-                                        }
-                                       </script>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--Segunda parte-->
+                           <!--Primera parte-->
                            <div class="row mbl">
                                <div class="col-lg-8">
                                     <div class="panel">
@@ -328,7 +230,7 @@
                                     </div>    
                                 </div>
                             </div>
-                            <!--Tercera parte-->                                                        
+                            <!--Segunda parte-->                                                        
                             <div class="col-lg-12">
                                 <div class="portlet box">
                                     <div class="portlet-header">
@@ -373,7 +275,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <!--Cuarta parte-->
+                            <!--Tercera parte-->
                             <div class="row">
                                 <div class="col-lg-6"> 
                                     <div class="portlet box">
@@ -466,6 +368,109 @@
                                     </div>
                                 </div>
                             </div>
+                            <!--Cuarta parte-->
+                            <div class="row mbl">
+                                <div class="col-lg-12">
+                                    <div class="panel">
+                                       <script type="text/javascript">
+                                        //Ancho (en pixeles)
+                                        var sliderwidth="1200px"
+                                        //Alto
+                                        var sliderheight="300px"
+                                        //Velocidad 1-10
+                                        var slidespeed=1
+                                        //Color de fondo:
+                                        slidebgcolor="#dedede"
+                                        //Vinculos y enlaces de las imagenes
+                                        var leftrightslide=new Array()
+                                        var finalslide=''
+                                            leftrightslide[0]='<a href="images/peliculas/star-wars.jpg" title="Star Wars VII"><img border="0" src="images/peliculas/star-wars.jpg"></a>'
+                                            leftrightslide[1]='<a href="images/peliculas/zoolander.jpg" title="Zoolander"><img border="0" src="images/peliculas/zoolander.jpg"></a>'
+                                            leftrightslide[2]='<a href="images/peliculas/blancanieves.png" title="Blancanieves"><img border="0" src="images/peliculas/blancanieves.png"></a>'
+                                            leftrightslide[3]='<a href="images/peliculas/ant-man.jpg" title="Ant-Man"><img border="0" src="images/peliculas/ant-man.jpg"></a>'
+                                            leftrightslide[4]='<a href="images/peliculas/alvin.jpg" title="Alvin y las ardillas"><img border="0" src="images/peliculas/alvin.jpg"></a>'
+                                            leftrightslide[5]='<a href="images/peliculas/batman.jpg" title="Batman"><img border="0" src="images/peliculas/batman.jpg"></a>'
+                                            leftrightslide[6]='<a href="images/peliculas/thebookofeli.jpg" title="The book of Eli"><img border="0" src="images/peliculas/thebookofeli.jpg"></a>'
+                                            leftrightslide[7]='<a href="images/peliculas/harry-potter.jpg" title="Harry Potter"><img border="0" src="images/peliculas/harry-potter.jpg"></a>'
+                                            leftrightslide[8]='<a href="images/peliculas/deadpool.jpg" title="Deadpool"><img border="0" src="images/peliculas/deadpool.jpg"></a>'
+
+                                        var imagegap=""
+                                        var slideshowgap=5
+                                        var copyspeed=slidespeed
+                                            leftrightslide='<nobr>'+leftrightslide.join(imagegap)+'</nobr>'
+                                        var iedom=document.all||document.getElementById
+                                        if (iedom)
+                                                document.write('<span id="temp" style="visibility:hidden;position:absolute;top:-100px;left:-9000px">'+leftrightslide+'</span>')
+                                        var actualwidth=''
+                                        var cross_slide, ns_slide
+
+                                        function fillup(){
+                                            if (iedom){
+                                                cross_slide=document.getElementById? document.getElementById("test2") : document.all.test2
+                                                cross_slide2=document.getElementById? document.getElementById("test3") : document.all.test3
+                                                cross_slide.innerHTML=cross_slide2.innerHTML=leftrightslide
+                                                actualwidth=document.all? cross_slide.offsetWidth : document.getElementById("temp").offsetWidth
+                                                cross_slide2.style.left=actualwidth+slideshowgap+"px"
+                                            }
+                                            else if (document.layers){
+                                                ns_slide=document.ns_slidemenu.document.ns_slidemenu2
+                                                ns_slide2=document.ns_slidemenu.document.ns_slidemenu3
+                                                ns_slide.document.write(leftrightslide)
+                                                ns_slide.document.close()
+                                                actualwidth=ns_slide.document.width
+                                                ns_slide2.left=actualwidth+slideshowgap
+                                                ns_slide2.document.write(leftrightslide)
+                                                ns_slide2.document.close()
+                                            }
+                                            lefttime=setInterval("slideleft()",30)
+                                            }
+                                        window.onload=fillup
+
+                                        function slideleft(){
+                                        if (iedom){
+                                            if (parseInt(cross_slide.style.left)>(actualwidth*(-1)+8))
+                                                cross_slide.style.left=parseInt(cross_slide.style.left)-copyspeed+"px"
+                                            else
+                                                cross_slide.style.left=parseInt(cross_slide2.style.left)+actualwidth+slideshowgap+"px"
+                                            if (parseInt(cross_slide2.style.left)>(actualwidth*(-1)+8))
+                                                cross_slide2.style.left=parseInt(cross_slide2.style.left)-copyspeed+"px"
+                                            else
+                                                cross_slide2.style.left=parseInt(cross_slide.style.left)+actualwidth+slideshowgap+"px"
+                                            }
+                                            else if (document.layers){
+                                                if (ns_slide.left>(actualwidth*(-1)+8))
+                                                    ns_slide.left-=copyspeed
+                                                else
+                                                    ns_slide.left=ns_slide2.left+actualwidth+slideshowgap
+                                                if (ns_slide2.left>(actualwidth*(-1)+8))
+                                                    ns_slide2.left-=copyspeed
+                                                else
+                                                    ns_slide2.left=ns_slide.left+actualwidth+slideshowgap
+                                            }
+                                        }
+                                        if (iedom||document.layers){
+                                            with (document){
+                                                document.write('<table border="0" cellspacing="0" cellpadding="0"><td>')
+                                                if (iedom){
+                                                    write('<div style="position:relative;width:'+sliderwidth+';height:'+sliderheight+';overflow:hidden">')
+                                                    write('<div style="position:absolute;width:'+sliderwidth+';height:'+sliderheight+';background-color:'+slidebgcolor+'" onmouseover="copyspeed=0" onmouseout="copyspeed=slidespeed">')
+                                                    write('<div id="test2" style="position:absolute;left:0px;top:0px"></div>')
+                                                    write('<div id="test3" style="position:absolute;left:-1000px;top:0px"></div>')
+                                                    write('</div></div>')
+                                                }
+                                                else if (document.layers){
+                                                    write('<ilayer width="+sliderwidth+" height="+sliderheight+" name="ns_slidemenu" bgcolor="+slidebgcolor+">')
+                                                    write('<layer left="0" top="0" onmouseover="copyspeed=0" onmouseout="copyspeed=slidespeed" name="ns_slidemenu2"></layer>')
+                                                    write('<layer left="0" top="0" onmouseover="copyspeed=0" onmouseout="copyspeed=slidespeed" name="ns_slidemenu3"></layer>')
+                                                    write('</ilayer>')
+                                                }
+                                                document.write('</td></table>')
+                                            }
+                                        }
+                                       </script>
+                                    </div>
+                                </div>
+                            </div>
                             <!--Copyright-->
                             <div id="footer">
                                 <div class="copyright">
@@ -478,7 +483,8 @@
                                 <script src="script/jquery.flot.js"></script><!--No-->
                                 <script src="script/jquery.flot.categories.js"></script><!--No-->
                                 <script src="script/zabuto_calendar.min.js"></script><!--No-->
-                                <script src="script/index.js"></script><!--No-->                             
+                                <script src="script/index.js"></script><!--No--> 
+                                <script src="script/bootstrap-hover-dropdown.js"></script>
                       </div>
                   </div>
               </div>
