@@ -4,26 +4,27 @@ FILMBOOK
 ## Descripción: 
 Filmbook es una red social nacida para compartir unicamente contenido cinematografico con tus amigos, 		simple, rápida de todos y para todos. Sin exceso de contenido y fácil de entender.
 	
-- Funcionalidad pública: Cualquier usuario podrá consultar su timeline y visualizar los comententarios y 		  valoraciones de otros usuarios, además, existiran salas de debate donde los usuarios podran hacer           comentarios acerca de series/peliculas y una sección de noticias donde se mostrarán las peliculas 
-y series mas recientes.
+- Funcionalidad pública: Cualquier usuario podrá consultar su timeline y visualizar los comententarios y 		  valoraciones de otros usuarios, además, existiran comentarios acerca de series/peliculas y una sección de novedades donde se mostrarán las peliculas 
+y series mas recientescjunto con las noticias relacionadas.
 	
 - Funcionalidad privada: Cada usuario podrá gestionar su propia cuenta, mirar la actividad de sus 
-amigos en su timeline y publicar sus gustos y valoraciones.
+amigos en su timeline y publicar sus listas de peliculas y valoraciones.
 
 - Administrador: Será el encargado de actualizar las diferentes carteleras y moderar usuarios.
 
 ## Entidades:
-- Perfil: El perfil será adecuado al estilo del usuario, ya que este elige que tipo de espectador es. 
+- Perfil: El perfil es la vista publica del usuario, desde ahí el resto de usuarios veran que tipo de espectador es cierto usuario, ahi aparecerá 
+la actividad reciente, junto con sus listas y actividades y una valoracion del usuario. 
 		
-- Películas: La lista de películas será algo sencillo, tendrán sinopsis, una valoración por separado dependiendo
-del tipo de espectador, algunos comentarios breves y la repercusion en la red.
+- Ficha de pelicula: La ficha de las películas será algo sencillo, tendrán sinopsis, una valoración por separado dependiendo
+del tipo de espectador, algunos comentarios breves y la repercusion en la red, ademas los usuarion podran añadir la pelicula seleccionada a alguna de sus listas o recomendarla.
 
-- Tablón/Timeline: Donde se mostrará la actividad de los contactos del usuario.
+- Tablón/Timeline: Donde se mostrará la actividad de los contactos del usuario junto con las tendencias actuales, ademas el usuario desde ahí
+podrá crear sus listas e interactuar con las tendencias del momento.
 
-- Salas: Las salas serán espacios para compartir opiniones en vivo acerca de películas que se esten emitiendo o
-se hayan estrenado hace poco. Los temas propuestos tendrán un tiempo limitado y las salas desaparecerán tras un tiempo estipulado.
+- Explorar: Donde el usuario podrá buscar sus peliculas favoritas en funcion de filtros seleccionados.
     
-- Noticias/Carteleras: no será mas que un timeline oficial de la web, donde los moderadores publicarán las nuevas peliculas.
+- Novedades: no será mas que un timeline oficial de la web, donde los moderadores publicarán las nuevas peliculas y las noticias relacionadas con estas.
 
 ## Integrantes del equipo de desarrollo:	
 Mario Francia Rius
