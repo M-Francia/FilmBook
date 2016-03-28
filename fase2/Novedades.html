@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Novedades</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/icons/favicon.ico">
+    <link rel="apple-touch-icon" href="images/icons/favicon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/icons/favicon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/icons/favicon-114x114.png">
+    <!--Loading bootstrap css-->
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700">
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oswald:400,700,300">
+    <link type="text/css" rel="stylesheet" href="styles/jquery-ui-1.10.4.custom.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/animate.css">
+    <link type="text/css" rel="stylesheet" href="styles/all.css">
+    <link type="text/css" rel="stylesheet" href="styles/main.css">
+    <link type="text/css" rel="stylesheet" href="styles/style-responsive.css">
+    <link type="text/css" rel="stylesheet" href="styles/zabuto_calendar.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/pace.css">
+    <link type="text/css" rel="stylesheet" href="styles/jquery.news-ticker.css">
+</head>
+
+<body>
+    <!--Comienzo to top-->
+    <a id="totop" href="#"><i class="fa fa-angle-up"></i></a>
+    <!--Final TO TOP-->
+    <!--Comienzo TOPBAR-->
+    <div id="header-topbar-option-demo" class="page-header-topbar">
+        <nav id="topbar" role="navigation" style="margin-bottom: 0;" data-step="3" class="navbar navbar-default navbar-static-top">
+            <div class="navbar-header">
+                <a id="logo" href="timeline.html" class="navbar-brand"><span class="fa fa-rocket"></span><span class="logo-text">FilmBook</span><span style="display: none" class="logo-text-icon">µ</span></a>
+            </div>
+            <!--Topbar-->
+            <div class="topbar-main"><a id="menu-toggle" href="#" class="hidden-xs"><i class="fa fa-bars"></i></a>
+               <form id="topbar-search" action="" method="" class="hidden-sm hidden-xs">
+                    <div class="input-icon right text-white"><a href="#"><i class="fa fa-search"></i></a><input type="text" placeholder="Buscar aquí..." class="form-control text-white"/></div>
+                </form>
+                <ul class="nav navbar navbar-top-links navbar-right mbn">
+                    <li class="dropdown"><a data-hover="dropdown" href="#" class="dropdown-toggle"><i class="fa fa-bell fa-fw"></i><span class="badge badge-green">3</span></a>
+                    </li>
+                    <li class="dropdown topbar-user">
+                        <a data-hover="dropdown" class="dropdown-toggle"><img src="http://k32.kn3.net/taringa/7/4/2/A/F/C/enri2323/05F.jpg" alt="" class="img-responsive img-circle" />&nbsp;
+                            <span class="hidden-xs">Nazaret García</span>&nbsp;<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-user pull-right">
+                            <li><a href="Perfil.html"><i class="fa fa-user"></i>Mi Perfil</a></li>
+                            <li class="divider"></li>
+                            <li><a href="index.html"><i class="fa fa-key"></i>Cerrar sesión</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!--Final TOPBAR-->
+    <!--Comienzo menu lateral-->
+    <div id="wrapper">
+        <nav id="sidebar" role="navigation" data-step="2" data-intro="Template has &lt;b&gt;many navigation styles&lt;/b&gt;" data-position="right" class="navbar-default navbar-static-side">
+            <div class="sidebar-collapse menu-scroll">
+                <ul id="side-menu" class="nav">
+                    <div class="clearfix"></div>
+                    <li><a href="timeline.html"><i class="fa fa-th-list fa-fw">
+                        <div class="icon-bg bg-orange"></div>
+                    </i><span class="menu-title">Timeline</span></a>
+                    </li>
+                    <li>
+                        <a href="Fichatecnica.html"><i class="fa fa-film">
+                        <div class="icon-bg bg-pink"></div>
+                    </i><span class="menu-title">Ficha técnica</span></a>
+                        </li>
+                        <li><li class="active"><a href="Novedades.html"><i class="fa fa-send-o fa-fw">
+                        <div class="icon-bg bg-green"></div>
+                    </i><span class="menu-title">Novedades</span></a>
+                        </li>
+                        <li><a href="Explorar.html"><i class="fa fa-search">
+                        <div class="icon-bg bg-violet"></div>
+                    </i><span class="menu-title">Explorar</span></a>
+                        </li>
+                        <li><a href="Perfil.html"><i class="fa fa-user">
+                        <div class="icon-bg bg-blue"></div>
+                    </i><span class="menu-title">Perfil</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!--Comienzo página-->
+        <div id="page-wrapper">
+            <div id="title-breadcrumb-option-demo" class="page-title-breadcrumb">
+                <div class="page-header pull-left">
+                    <div class="page-title">
+                        Novedades</div>
+                </div>
+                <ol class="breadcrumb page-breadcrumb pull-right">
+                    <li><i class="fa fa-home"></i>&nbsp;<a href="dashboard.html">Home</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
+                    <li class="hidden"><a href="#">Novedades</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
+                    <li class="active">Novedades</li>
+                </ol>
+                <div class="clearfix">
+                </div>
+            </div>
+            <!--Comienzo contenido-->
+            <div class="page-content">
+                <div id="tab-general">
+                    <div class="row mbl">
+                        <div class="col-lg-12">
+                            <div class="col-md-12">
+                                <div id="area-chart-spline" style="width: 100%; height: 300px; display: none;">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="col-lg-12">
+                                <ul id="generalTab" class="nav nav-tabs responsive">
+                                    <li class="active"><a href="#abril" data-toggle="tab">Abril</a></li>
+                                    <li><a href="#mayo" data-toggle="tab">Mayo</a></li>
+                                    <li><a href="#junio" data-toggle="tab">Junio</a></li>
+                                    <li><a href="#julio" data-toggle="tab">Julio</a></li>
+                                    <li><a href="#agosto" data-toggle="tab">Agosto</a></li>
+                                    <li><a href="#septiembre" data-toggle="tab">Septiembre</a></li>
+                                    <li><a href="#octubre" data-toggle="tab">Octubre</a></li>
+                                    <li><a href="#noviembre" data-toggle="tab">Noviembre</a></li>
+                                    <li><a href="#diciembre" data-toggle="tab">Diciembre</a></li>
+                                </ul>
+                                <div id="generalTabContent" class="tab-content responsive">
+                                    <div id="abril" class="tab-pane fade in active">
+                                        <div class="row">
+                                            <div class="col-lg-3">
+                                                <p>Viernes, 01 Abril 2016</p>
+                                                <img src="images/novedades/altamira.jpg" width="200" height="200" class="img-responsive" />
+                                                <h4 href="#">Altamira <small><br>(Hugh Hudson)</small></h4>
+                                                <div class="form-group">
+                                                    <div class="rating">
+                                                        <label for="quality-5">
+                                                            <i class="fa fa-star"></i>
+                                                        </label>
+                                                        <label for="quality-4">
+                                                            <i class="fa fa-star"></i>
+                                                        </label>
+                                                        <label for="quality-3">
+                                                            <i class="fa fa-star"></i>
+                                                        </label>
+                                                        <label for="quality-2">
+                                                            <i class="fa fa-star text-yellow"></i>
+                                                        </label>
+                                                        <label for="quality-1">
+                                                            <i class="fa fa-star text-yellow"></i>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3">
+                                                <p>Viernes, 01 Abril 2016</p>
+                                                <img src="images/novedades/hermanisimas.jpg" width="200" height="200" class="img-responsive" />
+                                                <h4>Hermanísimas <small><br>(Jason Moore)</small></h4>
+                                                <div class="form-group">
+                                                    <div class="rating">
+                                                        <label for="quality-5">
+                                                            <i class="fa fa-star"></i>
+                                                        </label>
+                                                        <label for="quality-4">
+                                                            <i class="fa fa-star"></i>
+                                                        </label>
+                                                        <label for="quality-3">
+                                                            <i class="fa fa-star text-yellow"></i>
+                                                        </label>
+                                                        <label for="quality-2">
+                                                            <i class="fa fa-star text-yellow"></i>
+                                                        </label>
+                                                        <label for="quality-1">
+                                                            <i class="fa fa-star text-yellow"></i>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3">
+                                                <p>Viernes, 01 Abril 2016</p>
+                                                <img src="images/novedades/kiki.jpg" width="200" height="200" class="img-responsive" />
+                                                <h4>Kiki, el amor se hace <small><br>(Paco León)</small></h4>
+                                                <div class="form-group">
+                                                    <div class="rating">
+                                                        <label for="quality-5">
+                                                            <i class="fa fa-star text-yellow"></i>
+                                                        </label>
+                                                        <label for="quality-4">
+                                                            <i class="fa fa-star text-yellow"></i>
+                                                        </label>
+                                                        <label for="quality-3">
+                                                            <i class="fa fa-star text-yellow"></i>
+                                                        </label>
+                                                        <label for="quality-2">
+                                                            <i class="fa fa-star text-yellow"></i>
+                                                        </label>
+                                                        <label for="quality-1">
+                                                            <i class="fa fa-star text-yellow"></i>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3">
+                                                <p>Viernes, 01 Abril 2016</p>
+                                                <img src="images/novedades/norman.jpg" width="200" height="200" class="img-responsive" />
+                                                <h4>Norman del norte <small><br>(Trevor Wall)</small></h4>
+                                                <div class="form-group">
+                                                    <div class="rating">
+                                                        <label for="quality-5">
+                                                            <i class="fa fa-star"></i>
+                                                        </label>
+                                                        <label for="quality-4">
+                                                            <i class="fa fa-star"></i>
+                                                        </label>
+                                                        <label for="quality-3">
+                                                            <i class="fa fa-star"></i>
+                                                        </label>
+                                                        <label for="quality-2">
+                                                            <i class="fa fa-star text-yellow"></i>
+                                                        </label>
+                                                        <label for="quality-1">
+                                                            <i class="fa fa-star text-yellow"></i>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3">
+                                                <p>Viernes, 01 Abril 2016</p>
+                                                <img src="images/novedades/inventor.jpg" width="200" height="200" class="img-responsive" />
+                                                <h4>El inventor de juegos <small><br>(Juan Pablo Buscarini)</small></h4>
+                                                <div class="form-group">
+                                                    <div class="rating">
+                                                        <label for="quality-5">
+                                                            <i class="fa fa-star"></i>
+                                                        </label>
+                                                        <label for="quality-4">
+                                                            <i class="fa fa-star text-yellow"></i>
+                                                        </label>
+                                                        <label for="quality-3">
+                                                            <i class="fa fa-star text-yellow"></i>
+                                                        </label>
+                                                        <label for="quality-2">
+                                                            <i class="fa fa-star text-yellow"></i>
+                                                        </label>
+                                                        <label for="quality-1">
+                                                            <i class="fa fa-star text-yellow"></i>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3">
+                                                <p>Viernes, 01 Abril 2016</p>
+                                                <img src="images/novedades/madame.jpg" width="200" height="200" class="img-responsive" />
+                                                <h4>Madame Marguerite <small><br>(Xavier Giannoli)</small></h4>
+                                                <div class="form-group">
+                                                    <div class="rating">
+                                                        <label for="quality-5">
+                                                            <i class="fa fa-star"></i>
+                                                        </label>
+                                                        <label for="quality-4">
+                                                            <i class="fa fa-star"></i>
+                                                        </label>
+                                                        <label for="quality-3">
+                                                            <i class="fa fa-sta text-yellowr"></i>
+                                                        </label>
+                                                        <label for="quality-2">
+                                                            <i class="fa fa-star text-yellow"></i>
+                                                        </label>
+                                                        <label for="quality-1">
+                                                            <i class="fa fa-star text-yellow"></i>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3">
+                                                <p>Viernes, 01 Abril 2016</p>
+                                                <img src="images/novedades/orgullo.jpg" width="200" height="200" class="img-responsive" />
+                                                <h4>Orgullo + Prejuicio + Zombies <small><br>(Burr Steers)</small></h4>
+                                                <div class="form-group">
+                                                    <div class="rating">
+                                                        <label for="quality-5">
+                                                            <i class="fa fa-star"></i>
+                                                        </label>
+                                                        <label for="quality-4">
+                                                            <i class="fa fa-star"></i>
+                                                        </label>
+                                                        <label for="quality-3">
+                                                            <i class="fa fa-star"></i>
+                                                        </label>
+                                                        <label for="quality-2">
+                                                            <i class="fa fa-star text-yellow"></i>
+                                                        </label>
+                                                        <label for="quality-1">
+                                                            <i class="fa fa-star text-yellow"></i>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3">
+                                                <p>Viernes, 08 Abril 2016</p>
+                                                <img src="images/novedades/julieta.jpg" width="200" height="200" class="img-responsive" />
+                                                <h4>Julieta <small><br>(Pedro Almodóvar)</small></h4>
+                                                <div class="form-group">
+                                                    <div class="rating">
+                                                        <label for="quality-5">
+                                                            <i class="fa fa-star"></i>
+                                                        </label>
+                                                        <label for="quality-4">
+                                                            <i class="fa fa-star"></i>
+                                                        </label>
+                                                        <label for="quality-3">
+                                                            <i class="fa fa-star"></i>
+                                                        </label>
+                                                        <label for="quality-2">
+                                                            <i class="fa fa-star text-yellow"></i>
+                                                        </label>
+                                                        <label for="quality-1">
+                                                            <i class="fa fa-star text-yellow"></i>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="mayo" class="tab-pane fade">
+                                        <div class="row">
+                                            <div class="col-lg-3">
+                                                <p>Viernes, 13 Mayo 2016</p>
+                                                <img src="images/novedades/angry.jpg" width="200" height="200" class="img-responsive" />
+                                                <h4>Angry Birds <small><br>(Clay Kaytis, Fergal Reilly)</small></h4>
+                                                <div class="form-group">
+                                                    <div class="rating">
+                                                        <label for="quality-5">
+                                                            <i class="fa fa-star"></i>
+                                                        </label>
+                                                        <label for="quality-4">
+                                                            <i class="fa fa-star"></i>
+                                                        </label>
+                                                        <label for="quality-3">
+                                                            <i class="fa fa-star"></i>
+                                                        </label>
+                                                        <label for="quality-2">
+                                                            <i class="fa fa-star"></i>
+                                                        </label>
+                                                        <label for="quality-1">
+                                                            <i class="fa fa-star text-yellow"></i>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3">
+                                                <p>Viernes, 20 Mayo 2016</p>
+                                                <img src="images/novedades/jefa.jpg" width="200" height="200" class="img-responsive" />
+                                                <h4>Es la jefa <small><br>(Ben Falcone)</small></h4>
+                                                <div class="form-group">
+                                                    <div class="rating">
+                                                        <label for="quality-5">
+                                                            <i class="fa fa-star"></i>
+                                                        </label>
+                                                        <label for="quality-4">
+                                                            <i class="fa fa-star"></i>
+                                                        </label>
+                                                        <label for="quality-3">
+                                                            <i class="fa fa-star text-yellow"></i>
+                                                        </label>
+                                                        <label for="quality-2">
+                                                            <i class="fa fa-star text-yellow"></i>
+                                                        </label>
+                                                        <label for="quality-1">
+                                                            <i class="fa fa-star text-yellow"></i>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="junio" class="tab-pane fade">
+                                        <div class="row">
+                                            <div class="col-lg-3">
+                                                <p>Viernes, 03 Junio 2016</p>
+                                                <img src="images/novedades/war.jpg" width="200" height="200" class="img-responsive" />
+                                                <h4>Warcraft:El origen <small><br>(Duncan Jones)</small></h4>
+                                                <div class="form-group">
+                                                    <div class="rating">
+                                                        <label for="quality-5">
+                                                            <i class="fa fa-star"></i>
+                                                        </label>
+                                                        <label for="quality-4">
+                                                            <i class="fa fa-star text-yellow"></i>
+                                                        </label>
+                                                        <label for="quality-3">
+                                                            <i class="fa fa-star text-yellow"></i>
+                                                        </label>
+                                                        <label for="quality-2">
+                                                            <i class="fa fa-star text-yellow"></i>
+                                                        </label>
+                                                        <label for="quality-1">
+                                                            <i class="fa fa-star text-yellow"></i>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3">
+                                                <p>Viernes, 10 Junio 2016</p>
+                                                <img src="images/novedades/eddie.jpg" width="200" height="200" class="img-responsive" />
+                                                <h4>Eddie el águila <small><br>(Dexter Fletcher)</small></h4>
+                                                <div class="form-group">
+                                                    <div class="rating">
+                                                        <label for="quality-5">
+                                                            <i class="fa fa-star"></i>
+                                                        </label>
+                                                        <label for="quality-4">
+                                                            <i class="fa fa-star"></i>
+                                                        </label>
+                                                        <label for="quality-3">
+                                                            <i class="fa fa-star"></i>
+                                                        </label>
+                                                        <label for="quality-2">
+                                                            <i class="fa fa-star"></i>
+                                                        </label>
+                                                        <label for="quality-1">
+                                                            <i class="fa fa-star text-yellow"></i>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="julio" class="tab-pane fade">
+                                        <div class="row">
+                                            <div class="col-lg-3">
+                                                <p>Viernes, 01 Julio 2016</p>
+                                                <img src="images/novedades/day.jpg" width="200" height="200" class="img-responsive" />
+                                                <h4>Independence day <small><br>(Roland Emmerich)</small></h4>
+                                                <div class="form-group">
+                                                    <div class="rating">
+                                                        <label for="quality-5">
+                                                            <i class="fa fa-star"></i>
+                                                        </label>
+                                                        <label for="quality-4">
+                                                            <i class="fa fa-star"></i>
+                                                        </label>
+                                                        <label for="quality-3">
+                                                            <i class="fa fa-star"></i>
+                                                        </label>
+                                                        <label for="quality-2">
+                                                            <i class="fa fa-star"></i>
+                                                        </label>
+                                                        <label for="quality-1">
+                                                            <i class="fa fa-star"></i>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="agosto" class="tab-pane fade">
+                                        <div class="row">
+                                            <div class="col-lg-3">
+                                                <p>Viernes, 05 Agosto 2016</p>
+                                                <img src="images/novedades/escuadron.jpg" width="200" height="200" class="img-responsive" />
+                                                <h4>Escuardrón suicida <small><br>(David Ayer)</small></h4>
+                                                <div class="form-group">
+                                                    <div class="rating">
+                                                        <label for="quality-5">
+                                                            <i class="fa fa-star"></i>
+                                                        </label>
+                                                        <label for="quality-4">
+                                                            <i class="fa fa-star"></i>
+                                                        </label>
+                                                        <label for="quality-3">
+                                                            <i class="fa fa-star text-yellow"></i>
+                                                        </label>
+                                                        <label for="quality-2">
+                                                            <i class="fa fa-star text-yellow"></i>
+                                                        </label>
+                                                        <label for="quality-1">
+                                                            <i class="fa fa-star text-yellow"></i>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3">
+                                                <p>Viernes, 05 Agosto 2016</p>
+                                                <img src="images/novedades/mascotas.jpg" width="200" height="200" class="img-responsive" />
+                                                <h4>Mascotas <small><br>(Roland Emmerich)</small></h4>
+                                                <div class="form-group">
+                                                    <div class="rating">
+                                                        <label for="quality-5">
+                                                            <i class="fa fa-star text-yellow"></i>
+                                                        </label>
+                                                        <label for="quality-4">
+                                                            <i class="fa fa-star text-yellow"></i>
+                                                        </label>
+                                                        <label for="quality-3">
+                                                            <i class="fa fa-star text-yellow"></i>
+                                                        </label>
+                                                        <label for="quality-2 ">
+                                                            <i class="fa fa-star text-yellow"></i>
+                                                        </label>
+                                                        <label for="quality-1">
+                                                            <i class="fa fa-star text-yellow"></i>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="septiembre" class="tab-pane fade">
+                                        <div class="row">
+                                            <div class="col-lg-3">
+                                                <p>Viernes, 30 Septiembre 2016</p>
+                                                <img src="images/novedades/peregrine.jpg" width="200" height="200" class="img-responsive" />
+                                                <h4 href="#">El hogar de miss peregrine para niños peculiares <small><br>(Tim Burton)</small></h4>
+                                                <div class="form-group">
+                                                    <div class="rating">
+                                                        <label for="quality-5">
+                                                            <i class="fa fa-star"></i>
+                                                        </label>
+                                                        <label for="quality-4">
+                                                            <i class="fa fa-star"></i>
+                                                        </label>
+                                                        <label for="quality-3">
+                                                            <i class="fa fa-star"></i>
+                                                        </label>
+                                                        <label for="quality-2">
+                                                            <i class="fa fa-star text-yellow"></i>
+                                                        </label>
+                                                        <label for="quality-1">
+                                                            <i class="fa fa-star text-yellow"></i>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="octubre" class="tab-pane fade">
+                                        <div class="row">
+                                            <div class="col-lg-3">
+                                                <p>Viernes, 07 Octubre 2016</p>
+                                                <img src="images/novedades/monstruo.jpg" width="200" height="200" class="img-responsive" />
+                                                <h4 href="#">Un monstruo viene a verme <small><br>(Juan Antonio Bayona)</small></h4>
+                                                <div class="form-group">
+                                                    <div class="rating">
+                                                        <label for="quality-5">
+                                                            <i class="fa fa-star"></i>
+                                                        </label>
+                                                        <label for="quality-4">
+                                                            <i class="fa fa-star text-yellow"></i>
+                                                        </label>
+                                                        <label for="quality-3">
+                                                            <i class="fa fa-star text-yellow"></i>
+                                                        </label>
+                                                        <label for="quality-2">
+                                                            <i class="fa fa-star text-yellow"></i>
+                                                        </label>
+                                                        <label for="quality-1">
+                                                            <i class="fa fa-star text-yellow"></i>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="noviembre" class="tab-pane fade">
+                                        <div class="row">
+                                            <div class="col-lg-3">
+                                                <p>Viernes, 18 Noviembre 2016</p>
+                                                <img src="images/novedades/animales.jpg" width="200" height="200" class="img-responsive" />
+                                                <h4 href="#">Animales fantásticos <small><br>(David Yates)</small></h4>
+                                                <div class="form-group">
+                                                    <div class="rating">
+                                                        <label for="quality-5">
+                                                            <i class="fa fa-star"></i>
+                                                        </label>
+                                                        <label for="quality-4">
+                                                            <i class="fa fa-star"></i>
+                                                        </label>
+                                                        <label for="quality-3">
+                                                            <i class="fa fa-star"></i>
+                                                        </label>
+                                                        <label for="quality-2">
+                                                            <i class="fa fa-star text-yellow"></i>
+                                                        </label>
+                                                        <label for="quality-1">
+                                                            <i class="fa fa-star text-yellow"></i>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="diciembre" class="tab-pane fade">
+                                        <div class="row">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-10 pull-center">
+                            <div class="panel">
+                                <div class="list-group">
+                                    <a class="list-group-item active">Noticias</a>
+                                    <a class="list-group-item">
+                                        <h4><b>'Harry Potter': Un ordenador compara los libros y las películas y esta es su conclusión</b></h4>
+                                        <p class="date pull-right">26/03/2016</p>
+                                        <p class="">Este ordenador llamado Watson es capaz de analizar el texto y las imágenes e interpretar emociones de todo tipo, ¿preparado para sus resultados?</p>
+                                    </a>
+                                    <a class="list-group-item">
+                                        <h4><b>'Alvin y las ardillas': Disfruta con tus hijos de las tres películas en Netflix</b></h4>
+                                        <p class="date pull-right">26/03/2016</p>
+                                        <p>'Alvin y las ardillas', 'Alvin y las ardillas 2' y 'Alvin y las ardillas 3' están disponibles para los suscriptores de Netflix.</p>
+                                    </a>
+                                    <a class="list-group-item">
+                                        <h4><b>Primer póster de la película sobre el fundador de McDonalds con Michael Keaton</b></h4>
+                                        <p class="date pull-right">26/03/2016</p>
+                                        <p>El actor protagonizará 'The Founder', una historia que llegará a los cines estadounidenses el 5 de agosto.</p>
+                                    </a>
+                                    <a class="list-group-item">
+                                        <h4><b>'Ninja Turtles: Fuera de las sombras': Bebop y Rocksteady protagonizan los nuevos pósters de la película</b></h4>
+                                        <p class="date pull-right">26/03/2016</p>
+                                        <p>Paramount Pictures también ha publicado el primer y marchoso TV Spot del filme que se estrenará en España el próximo 17 de junio.</p>
+                                    </a>
+                                </div>
+                                <div class="text-center">
+                                    <ul class="pagination mtm mbm">
+                                        <li><a href="#">&laquo;</a></li>
+                                        <li class="active"><a href="Novedades.html">1</a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">4</a></li>
+                                        <li><a href="#">5</a></li>
+                                        <li><a href="#">&raquo;</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Final contenido-->
+            <!--Copyright-->
+            <div id="footer">
+                <div class="copyright">
+                    <a href="http://urjc.es">2016 © FilmBook Production</a></div>
+            </div>
+            <!--Fin FOOTER-->
+        </div>
+        <!--Final página-->
+    </div>
+    <script src="script/jquery-1.10.2.min.js"></script>
+    <script src="script/jquery-migrate-1.2.1.min.js"></script>
+    <script src="script/jquery-ui.js"></script>
+    <script src="script/bootstrap.min.js"></script>
+    <script src="script/bootstrap-hover-dropdown.js"></script>
+    <script src="script/html5shiv.js"></script>
+    <script src="script/respond.min.js"></script>
+    <script src="script/jquery.metisMenu.js"></script>
+    <script src="script/jquery.slimscroll.js"></script>
+    <script src="script/jquery.cookie.js"></script>
+    <script src="script/icheck.min.js"></script>
+    <script src="script/custom.min.js"></script>
+    <script src="script/jquery.news-ticker.js"></script>
+    <script src="script/jquery.menu.js"></script>
+    <script src="script/pace.min.js"></script>
+    <script src="script/holder.js"></script>
+    <script src="script/responsive-tabs.js"></script>
+    <script src="script/jquery.flot.js"></script>
+    <script src="script/jquery.flot.categories.js"></script>
+    <script src="script/jquery.flot.pie.js"></script>
+    <script src="script/jquery.flot.tooltip.js"></script>
+    <script src="script/jquery.flot.resize.js"></script>
+    <script src="script/jquery.flot.fillbetween.js"></script>
+    <script src="script/jquery.flot.stack.js"></script>
+    <script src="script/jquery.flot.spline.js"></script>
+    <script src="script/zabuto_calendar.min.js"></script>
+    <script src="script/index.js"></script>
+    
+</body>
+
+</html>
