@@ -26,6 +26,39 @@ podrá crear sus listas e interactuar con las tendencias del momento.
     
 - Novedades: no será mas que un timeline oficial de la web, donde los moderadores publicarán las nuevas peliculas y las noticias relacionadas con estas.
 
+##Diagrama:
+![Diagrama](https://github.com/M-Francia/FilmBook/blob/master/Capturas/diagrama.jpg?raw=true "Diagrama")
+
+
+##Capturas: 
+![Index](https://github.com/M-Francia/FilmBook/blob/master/Capturas/index.jpg?raw=true "Index")
+>Index
+
+![Registro](https://github.com/M-Francia/FilmBook/blob/master/Capturas/Registro.jpg?raw=true "Registro")
+>Registro
+
+
+![Timeline](https://github.com/M-Francia/FilmBook/blob/master/Capturas/Timeline_1.jpg?raw=true "Timeline")
+>Timeline
+
+
+![Ficha](https://github.com/M-Francia/FilmBook/blob/master/Capturas/Fichatecnica_1.jpg?raw=true "Ficha")
+>Ficha tecnica
+
+
+![Novedades](https://github.com/M-Francia/FilmBook/blob/master/Capturas/Novedades_1.jpg?raw=true "Novedades")
+>Novedades
+
+
+![Explorar](https://github.com/M-Francia/FilmBook/blob/master/Capturas/Explorar_1.jpg?raw=true "Explorar")
+>Explorar
+
+
+![Perfil](https://github.com/M-Francia/FilmBook/blob/master/Capturas/Perfil_1.jpg?raw=true "Perfil")
+>Perfil
+ 
+ No se añaden capturas de toda la navegación de cada entidad.
+
 ## Integrantes del equipo de desarrollo:	
 Mario Francia Rius
 m.francia@alumnos.urjc.es https://github.com/M-Francia
