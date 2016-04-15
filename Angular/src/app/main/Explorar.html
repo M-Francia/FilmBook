@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Explorar</title>
+    <meta charset="utf-8"></meta>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+    <link rel="shortcut icon" href="images/icons/favicon.ico">
+    <link rel="apple-touch-icon" href="images/icons/favicon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/icons/favicon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/icons/favicon-114x114.png">
+    <!--Loading bootstrap css-->
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700">
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oswald:400,700,300">
+    <link type="text/css" rel="stylesheet" href="./styles/jquery-ui-1.10.4.custom.min.css">
+    <link type="text/css" rel="stylesheet" href="./styles/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="./styles/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="./styles/animate.css">
+    <link type="text/css" rel="stylesheet" href="./styles/all.css">
+    <link type="text/css" rel="stylesheet" href="./styles/main.css">
+    <link type="text/css" rel="stylesheet" href="./styles/style-responsive.css">
+    <link type="text/css" rel="stylesheet" href="./styles/zabuto_calendar.min.css">
+    <link type="text/css" rel="stylesheet" href="./styles/pace.css">
+    <link type="text/css" rel="stylesheet" href="./styles/jquery.news-ticker.css">
+    <link type="text/css" rel="stylesheet" href="./styles/jplist-custom.css">
+</head>
+
+<body>
+    <!--Comienzo to top-->
+    <a id="totop" href="#"><i class="fa fa-angle-up"></i></a>
+    <!--Final TO TOP-->
+    <!--Comienzo TOPBAR-->
+    <div id="header-topbar-option-demo" class="page-header-topbar">
+        <nav id="topbar" role="navigation" style="margin-bottom: 0;" data-step="3" class="navbar navbar-default navbar-static-top">
+            <div class="navbar-header">
+                <a id="logo" href="timeline.html" class="navbar-brand"><span class="fa fa-rocket"></span><span class="logo-text">FilmBook</span><span style="display: none" class="logo-text-icon">µ</span></a></div>
+            <!--Topbar-->
+            <div class="topbar-main"><a id="menu-toggle" href="#" class="hidden-xs"><i class="fa fa-bars"></i></a>
+               <form id="topbar-search" action="" method="" class="hidden-sm hidden-xs">
+                    <div class="input-icon right text-white"><a href="#"><i class="fa fa-search"></i></a><input type="text" placeholder="Buscar aquí..." class="form-control text-white"/></div>
+                </form>
+                <ul class="nav navbar navbar-top-links navbar-right mbn">
+                    <li class="dropdown"><a data-hover="dropdown" href="#" class="dropdown-toggle"><i class="fa fa-bell fa-fw"></i><span class="badge badge-green">3</span></a>
+                    </li>
+                    <li class="dropdown topbar-user">
+                        <a data-hover="dropdown" class="dropdown-toggle"><img src="http://k32.kn3.net/taringa/7/4/2/A/F/C/enri2323/05F.jpg" alt="" class="img-responsive img-circle" />&nbsp;
+                            <span class="hidden-xs">Nazaret García</span>&nbsp;<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-user pull-right">
+                            <li><a href="Perfil.html"><i class="fa fa-user"></i>Mi Perfil</a></li>
+                            <li class="divider"></li>
+                            <li><a href="index.html"><i class="fa fa-key"></i>Cerrar sesión</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!--Final TOPBAR-->
+    <!--Comienzo menu lateral-->
+    <div id="wrapper">
+        <nav id="sidebar" role="navigation" data-step="2" data-intro="Template has &lt;b&gt;many navigation styles&lt;/b&gt;" data-position="right" class="navbar-default navbar-static-side">
+            <div class="sidebar-collapse menu-scroll">
+                <ul id="side-menu" class="nav">
+                    <div class="clearfix"></div>
+                    <li><a href="timeline.html"><i class="fa fa-th-list fa-fw">
+                        <div class="icon-bg bg-orange"></div>
+                    </i><span class="menu-title">Timeline</span></a>
+                    </li>
+                    <li>
+                        <a href="Fichatecnica.html"><i class="fa fa-film">
+                        <div class="icon-bg bg-pink"></div>
+                    </i><span class="menu-title">Ficha técnica</span></a>
+                        </li>
+                        <li><a href="Novedades.html"><i class="fa fa-send-o fa-fw">
+                        <div class="icon-bg bg-green"></div>
+                    </i><span class="menu-title">Novedades</span></a>
+                        </li>
+                        <li><li class="active"><a href="Explorar.html"><i class="fa fa-search">
+                        <div class="icon-bg bg-violet"></div>
+                    </i><span class="menu-title">Explorar</span></a>
+                        </li>
+                        <li><a href="Perfil.html"><i class="fa fa-user">
+                        <div class="icon-bg bg-blue"></div>
+                    </i><span class="menu-title">Perfil</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!--Comienzo página-->
+        <div id="page-wrapper">
+            <div id="title-breadcrumb-option-demo" class="page-title-breadcrumb">
+                <div class="page-header pull-left">
+                    <div class="page-title">
+                        Explorar</div>
+                </div>
+                <ol class="breadcrumb page-breadcrumb pull-right">
+                    <li><i class="fa fa-home"></i>&nbsp;<a href="index.html">Home</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
+                    <li class="active">Explorar</li>
+                </ol>
+                <div class="clearfix">
+                </div>
+            </div>
+            <!--Final barra del título-->
+            <!--Comienzo del contenido-->
+            <div class="page-content">
+                <div id="tab-general">
+                    <div class="row mbl">
+                        <div class="col-lg-12">
+                            <div class="col-md-12">
+                                <div id="area-chart-spline" style="width: 100%; height: 300px; display: none;">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="page-content">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="panel">
+                                            <div class="panel-body">
+                                                <div id="grid-layout-table-1" class="box jplist">
+                                                    <div class="jplist-ios-button"><i class="fa fa-sort"></i>Lista</div>
+                                                    <div class="jplist-panel box panel-top">
+                                                        <button type="button" data-control-type="reset" data-control-name="reset" data-control-action="reset" class="jplist-reset-btn btn btn-default">Resetear<i class="fa fa-share mls"></i></button>
+                                                        <div data-control-type="drop-down" data-control-name="paging" data-control-action="paging" class="jplist-drop-down form-control">
+                                                            <ul class="dropdown-menu">
+                                                                <li><span data-number="3"> 3 por página</span></li>
+                                                                <li><span data-number="5"> 5 por página</span></li>
+                                                                <li><span data-number="10" data-default="true"> 10 por página</span></li>
+                                                                <li><span data-number="all"> Ver todo </span></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div data-control-type="drop-down" data-control-name="sort" data-control-action="sort" data-datetime-format="{month}/{day}/{year}" class="jplist-drop-down form-control">
+                                                            <ul class="dropdown-menu">
+                                                                <li><span data-path="default">Ordenar por: </span></li>
+                                                                <li><span data-path=".title" data-order="asc" data-type="text" data-default="true">Título A-Z</span></li>
+                                                                <li><span data-path=".title" data-order="desc" data-type="text">Título Z-A</span></li>
+                                                                <li><span data-path=".desc" data-order="asc" data-type="text">Descripción A-Z</span></li>
+                                                                <li><span data-path=".desc" data-order="desc" data-type="text">Descripción Z-A</span></li>
+                                                                <li><span data-path=".date" data-order="asc" data-type="datetime">Fecha asc</span></li>
+                                                                <li><span data-path=".date" data-order="desc" data-type="datetime">Fecha desc</span></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="text-filter-box">
+                                                            <div class="input-group"><span class="input-group-addon"><i class="fa fa-search"></i></span>
+                                                                <input data-path=".title" type="text" value="" placeholder="Buscar por título" data-control-type="textbox" data-control-name="title-filter" data-control-action="filter" class="form-control" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="text-filter-box">
+                                                            <div class="input-group"><span class="input-group-addon"><i class="fa fa-search"></i></span>
+                                                                <input data-path=".desc" type="text" value="" placeholder="Buscar descrip." data-control-type="textbox" data-control-name="desc-filter" data-control-action="filter" class="form-control" />
+                                                            </div>
+                                                        </div>
+                                                        <div data-type="Página {current} de {pages}" data-control-type="pagination-info" data-control-name="paging" data-control-action="paging" class="jplist-label btn btn-default"></div>
+                                                        <div data-control-type="pagination" data-control-name="paging" data-control-action="paging" class="jplist-pagination"></div>
+                                                    </div>
+                                                    <div class="box text-shadow">
+                                                        <table class="demo-tbl">
+                                                            <!--<item1>-->
+                                                            <tr class="tbl-item">
+                                                                <!--<img/>-->
+                                                                <td class="img"><img src="images/explorar/star.jpg" alt="" title="" /></td>
+                                                                <!--<data>-->
+                                                                <td class="td-block">
+                                                                    <p class="date">12/18/2015</p>
+                                                                    <a href="#">
+                                                                        <p class="title">Star Wars VII</p>
+                                                                    </a>
+                                                                    <p class="desc"> El despertar de la Fuerza es una película estadounidense del género space opera. Estrenada en Estados Unidos el 18 de diciembre de 2015, está dirigida, coescrita y coproducida por J. J.</p>
+                                                                    <p class="like">120 Likes</p>
+                                                                </td>
+                                                            </tr>
+                                                            <!--<item2>-->
+                                                            <tr class="tbl-item">
+                                                                <!--<img/>-->
+                                                                <td class="img"><img src="images/explorar/angry.jpg" alt="" title="" /></td>
+                                                                <!--<data>-->
+                                                                <td class="td-block">
+                                                                    <p class="date">03/18/2016</p>
+                                                                    <a href="#">
+                                                                        <p class="title">Angry Birds: La película</p>
+                                                                    </a>
+                                                                    <p class="desc">The Angry Birds Movie es una próxima película finlandés-estadounidense en 3D de animación por computadora y comedia de acción dirigida por Clay Kaytis y Fergal Reilly, producida por John Cohen y Catherine Winder y escrita por Jon Vitti.</p>
+                                                                    <p class="like">25 Likes</p>
+                                                                </td>
+                                                            </tr>
+                                                            <!--<item3>-->
+                                                            <tr class="tbl-item">
+                                                                <!--<img/>-->
+                                                                <td class="img"><img src="images/explorar/altamira.jpg" alt="" title="" /></td>
+                                                                <!--<data>-->
+                                                                <td class="td-block">
+                                                                    <p class="date">04/01/2016</p>
+                                                                    <a href="#">
+                                                                        <p class="title">Altamira</p>
+                                                                    </a>
+                                                                    <p class="desc">Banderas interpretará el papel de Marcelino en Altamira, película dirigida por Hugh Hudson.</p>
+                                                                    <p class="like">10 Likes</p>
+                                                                </td>
+                                                            </tr>
+                                                            <!--<item4>-->
+                                                            <tr class="tbl-item">
+                                                                <!--<img/>-->
+                                                                <td class="img"><img src="images/explorar/hermanisimas.jpg" alt="" title="" /></td>
+                                                                <!--<data>-->
+                                                                <td class="td-block">
+                                                                    <p class="date">04/01/2016</p>
+                                                                    <a href="#">
+                                                                        <p class="title">Hermanísimas</p>
+                                                                    </a>
+                                                                    <p class="desc">Dos hermanas ya adultas deciden pasar un último fin de semana en la casa de su infancia antes de que sus padres la pongan a la venta, dirigida por Jason Moore.</p>
+                                                                    <p class="like">5 Likes</p>
+                                                                </td>
+                                                            </tr>
+                                                            <!--<item5>-->
+                                                            <tr class="tbl-item">
+                                                                <!--<img/>-->
+                                                                <td class="img"><img src="images/explorar/norman.jpg" alt="" title="" /></td>
+                                                                <!--<data>-->
+                                                                <td class="td-block">
+                                                                    <p class="date">04/01/2016</p>
+                                                                    <a href="#">
+                                                                        <p class="title">Norman del norte</p>
+                                                                    </a>
+                                                                    <p class="desc">Un oso polar encuentra refugio en una abandonada estación científica cuando se ve obligado a abandonar su hogar en el ártico como consecuencia del cambio climático, dirigida por Trevor Wall y guionizada por Jack Donaldson y Derek Elliott.</p>
+
+                                                                    <p class="like">20 Likes</p>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                    <div class="box jplist-no-results text-shadow align-center">
+                                                        <p>No se encuentran resultados</p>
+                                                    </div>
+                                                    <div class="jplist-ios-button"><i class="fa fa-sort"></i>Lista</div>
+                                                    <div class="jplist-panel box panel-bottom">
+                                                        <div data-control-type="drop-down" data-control-name="paging" data-control-action="paging" data-control-animate-to-top="true" class="jplist-drop-down form-control">
+                                                            <ul class="dropdown-menu">
+                                                                <li><span data-number="3"> 3 por página</span></li>
+                                                                <li><span data-number="5"> 5 por página </span></li>
+                                                                <li><span data-number="10" data-default="true"> 10 por página</span></li>
+                                                                <li><span data-number="all"> Ver todo</span></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div data-control-type="drop-down" data-control-name="sort" data-control-action="sort" data-control-animate-to-top="true" data-datetime-format="{month}/{day}/{year}" class="jplist-drop-down form-control">
+                                                            <ul class="dropdown-menu">
+                                                                <li><span data-path="default">Ordenar por: </span></li>
+                                                                <li><span data-path=".title" data-order="asc" data-type="text" data-default="true">Título A-Z</span></li>
+                                                                <li><span data-path=".title" data-order="desc" data-type="text">Título Z-A</span></li>
+                                                                <li><span data-path=".desc" data-order="asc" data-type="text">Descripción A-Z</span></li>
+                                                                <li><span data-path=".desc" data-order="desc" data-type="text">Descripción Z-A</span></li>
+                                                                <li><span data-path=".date" data-order="asc" data-type="datetime">Fecha asc</span></li>
+                                                                <li><span data-path=".date" data-order="desc" data-type="datetime">Fecha desc</span></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div data-type="{start} - {end} de {all}" data-control-type="pagination-info" data-control-name="paging" data-control-action="paging" class="jplist-label btn btn-default"></div>
+                                                        <div data-control-type="pagination" data-control-name="paging" data-control-action="paging" data-control-animate-to-top="true" class="jplist-pagination"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Final contenido-->
+            <!--Copyright-->
+            <div id="footer">
+                <div class="copyright">
+                    <a href="http://urjc.es">2016 © FilmBook Production</a></div>
+            </div>
+            <!--Fin footer-->
+        </div>
+        <!--Final página-->
+    </div>
+    <script src="script/jquery-1.10.2.min.js"></script>
+    <script src="script/jquery-migrate-1.2.1.min.js"></script>
+    <script src="script/jquery-ui.js"></script>
+    <script src="script/bootstrap.min.js"></script>
+    <script src="script/bootstrap-hover-dropdown.js"></script>
+    <script src="script/html5shiv.js"></script>
+    <script src="script/respond.min.js"></script>
+    <script src="script/jquery.metisMenu.js"></script>
+    <script src="script/jquery.slimscroll.js"></script>
+    <script src="script/jquery.cookie.js"></script>
+    <script src="script/icheck.min.js"></script>
+    <script src="script/custom.min.js"></script>
+    <script src="script/jquery.news-ticker.js"></script>
+    <script src="script/jquery.menu.js"></script>
+    <script src="script/pace.min.js"></script>
+    <script src="script/holder.js"></script>
+    <script src="script/responsive-tabs.js"></script>
+    <script src="script/jquery.flot.js"></script>
+    <script src="script/jquery.flot.categories.js"></script>
+    <script src="script/jquery.flot.pie.js"></script>
+    <script src="script/jquery.flot.tooltip.js"></script>
+    <script src="script/jquery.flot.resize.js"></script>
+    <script src="script/jquery.flot.fillbetween.js"></script>
+    <script src="script/jquery.flot.stack.js"></script>
+    <script src="script/jquery.flot.spline.js"></script>
+    <script src="script/zabuto_calendar.min.js"></script>
+    <script src="script/index.js"></script>
+    <script src="script/highcharts.js"></script>
+    <script src="script/data.js"></script>
+    <script src="script/drilldown.js"></script>
+    <script src="script/exporting.js"></script>
+    <script src="script/highcharts-more.js"></script>
+    <script src="script/charts-highchart-pie.js"></script>
+    <script src="script/charts-highchart-more.js"></script>
+    <script src="script/modernizr.min.js"></script>
+    <script src="script/jplist.min.js"></script>
+    <script src="script/jplist.js"></script>
+
+</body>
+
+</html>
