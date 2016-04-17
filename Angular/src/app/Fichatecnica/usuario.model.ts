@@ -3,5 +3,6 @@ export interface usuario{
   frase:string;
   seguidores:string;
   valoracion:string;
+  foto:URL;
 
 }

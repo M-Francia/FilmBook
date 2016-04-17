@@ -1,5 +1,5 @@
 import {comentario} from './comentario.model';
-export interface fichabeta{
+export interface fichatecnica{
     hashtag: string;
     puntuacion: string;
     like: number;

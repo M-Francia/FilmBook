@@ -160,72 +160,71 @@
                                                             <!--<item1>-->
                                                             <tr class="tbl-item">
                                                                 <!--<img/>-->
-                                                                <td class="img"><img src="images/explorar/star.jpg" alt="" title="" /></td>
+                                                                <td class="img"><img src="{{explorar.foto}}"/></td>
                                                                 <!--<data>-->
                                                                 <td class="td-block">
-                                                                    <p class="date">12/18/2015</p>
+                                                                    <p class="date">{{explorar.fecha}}</p>
                                                                     <a href="#">
-                                                                        <p class="title">Star Wars VII</p>
+                                                                        <p class="title" (click)="PASAR RUTA">{{explorar.pelicula}}</p>
                                                                     </a>
-                                                                    <p class="desc"> El despertar de la Fuerza es una película estadounidense del género space opera. Estrenada en Estados Unidos el 18 de diciembre de 2015, está dirigida, coescrita y coproducida por J. J.</p>
-                                                                    <p class="like">120 Likes</p>
+                                                                    <p class="desc">{{explorar.descripcion}}</p>
+                                                                    <p class="like">{{explorar.likes}}</p>
                                                                 </td>
                                                             </tr>
                                                             <!--<item2>-->
                                                             <tr class="tbl-item">
                                                                 <!--<img/>-->
-                                                                <td class="img"><img src="images/explorar/angry.jpg" alt="" title="" /></td>
+                                                                <td class="img"><img src="{{explorar.foto}}"/></td>
                                                                 <!--<data>-->
                                                                 <td class="td-block">
-                                                                    <p class="date">03/18/2016</p>
+                                                                    <p class="date">{{explorar.fecha}}</p>
                                                                     <a href="#">
-                                                                        <p class="title">Angry Birds: La película</p>
+                                                                        <p class="title">{{explorar.pelicula}}</p>
                                                                     </a>
-                                                                    <p class="desc">The Angry Birds Movie es una próxima película finlandés-estadounidense en 3D de animación por computadora y comedia de acción dirigida por Clay Kaytis y Fergal Reilly, producida por John Cohen y Catherine Winder y escrita por Jon Vitti.</p>
-                                                                    <p class="like">25 Likes</p>
+                                                                    <p class="desc">{{explorar.descripcion}}</p>
+                                                                    <p class="like">{{explorar.likes}}</p>
                                                                 </td>
                                                             </tr>
                                                             <!--<item3>-->
                                                             <tr class="tbl-item">
                                                                 <!--<img/>-->
-                                                                <td class="img"><img src="images/explorar/altamira.jpg" alt="" title="" /></td>
-                                                                <!--<data>-->
+                                                                <td class="img"><img src="{{explorar.foto}}"/></td>
                                                                 <td class="td-block">
-                                                                    <p class="date">04/01/2016</p>
+                                                                    <p class="date">{{explorar.fecha}}</p>
                                                                     <a href="#">
-                                                                        <p class="title">Altamira</p>
+                                                                        <p class="title">{{explorar.pelicula}}</p>
                                                                     </a>
-                                                                    <p class="desc">Banderas interpretará el papel de Marcelino en Altamira, película dirigida por Hugh Hudson.</p>
-                                                                    <p class="like">10 Likes</p>
+                                                                    <p class="desc">{{explorar.descripcion}}</p>
+                                                                    <p class="like">{{explorar.likes}}</p>
                                                                 </td>
                                                             </tr>
                                                             <!--<item4>-->
                                                             <tr class="tbl-item">
                                                                 <!--<img/>-->
-                                                                <td class="img"><img src="images/explorar/hermanisimas.jpg" alt="" title="" /></td>
+                                                                <td class="img"><img src="{{explorar.foto}}"/></td>
                                                                 <!--<data>-->
                                                                 <td class="td-block">
-                                                                    <p class="date">04/01/2016</p>
+                                                                    <p class="date">{{explorar.fecha}}</p>
                                                                     <a href="#">
-                                                                        <p class="title">Hermanísimas</p>
+                                                                        <p class="title">{{explorar.pelicula}}</p>
                                                                     </a>
-                                                                    <p class="desc">Dos hermanas ya adultas deciden pasar un último fin de semana en la casa de su infancia antes de que sus padres la pongan a la venta, dirigida por Jason Moore.</p>
-                                                                    <p class="like">5 Likes</p>
+                                                                    <p class="desc">{{explorar.descripcion}}</p>
+                                                                    <p class="like">{{explorar.likes}}</p>
                                                                 </td>
                                                             </tr>
                                                             <!--<item5>-->
                                                             <tr class="tbl-item">
                                                                 <!--<img/>-->
-                                                                <td class="img"><img src="images/explorar/norman.jpg" alt="" title="" /></td>
+                                                                <td class="img"><img src="{{explorar.foto}}"/></td>
                                                                 <!--<data>-->
                                                                 <td class="td-block">
-                                                                    <p class="date">04/01/2016</p>
+                                                                    <p class="date">{{explorar.fecha}}</p>
                                                                     <a href="#">
-                                                                        <p class="title">Norman del norte</p>
+                                                                        <p class="title">{{explorar.pelicula}}</p>
                                                                     </a>
-                                                                    <p class="desc">Un oso polar encuentra refugio en una abandonada estación científica cuando se ve obligado a abandonar su hogar en el ártico como consecuencia del cambio climático, dirigida por Trevor Wall y guionizada por Jack Donaldson y Derek Elliott.</p>
+                                                                    <p class="desc">{{explorar.descripcion}}</p>
 
-                                                                    <p class="like">20 Likes</p>
+                                                                    <p class="like">{{explorar.likes}}</p>
                                                                 </td>
                                                             </tr>
                                                         </table>
@@ -267,7 +266,7 @@
                     </div>
                 </div>
             </div>
-            <!--Final contenido-->
+                        <!--Final contenido-->
             <!--Copyright-->
             <div id="footer">
                 <div class="copyright">
