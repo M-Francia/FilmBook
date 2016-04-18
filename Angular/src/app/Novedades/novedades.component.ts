@@ -4,7 +4,7 @@ import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
 
 
 @Component({
-  selector: 'main',
+  selector: 'Novedades',
   templateUrl: 'app/Novedades.component.html',
   directives: [ROUTER_DIRECTIVES]
 })

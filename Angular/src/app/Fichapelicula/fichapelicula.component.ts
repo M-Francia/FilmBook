@@ -1,22 +1,22 @@
 import {Component,Input,Output,EventEmitter,View} from 'angular2/core';
 import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
-import {fichatecnica} from './fichatecnica.model';
+import {fichapelicula} from './fichapelicula.model';
 
 
 @Component({
-  selector: 'main',
-  templateUrl: 'app/fichatecnica.component.html',
+  selector: 'fichapelicula',
+  templateUrl: 'app/fichapelicula.component.html',
   directives: [ROUTER_DIRECTIVES]
 })
 @RouteConfig([
 
 ])
 
-export class FichaTecnicaComponent {
+export class FichaPeliculaComponent {
 @Input()
-private fichatecnica:fichatecnica;
+private fichapelicula:fichapelicula;
   like(){
-    this.fichatecnica.like=this.fichatecnica.like+1;
+    this.fichapelicula.like=this.fichapelicula.like+1;
   }
   enviar(){
 

@@ -5,7 +5,7 @@ import {explorar} from './explorar.model';
 
 
 @Component({
-  selector: 'main',
+  selector: 'explorar',
   templateUrl: 'app/Explorar.component.html',
   directives: [ROUTER_DIRECTIVES],
 })
@@ -13,5 +13,7 @@ import {explorar} from './explorar.model';
 
 ])
 export class ExplorarComponent {
+
+
 
 }

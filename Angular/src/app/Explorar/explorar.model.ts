@@ -1,5 +1,5 @@
-export interface explorar{
-  foto:URL;
+export class explorar{
+  foto:string;
   pelicula:string;
   descripcion:string;
   fecha:string;
