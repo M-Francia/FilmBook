@@ -1,0 +1,56 @@
+<div id="header-topbar-option-demo" class="page-header-topbar">
+        <nav id="topbar" role="navigation" style="margin-bottom: 0;" data-step="3" class="navbar navbar-default navbar-static-top">
+            <div class="navbar-header">
+                <a id="logo" href="timeline.html" class="navbar-brand"><span class="fa fa-rocket"></span><span class="logo-text">FilmBook</span><span style="display: none" class="logo-text-icon">µ</span></a></div>
+            <!--Topbar-->
+            <div class="topbar-main"><a id="menu-toggle" href="#" class="hidden-xs"><i class="fa fa-bars"></i></a>
+               <form id="topbar-search" action="" method="" class="hidden-sm hidden-xs">
+                    <div class="input-icon right text-white"><a href="#"><i class="fa fa-search"></i></a><input type="text" placeholder="Buscar aquí..." class="form-control text-white"/></div>
+                </form>
+                <ul class="nav navbar navbar-top-links navbar-right mbn">
+                    <li class="dropdown"><a data-hover="dropdown" href="#" class="dropdown-toggle"><i class="fa fa-bell fa-fw"></i><span class="badge badge-green">3</span></a>
+                    </li>
+                    <li>
+                       <a id="logeo" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="modal" data-target="#myModal">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+                    <h3 class="sesion"><b>Iniciar sesión</b></h3>
+                </div>
+                <div class="modal-body">
+                    <form>
+                       <div class="input-icon right">
+                        <i class="fa fa-user"></i>
+                        <input id="user" type="text" class="form-control" placeholder="Nombre de usuario" [(ngModel)]="usuario">
+                        </div>
+                    </form>
+                    <br>
+                    <form>
+                       <div class="input-icon right">
+                        <i class="fa fa-lock"></i>
+                        <input id="pass" type="password" class="form-control" placeholder="Contraseña" [(ngModel)]="contraseña">
+                        </div>
+                    </form>
+                    <br>
+                    <button type="button" id="login" (click)="log()">Aceptar</button>&nbsp;&nbsp;&nbsp;
+                    <label class="record"><input type="checkbox">  Recordarme</label>
+                    <hr>
+                    <div class="reg">
+                        <span>
+                        No tengo una cuenta. Registrate aquí:
+                        </span>
+                        <br>
+                        <br>
+                        <a type="button" class="btn btn-info" href="Registro.html">Registrarme</a>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>

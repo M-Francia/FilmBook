@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>FilmBook | TimeLine</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/icons/favicon.ico">
+    <link rel="apple-touch-icon" href="images/icons/favicon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/icons/favicon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/icons/favicon-114x114.png">
+    <!--Loading bootstrap css-->
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700">
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oswald:400,700,300">
+    <link type="text/css" rel="stylesheet" href="styles/jquery-ui-1.10.4.custom.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/animate.css">
+    <link type="text/css" rel="stylesheet" href="styles/all.css">
+    <link type="text/css" rel="stylesheet" href="styles/main.css">
+    <link type="text/css" rel="stylesheet" href="styles/style-responsive.css">
+    <link type="text/css" rel="stylesheet" href="styles/zabuto_calendar.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/pace.css">
+    <link type="text/css" rel="stylesheet" href="styles/jquery.news-ticker.css">
+</head>
+<body>
+    <div>
+        <!--BEGIN THEME SETTING-->
+        <!--END THEME SETTING-->
+        <!--BEGIN BACK TO TOP-->
+        <a id="totop" href="#"><i class="fa fa-angle-up"></i></a>
+        <!--END BACK TO TOP-->
+        <!--BEGIN TOPBAR-->
+        <div id="header-topbar-option-demo" class="page-header-topbar">
+            <nav id="topbar" role="navigation" style="margin-bottom: 0;" data-step="3" class="navbar navbar-default navbar-static-top">
+            <div class="navbar-header">
+                <a id="logo" href="timeline.html" class="navbar-brand"><span class="fa fa-rocket"></span><span class="logo-text">FilmBook</span><span style="display: none" class="logo-text-icon">µ</span></a></div>
+            <div class="topbar-main"><a id="menu-toggle" href="#" class="hidden-xs"><i class="fa fa-bars"></i></a>
+
+                <form id="topbar-search" action="" method="" class="hidden-sm hidden-xs">
+                    <div class="input-icon right text-white"><a href="#"><i class="fa fa-search"></i></a><input type="text" placeholder="Buscar aquí..." class="form-control text-white"/></div>
+                </form>
+                <ul class="nav navbar navbar-top-links navbar-right mbn">
+                    <li class="dropdown"><a data-hover="dropdown" href="#" class="dropdown-toggle"><i class="fa fa-bell fa-fw"></i><span class="badge badge-green">3</span></a>
+                    <li class="dropdown topbar-user"><a data-hover="dropdown" href="#" class="dropdown-toggle"><img src="images/avatar/48.jpg" alt="" class="img-responsive img-circle"/>&nbsp;<span class="hidden-xs">Mario Francia</span>&nbsp;<span class="caret"></span></a>
+                        <ul class="dropdown-menu dropdown-user pull-right">
+                            <li><a href="Perfil.html"><i class="fa fa-user"></i>Mi perfil</a></li>
+                            <li><a href="index.html"><i class="fa fa-key"></i>Cerrar sesión</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        </div>
+        <!--END TOPBAR-->
+        <div id="wrapper">
+            <!--BEGIN SIDEBAR MENU-->
+            <nav id="sidebar" role="navigation" data-step="2" data-intro="Template has &lt;b&gt;many navigation styles&lt;/b&gt;"
+                data-position="right" class="navbar-default navbar-static-side">
+            <ul id="side-menu" class="nav">
+                    <div class="clearfix"></div>
+                    <li class="active"><a href="timeline.html"><i class="fa fa-th-list fa-fw">
+                        <div class="icon-bg bg-orange"></div>
+                    </i><span class="menu-title">Timeline</span></a>
+                    </li>
+                    <li>
+                        <li ><a href="Fichatecnica.html"><i class="fa fa-film">
+                        <div class="icon-bg bg-pink"></div>
+                    </i><span class="menu-title">Ficha técnica</span></a>
+                        </li>
+                        <li><a href="Novedades.html"><i class="fa fa-send-o fa-fw">
+                        <div class="icon-bg bg-green"></div>
+                    </i><span class="menu-title">Novedades</span></a>
+                        </li>
+                        <li><a href="Explorar.html"><i class="fa fa-search">
+                        <div class="icon-bg bg-violet"></div>
+                    </i><span class="menu-title">Explorar</span></a>
+                        </li>
+                        <li><a href="Perfil.html"><i class="fa fa-user">
+                        <div class="icon-bg bg-blue"></div>
+                    </i><span class="menu-title">Perfil</span></a>
+                    </li>
+                </ul>
+        </nav>
+            <!--END SIDEBAR MENU-->
+            <!--BEGIN PAGE WRAPPER-->
+            <div id="page-wrapper">
+                <!--BEGIN TITLE & BREADCRUMB PAGE-->
+                <div id="title-breadcrumb-option-demo" class="page-title-breadcrumb">
+                    <div class="page-header pull-left">
+                        <div class="page-title">
+                            Perfil</div>
+                    </div>
+                    <ol class="breadcrumb page-breadcrumb pull-right">
+                        <li><i class="fa fa-home"></i>&nbsp;<a href="dashboard.html">Home</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
+                        <li class="hidden"><a href="#">Perfil</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
+                        <li class="active">Perfil</li>
+                    </ol>
+                    <div class="clearfix">
+                    </div>
+                </div>
+                <!--END TITLE & BREADCRUMB PAGE-->
+                <!--BEGIN CONTENT-->
+                <div class="page-content">
+                    <div id="tab-general">
+                        <div class="row mbl">
+	                        <div class="col-lg-8 col-md-8">
+	                        	<div class="portlet box">
+                                    <div class="portlet-body">
+                                    	<div class="row">
+	                                    	<div class="col-lg-3 col-md-3">
+	                                    		<img src={{usuario.foto}} width="150" height="150">
+	                                    	</div>
+	                                    	<div class="col-lg-9">
+	                                    		<h2 class="box-heading">{{usuario.nombre}}</h2>
+	                                    		<div class="row">
+	                                    			<div class="col-lg-12">
+	                                    				<h5 class="box-heading">{{usuario.frase}}</h5>
+                                                        <h1 class="box-heading">{{usuario.seguidores}}k</h1>
+                                                     </div>
+                                                </div>
+	                                    	</div>
+		                                    </div>
+                                    	</div>
+                                    	<div class="form-actions text-right pal">
+                                            <button  type="submit" class="btn btn-green" (click)="follow()">FOLLOW</button>
+                                        </div>
+                                    </div>
+	                             </div>
+	                             <div class="col-lg-4">
+	                             	<div class="panel panel-yellow">
+		                             	<div class="panel-heading"><h2 align="center" class="box-heading">LEVEL</h2></div>
+		                             	<div class="panel-body pan">
+		                             		<h1 align="center" class="box-heading">{{usuario.valoracion}}/10</h1>
+		                             		<select class="form-control">
+                                            	<option>1</option>
+                                            	<option>2</option>
+                                            	<option>3</option>
+                                            	<option>4</option>
+                                            	<option>5</option>
+                                            	<option>6</option>
+                                            	<option>7</option>
+                                            </select>
+		                             	</div>
+	                             	</div>
+	                             </div>
+	                        </div>
+                        </div>
+                        // A PARTIR DE AQUI SE SUPONE QUE SE CARGARIA CON LA PARTE DE FICHATECNICA
+                        <div class="panel panel-red">
+	                        <div class="panel-heading">
+	                            <div class="caption">
+	                                <h1 class="box-heading">Recomiendo: #HatefulEight</h1>
+	                            </div>
+	                        </div>
+	                        <div class="panel-body">
+	                        	<div class="row mbl">
+	                            	<div class="col-lg-5 col-md-5">
+	                                	<iframe width="360" height="203" src="https://www.youtube.com/embed/gnRbXn4-Yis?autoplay=1&amp;loop=1&amp;rel=0&amp;showinfo=0" frameborder="0" allowfullscreen=""></iframe>
+	                                	<h5>Etiquetas:</h5>
+	                                	<span class="badge badge-red">Western</span>
+	                                	<span class="badge badge-dark">Comedia negra</span>
+	                                	<span class="badge badge-grey">Intriga</span>
+	                                	<span class="badge badge-yellow">Siglo XIX</span>
+	                            	</div>
+	                            	<div class="col-lg-7">
+                                        <div class="note note-success"><h5 class="box-heading">Lo bueno: </h5>
+                                        <p>Hacia mucho tiempo que no veia una pelicula así</p></div>
+                                        <div class="note note-danger"><h5 class="box-heading">Lo malo: </h5>
+	                                            <p>La podrian haber acotado un poco</p></div>
+	                                    <div class="rating">
+                                            <label for="quality-5">
+                                                  <i class="fa fa-star"></i>
+                                            </label>
+                                            <label for="quality-4">
+                                                <i class="fa fa-star"></i>
+                                            </label>
+                                            <label for="quality-3">
+                                                <i class="fa fa-star"></i>
+                                            </label>
+                                            <label for="quality-2">
+                                                <i class="fa fa-star text-yellow"></i>
+                                            </label>
+                                            <label for="quality-1">
+                                                <i class="fa fa-star text-yellow"></i>
+                                            </label>
+                                            Mario la valora con:
+                                        </div>
+	                                </div>
+	                        	</div>
+	                        </div>
+	                     </div>
+                        <div class="row mbl">
+	                        <div class="col-lg-12">
+		                        <div class="panel panel-green">
+		                                <div class="panel-heading">
+			                                <div class="row">
+			                                <div class="col-lg-8"> <h1 class="box-heading">Lista: Top 10</h1></div>
+			                                <div class="col-lg-4"><h1 class="box-heading">500 Seguidores</h1></div>
+			                                </div>
+		                                </div>
+		                                   <div class="row text-center divider">
+		                                <div class="panel-body">
+		                                        <div class="col-lg-3 col-sm-6 col-md-3">
+		                                           <div class="caption"><h4>Angry birds</h4>
+		                                            <div class="thumbnail"><img src="images/novedades/angry.jpg" heidth="100" width="150">
+		                                            </div>
+		                                            <p><a href="Fichatecnica.html" role="button" class="btn btn-primary">Ir a su ficha técnica</a>&nbsp;</p>
+		                                            </div>
+		                                        </div>
+		                                        <div class="col-lg-3 col-sm-6 col-md-3">
+		                                            <div class="caption"><h4>Altamira</h4>
+		                                            <div class="thumbnail"><img src="images/novedades/altamira.jpg" heidth="100" width="150">
+		                                            </div>
+		                                            <p><a href="Fichatecnica.html" role="button" class="btn btn-primary">Ir a su ficha técnica</a>&nbsp;</p>
+		                                            </div>
+		                                        </div>
+		                                        <div class="col-lg-3 col-sm-6 col-md-3">
+		                                            <div class="caption"><h4>Eddie</h4>
+		                                            <div class="thumbnail"><img src="images/novedades/eddie.jpg" heidth="100" width="150">
+		                                            </div>
+		                                            <p><a href="Fichatecnica.html" role="button" class="btn btn-primary">Ir a su ficha técnica</a>&nbsp;</p>
+		                                            </div>
+		                                        </div>
+		                                        <div class="col-lg-3 col-sm-6 col-md-3">
+		                                            <div class="caption"><h4>Julieta</h4>
+		                                            <div class="thumbnail"><img src="images/novedades/julieta.jpg" heidth="100" width="150">
+		                                            </div>
+		                                            <p><a href="Fichatecnica.html" role="button" class="btn btn-primary">Ir a su ficha técnica</a>&nbsp;</p>
+		                                            </div>
+		                                        </div>
+		                                  </div>
+		                                </div>
+		                            </div>
+		                    </div>
+                        </div>
+                    </div>
+                </div>
+                <!--END CONTENT-->
+                <!--BEGIN FOOTER-->
+                <div id="footer">
+                    <div class="copyright">
+                        <a href="http://themifycloud.com">2016 © FilmBook</a></div>
+                </div>
+                <!--END FOOTER-->
+            </div>
+            <!--END PAGE WRAPPER-->
+        </div>
+    </div>
+    <script src="script/jquery-1.10.2.min.js"></script>
+    <script src="script/jquery-migrate-1.2.1.min.js"></script>
+    <script src="script/jquery-ui.js"></script>
+    <script src="script/bootstrap.min.js"></script>
+    <script src="script/bootstrap-hover-dropdown.js"></script>
+    <script src="script/html5shiv.js"></script>
+    <script src="script/respond.min.js"></script>
+    <script src="script/jquery.metisMenu.js"></script>
+    <script src="script/jquery.slimscroll.js"></script>
+    <script src="script/jquery.cookie.js"></script>
+    <script src="script/icheck.min.js"></script>
+    <script src="script/custom.min.js"></script>
+    <script src="script/jquery.news-ticker.js"></script>
+    <script src="script/jquery.menu.js"></script>
+    <script src="script/pace.min.js"></script>
+    <script src="script/holder.js"></script>
+    <script src="script/responsive-tabs.js"></script>
+    <script src="script/jquery.flot.js"></script>
+    <script src="script/jquery.flot.categories.js"></script>
+    <script src="script/jquery.flot.pie.js"></script>
+    <script src="script/jquery.flot.tooltip.js"></script>
+    <script src="script/jquery.flot.resize.js"></script>
+    <script src="script/jquery.flot.fillbetween.js"></script>
+    <script src="script/jquery.flot.stack.js"></script>
+    <script src="script/jquery.flot.spline.js"></script>
+    <script src="script/zabuto_calendar.min.js"></script>
+    <script src="script/index.js"></script>
+    <!--LOADING SCRIPTS FOR CHARTS-->
+    <script src="script/highcharts.js"></script>
+    <script src="script/data.js"></script>
+    <script src="script/drilldown.js"></script>
+    <script src="script/exporting.js"></script>
+    <script src="script/highcharts-more.js"></script>
+    <script src="script/charts-highchart-pie.js"></script>
+    <script src="script/charts-highchart-more.js"></script>
+    <!--CORE JAVASCRIPT-->
+    <script src="script/main.js"></script>
+</body>
+</html>
