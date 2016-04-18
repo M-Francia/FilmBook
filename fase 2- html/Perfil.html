@@ -36,7 +36,7 @@
             <div class="navbar-header">
                 <a id="logo" href="timeline.html" class="navbar-brand"><span class="fa fa-rocket"></span><span class="logo-text">FilmBook</span><span style="display: none" class="logo-text-icon">µ</span></a></div>
             <div class="topbar-main"><a id="menu-toggle" href="#" class="hidden-xs"><i class="fa fa-bars"></i></a>
-
+                
                 <form id="topbar-search" action="" method="" class="hidden-sm hidden-xs">
                     <div class="input-icon right text-white"><a href="#"><i class="fa fa-search"></i></a><input type="text" placeholder="Buscar aquí..." class="form-control text-white"/></div>
                 </form>
@@ -44,7 +44,7 @@
                     <li class="dropdown"><a data-hover="dropdown" href="#" class="dropdown-toggle"><i class="fa fa-bell fa-fw"></i><span class="badge badge-green">3</span></a>
                     <li class="dropdown topbar-user"><a data-hover="dropdown" href="#" class="dropdown-toggle"><img src="images/avatar/48.jpg" alt="" class="img-responsive img-circle"/>&nbsp;<span class="hidden-xs">Mario Francia</span>&nbsp;<span class="caret"></span></a>
                         <ul class="dropdown-menu dropdown-user pull-right">
-                            <li><a href="Perfil.html"><i class="fa fa-user"></i>Mi perfil</a></li>
+                            <li><a href="editarperfil.html"><i class="fa fa-user"></i>Editar perfil</a></li>
                             <li><a href="index.html"><i class="fa fa-key"></i>Cerrar sesión</a></li>
                         </ul>
                     </li>
@@ -59,15 +59,15 @@
                 data-position="right" class="navbar-default navbar-static-side">
             <ul id="side-menu" class="nav">
                     <div class="clearfix"></div>
-                    <li class="active"><a href="timeline.html"><i class="fa fa-th-list fa-fw">
+                    <li ><a href="timeline.html"><i class="fa fa-th-list fa-fw">
                         <div class="icon-bg bg-orange"></div>
                     </i><span class="menu-title">Timeline</span></a>
                     </li>
                     <li>
-                        <li ><a href="Fichatecnica.html"><i class="fa fa-film">
-                        <div class="icon-bg bg-pink"></div>
-                    </i><span class="menu-title">Ficha técnica</span></a>
-                        </li>
+                        <li class="active"><a href="Perfil.html"><i class="fa fa-user">
+                        <div class="icon-bg bg-blue"></div>
+                    </i><span class="menu-title">Mi Perfil</span></a>
+                    </li>
                         <li><a href="Novedades.html"><i class="fa fa-send-o fa-fw">
                         <div class="icon-bg bg-green"></div>
                     </i><span class="menu-title">Novedades</span></a>
@@ -76,10 +76,6 @@
                         <div class="icon-bg bg-violet"></div>
                     </i><span class="menu-title">Explorar</span></a>
                         </li>
-                        <li><a href="Perfil.html"><i class="fa fa-user">
-                        <div class="icon-bg bg-blue"></div>
-                    </i><span class="menu-title">Perfil</span></a>
-                    </li>
                 </ul>
         </nav>
             <!--END SIDEBAR MENU-->
@@ -116,7 +112,7 @@
 	                                    		<div class="row">
 	                                    			<div class="col-lg-12">
 	                                    				<h5 class="box-heading">La vida es lo mejor La vida es lo mejor La vida es lo mejor La vida es lo mejor</h5>
-                                                        <h1 class="box-heading">16k</h1>
+                                                        <h1 class="box-heading">16k followes</h1>
                                                      </div>
                                                 </div>
 	                                    	</div>
@@ -129,18 +125,23 @@
 	                             </div>
 	                             <div class="col-lg-4">
 	                             	<div class="panel panel-yellow">
-		                             	<div class="panel-heading"><h2 align="center" class="box-heading">LEVEL</h2></div>
+		                             	<div class="panel-heading"><h2 align="center" class="box-heading">REPUTACIÓN</h2></div>
 		                             	<div class="panel-body pan">
 		                             		<h1 align="center" class="box-heading">8,1/10</h1>
-		                             		<select class="form-control">
-                                            	<option>1</option>
-                                            	<option>2</option>
-                                            	<option>3</option>
-                                            	<option>4</option>
-                                            	<option>5</option>
-                                            	<option>6</option>
-                                            	<option>7</option>
-                                            </select>
+                                            <div class="row mbl">
+                                                <div class="col-lg-offset-1 col-lg-10">
+                                                    <h5 class="box-heading">Votar</h5>
+                                                    <select class="form-control">
+                                                        <option>1</option>
+                                                        <option>2</option>
+                                                        <option>3</option>
+                                                        <option>4</option>
+                                                        <option>5</option>
+                                                        <option>6</option>
+                                                        <option>7</option>
+                                                    </select>
+                                                </div>
+                                            </div>
 		                             	</div>
 	                             	</div>
 	                             </div>
@@ -149,7 +150,7 @@
                         <div class="panel panel-red">
 	                        <div class="panel-heading">
 	                            <div class="caption">
-	                                <h1 class="box-heading">Recomiendo: #HatefulEight</h1>
+	                                <a href="fichapelicula.html"><h1 class="box-heading">Recomiendo: #HatefulEight</h1></a>
 	                            </div>
 	                        </div>
 	                        <div class="panel-body">
@@ -197,9 +198,10 @@
 			                                <div class="col-lg-8"> <h1 class="box-heading">Lista: Top 10</h1></div>
 			                                <div class="col-lg-4"><h1 class="box-heading">500 Seguidores</h1></div>
 			                                </div>
-		                                </div>
+		                                </div>                   
 		                                   <div class="row text-center divider">
 		                                <div class="panel-body">
+                                            <div class="row">
 		                                        <div class="col-lg-3 col-sm-6 col-md-3">
 		                                           <div class="caption"><h4>Angry birds</h4>
 		                                            <div class="thumbnail"><img src="images/novedades/angry.jpg" heidth="100" width="150">
@@ -228,10 +230,62 @@
 		                                            <p><a href="Fichatecnica.html" role="button" class="btn btn-primary">Ir a su ficha técnica</a>&nbsp;</p>
 		                                            </div>
 		                                        </div>
+                                                </div>
+                                                <br>
+                                                <div class="row">
+                                                    <div class="col-lg-3">Valoración:   <i class="fa fa-star text-yellow fa-fw"></i><i class="fa fa-star text-yellow fa-fw"></i><i class="fa fa-star text-yellow fa-fw"></i><i class="fa fa-star text-yellow fa-fw"></i><i class="fa fa-star fa-fw"></i></div>
+                                                    <div class="col-lg-2">Votaciones: 14k5</div>
+                                                    <div class="col-lg-7">Etiquetas: <span class="badge badge-dark">Comedia negra</span>
+                                                                    <span class="badge badge-grey">Intriga</span>
+                                                                    <span class="badge badge-yellow">Siglo XIX</span></div>
+                                                </div>
 		                                  </div>
 		                                </div>
-		                            </div>
+                                        <div class="panel-footer">
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <div class="col-lg-4">
+                                                        <h5 class="box-heading" align="center">Votar</h5>
+                                                    <select class="form-control">
+                                                        <option>1</option>
+                                                        <option>2</option>
+                                                        <option>3</option>
+                                                        <option>4</option>
+                                                        <option>5</option>
+                                                        <option>6</option>
+                                                        <option>7</option>
+                                                    </select>
+                                                    </div>
+                                                    <div class="col-lg-offset-4 col-lg-4">
+                                                    <h5 class="box-heading" align="center">Sigue la lista</h5>
+                                                        <button type="submit" class="btn btn-primary btn-block">
+                                                                Seguir</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+		                          </div>
 		                    </div>
+                        </div> <!--row-->
+                        <div class="row mbl">
+                            <div class="col-lg-12">
+                                <div class="panel panel-grey">
+                                        <div class="panel-heading">
+                                            <div class="row">
+                                            <div class="col-lg-8"> <h3 class="box-heading">Otras listas</h3></div>
+                                            </div> 
+                                        </div>
+                                        <div class="panel-body">
+                                        	<div class="list-group"><a href="#" class="list-group-item active"><h4 class="list-group-item-heading">List group item heading</h4>
+
+                                            <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p></a><a href="#" class="list-group-item"><h4 class="list-group-item-heading">List group item heading</h4>
+
+                                            <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p></a><a href="#" class="list-group-item"><h4 class="list-group-item-heading">List group item heading</h4>
+
+                                            <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p></a></div>
+                                        </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
