@@ -4,13 +4,10 @@ import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
 
 
 @Component({
-  selector: 'Novedades',
-  templateUrl: 'app/Novedades.component.html',
-  directives: [ROUTER_DIRECTIVES]
+  selector: 'novedades',
+  templateUrl: 'app/Novedades/Novedades.component.html'
 })
-@RouteConfig([
 
-])
 export class NovedadesComponent {
 
 

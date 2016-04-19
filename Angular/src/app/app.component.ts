@@ -17,11 +17,10 @@ import {PerfilComponent} from './Perfil/perfil.component.ts';
         NovedadesComponent,PerfilComponent,TimelineComponent,ROUTER_DIRECTIVES]
 })
 @RouteConfig([
-    {path:'/fichapelicula', name:'Fichapelicula',component:FichaPeliculaComponent,useAsDefault:true},
-    {path:'/novedades', name:'Novedades', component:NovedadesComponent},
-    {path:'/timeline', name:'Timeline', component:TimelineComponent},
-    {path:'/explorar', name:'Explorar', component:ExplorarComponent},
-    {path:'/perfil', name:'Perfil', component:PerfilComponent},
+    {path: '/novedades', name: 'Novedades', component:NovedadesComponent},
+    {path: '/timeline', name: 'Timeline', component:TimelineComponent,useAsDefault:true},
+    {path: '/explorar', name: 'Explorar', component:ExplorarComponent},
+    {path: '/perfil', name: 'Perfil', component:PerfilComponent},
 ])
 
 export class AppComponent {

@@ -6,12 +6,9 @@ import {usuario} from '../Fichapelicula/usuario.model';
 
 @Component({
   selector: 'perfil',
-  templateUrl: 'app/Perfil.component.html',
-  directives: [ROUTER_DIRECTIVES]
+  templateUrl: 'app/Perfil/Perfil.component.html',
 })
-@RouteConfig([
 
-])
 export class PerfilComponent {
 @Input()
   private perfil:usuario;

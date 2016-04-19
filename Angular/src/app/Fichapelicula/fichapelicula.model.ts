@@ -13,6 +13,5 @@ export class fichapelicula{
     comentario: comentario[];
     bso: string;
     nombrebso:string;
-    categoria:string;
 
 }

@@ -5,12 +5,8 @@ import {fichapelicula} from './fichapelicula.model';
 
 @Component({
   selector: 'fichapelicula',
-  templateUrl: 'app/fichapelicula.component.html',
-  directives: [ROUTER_DIRECTIVES]
+  templateUrl: 'app/Fichapelicula/fichapelicula.component.html',
 })
-@RouteConfig([
-
-])
 
 export class FichaPeliculaComponent {
 @Input()

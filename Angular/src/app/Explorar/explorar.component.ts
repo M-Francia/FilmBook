@@ -6,12 +6,9 @@ import {explorar} from './explorar.model';
 
 @Component({
   selector: 'explorar',
-  templateUrl: 'app/Explorar.component.html',
-  directives: [ROUTER_DIRECTIVES],
+  templateUrl: 'app/Explorar/Explorar.component.html'
 })
-@RouteConfig([
 
-])
 export class ExplorarComponent {
 
 
