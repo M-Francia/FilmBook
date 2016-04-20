@@ -23,10 +23,10 @@
                         <div class="panel-body">
                             <h4 class="value">
                                 <span data-counter="" data-start="10" data-end="50" data-step="1" data-duration="0">
-                                </span><span class="label label-red">#BradPitt</span></h4>
+                                </span><span class="label label-orange">{{fichapeliculaUno.hashtag}}</span></h4>
                                 <br>
                             <p class="description">
-                                New film</p>
+                                {{fichapeliculaUno.descripcion}}</p>
                         </div>
                     </div>
                 </div>
@@ -35,10 +35,10 @@
                         <div class="panel-body">
                             <h4 class="value">
                                 <span data-counter="" data-start="10" data-end="50" data-step="1" data-duration="0">
-                                </span><span class="label label-orange">#Quentin</span></h4>
+                                </span><span class="label label-orange">{{fichapeliculaDos.hashtag}}</span></h4>
                                 <br>
                             <p class="description">
-                                Spotlight no merecía el oscar</p>
+                                {{fichapeliculaDos.hashtag}}</p>
                         </div>
                     </div>
                 </div>
@@ -47,10 +47,10 @@
                         <div class="panel-body">
                             <h4 class="value">
                                 <span data-counter="" data-start="10" data-end="50" data-step="1" data-duration="0">
-                                </span><span class="label label-green">#BlackMirror</span></h4>
+                                </span><span class="label label-green">{{fichapeliculaTres.hashtag}}</span></h4>
                                 <br>
                             <p class="description">
-                                White christmas</p>
+                                {{fichapeliculaTres.hashtag}}</p>
                         </div>
                     </div>
                 </div>
@@ -59,10 +59,10 @@
                         <div class="panel-body">
                             <h4 class="value">
                                 <span data-counter="" data-start="10" data-end="50" data-step="1" data-duration="0">
-                                </span><span class="label label-grey">#HouseOfCa</span></h4>
+                                </span><span class="label label-grey">{{fichapeliculaCuatro.hashtag}}</span></h4>
                                 <br>
                             <p class="description">
-                                Nuevo capitulo</p>
+                                {{fichapeliculaCuatro.hashtag}}</p>
                         </div>
                     </div>
                 </div>
@@ -72,23 +72,20 @@
                 <div class="portlet box">
                         <div class="portlet-header">
                             <div class="caption">
-                                <a href="fichapelicula.html"><h1>#HatefulEight</h1></a></div>
+                                <a href="fichapelicula.html"><h1>{{fichapeliculaCinco.hashtag}}</h1></a></div>
                         </div>
                         <div class="portlet-body">
                           <div class="row mbl">
                             <div class="col-lg-5 col-md-5">
-                              <iframe width="360" height="203" src="https://www.youtube.com/embed/gnRbXn4-Yis?autoplay=1&loop=1&rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+                              <iframe width="360" height="203" src="{{fichapeliculaCinco.trailer}}" frameborder="0" allowfullscreen></iframe>
                               <h5>Etiquetas:</h5>
-                              <span class="badge badge-red">Western</span>
-                              <span class="badge badge-dark">Comedia negra</span>
-                              <span class="badge badge-grey">Intriga</span>
-                              <span class="badge badge-yellow">Siglo XIX</span>
-                            </div>
+                              <span *ngFor="#etiqueta of fichapeliculaCinco.etiqueta" class="badge badge-red">{{etiqueta}}</span>
+                              </div>
                             <div class="col-lg-7">
-                                <div class="note note-danger"><h5 class="box-heading">"La película límite, contradictoria y extremadamente virtuosa de un director condenado a ser siempre él mismo. (...) una exhibición tan florida como irrenunciable; tan cargante como hipnótica (...) Tarantino más 'tarantinizado' que nunca."</h5>
-                                    <p>Luis Martínez: Diario El Mundo</p></div>
-                                    <div class="note note-success"><h5 class="box-heading">Sobredosis de Tarantino. Bendito banquete para unos, empacho casi letal para los otros. (...)</h5>
-                                    <p>Diario La Vanguardia</p></div>
+                                <div class="note note-danger"><h5 class="box-heading">{{fichapeliculaCinco.vnegativa}}</h5>
+                                    <p>{{fichapeliculaCinco.vnegautor}}</p></div>
+                                    <div class="note note-success"><h5 class="box-heading">{{fichapeliculaCinco.vpositiva}}</h5>
+                                    <p>{{{fichapeliculaCinco.vpostautor}}}</p></div>
                               </div>
                           </div>
                         </div>
@@ -136,7 +133,7 @@
                     <div class="portlet box">
                         <div class="portlet-header">
                             <div class="caption">
-                                #BradPitt</div>
+                                {{fichapeliculaUno.hashtag}}</div>
                         </div>
                         <div class="portlet-body">
                             <div class="chat-scroller">
@@ -144,27 +141,26 @@
                                     <li class="in">
                                         <img src="images/avatar/48.jpg" class="avatar img-responsive" />
                                         <div class="message">
-                                            <span class="chat-arrow"></span><a href="#" class="chat-name">PacoPolo</a>&nbsp;<span
-                                                class="chat-datetime"> Julio 06, 2014 17:06</span><span class="chat-body">Me encanta como actua este tío
-                                                espero que en la nueva película con Angelina salga igual</span></div>
+                                            <span class="chat-arrow"></span><a href="#" class="chat-name">{{comentarioUno.usuario.nombre}}</a>&nbsp;<span
+                                                class="chat-datetime">{{comentarioUno.fecha}}</span><span class="chat-body">{{comentarioUno.texto}}</span></div>
                                     </li>
                                     <li class="out">
                                         <img src="images/avatar/48.jpg" class="avatar img-responsive" />
                                         <div class="message">
-                                            <span class="chat-arrow"></span><a href="#" class="chat-name">PacoPolo</a>&nbsp;<span
-                                                class="chat-datetime"> Julio 06, 2014 18:06</span><span class="chat-body">Una película con Angelina, aqui va a haber magreo</span></div>
+                                            <span class="chat-arrow"></span><a href="#" class="chat-name">{{comentarioUno.usuario.nombre}}</a>&nbsp;<span
+                                                class="chat-datetime">{{comentarioUno.fecha}}</span><span class="chat-body">{{comentarioUno.texto}}</span></div>
                                     </li>
                                     <li class="in">
                                         <img src="images/avatar/48.jpg" class="avatar img-responsive" />
                                         <div class="message">
-                                            <span class="chat-arrow"></span><a href="#" class="chat-name">PacoPolo</a>&nbsp;<span
-                                                class="chat-datetime"> Julio 06, 2014 17:06</span><span class="chat-body">50.000$ se ha llevado por día de trabajo</span></div>
+                                            <span class="chat-arrow"></span><a href="#" class="chat-name">{{comentarioUno.usuario.nombre}}</a>&nbsp;<span
+                                                class="chat-datetime">{{comentarioUno.fecha}}</span><span class="chat-body">{{comentarioUno.texto}}</span></div>
                                     </li>
                                     <li class="out">
                                         <img src="images/avatar/48.jpg" class="avatar img-responsive" />
                                         <div class="message">
-                                            <span class="chat-arrow"></span><a href="#" class="chat-name">PacoPolo</a>&nbsp;<span
-                                                class="chat-datetime"> Julio 06, 2014 17:06</span><span class="chat-body">Menudo pesetero</span></div>
+                                            <span class="chat-arrow"></span><a href="#" class="chat-name">{{comentarioUno.usuario.nombre}}</a>&nbsp;<span
+                                                class="chat-datetime">{{comentarioUno.fecha}}</span><span class="chat-body">{{comentarioUno.texto}}</span></div>
                                     </li>
                                 </ul>
                             </div>
@@ -194,38 +190,8 @@
                                 <li class="clearfix"><span class="drag-drop"><i></i></span>
                                     <div class="todo-check pull-left">
                                         <input type="checkbox" value="" /></div>
-                                    <div class="todo-title">
-                                        Black Mirror</div>
-                                    <div class="todo-actions pull-right clearfix">
-                                        <a href="#" class="todo-complete"><i class="fa fa-check"></i></a><a href="#" class="todo-remove"><i class="fa fa-trash-o">
-                                            </i></a>
-                                    </div>
-                                </li>
-                                <li class="clearfix"><span class="drag-drop"><i></i></span>
-                                    <div class="todo-check pull-left">
-                                        <input type="checkbox" value="" /></div>
-                                    <div class="todo-title">
-                                        El club de los poetas muertos</div>
-                                    <div class="todo-actions pull-right clearfix">
-                                        <a href="#" class="todo-complete"><i class="fa fa-check"></i></a><a href="#" class="todo-remove"><i class="fa fa-trash-o">
-                                            </i></a>
-                                    </div>
-                                </li>
-                                <li class="clearfix"><span class="drag-drop"><i></i></span>
-                                    <div class="todo-check pull-left">
-                                        <input type="checkbox" value="" /></div>
-                                    <div class="todo-title">
-                                        Game of thrones</div>
-                                    <div class="todo-actions pull-right clearfix">
-                                        <a href="#" class="todo-complete"><i class="fa fa-check"></i></a><a href="#" class="todo-remove"><i class="fa fa-trash-o">
-                                            </i></a>
-                                    </div>
-                                </li>
-                                <li class="clearfix"><span class="drag-drop"><i></i></span>
-                                    <div class="todo-check pull-left">
-                                        <input type="checkbox" value="" /></div>
-                                    <div class="todo-title">
-                                        Leon the professional</div>
+                                    <div *ngFor="#hashtag of fichapeliculaTodo" classclass="todo-title">
+                                        {{hashtag}}</div>
                                     <div class="todo-actions pull-right clearfix">
                                         <a href="#" class="todo-complete"><i class="fa fa-check"></i></a><a href="#" class="todo-remove"><i class="fa fa-trash-o">
                                             </i></a>
