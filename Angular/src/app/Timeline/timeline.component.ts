@@ -3,6 +3,7 @@ import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
 import {fichapelicula} from '../Fichapelicula/fichapelicula.model';
 import {comentario} from '../Fichapelicula/comentario.model';
 import {usuario} from '../Fichapelicula/usuario.model';
+import {lista} from './lista.model';
 
 
 @Component({
@@ -35,6 +36,12 @@ private peliculasRecomendadas = [new fichapelicula("Black Mirror","6",230,"./ima
   new fichapelicula("Leon the professional","6",230,"./images/peliculas/ant-man.jpg","https://youtu.be/F7BqFYbLJeM",["etiquetauno","etiquetados","etiquetatres"],"The Hateful Eight es una película estadounidense dirigida por Quentin Tarantino, estrenada en Estados Unidos en 2015.","valoracion negativa","nombre del autor de la valoracion negativa","valoracion positiva","nombre del autor de la valoracion positiva",[this.comentarioUno],"banda sonora","nombre de la banda sonora")
 ];
 
+private peliculasLista = [new fichapelicula("#BratPitt","6",230,"./images/peliculas/ant-man.jpg","https://youtu.be/F7BqFYbLJeM",["etiquetauno","etiquetados","etiquetatres"],"Hace una buena interpretación","valoracion negativa","nombre del autor de la valoracion negativa","valoracion positiva","nombre del autor de la valoracion positiva",[this.comentarioUno],"banda sonora","nombre de la banda sonora"),
+  new fichapelicula("#AntMan","6",230,"./images/peliculas/ant-man.jpg","https://youtu.be/F7BqFYbLJeM",["etiquetauno","etiquetados","etiquetatres"],"descripcion numero  2","valoracion negativa 2","Una pelicula muy graciosa","valoracion positiva 2","nombre del autor de la valoracion positiva 2",[this.comentarioUno],"banda sonora 2","nombre de la banda sonora 2"),
+  new fichapelicula("#BatmanVsSuperman","6",230,"./images/peliculas/ant-man.jpg","https://youtu.be/F7BqFYbLJeM",["etiquetauno","etiquetados","etiquetatres"],"Una mala pelicula sobre superhéroes","valoracion negativa","nombre del autor de la valoracion negativa","valoracion positiva","nombre del autor de la valoracion positiva",[this.comentarioUno],"banda sonora","nombre de la banda sonora"),
+  new fichapelicula("#Altamira","6",230,"./images/peliculas/ant-man.jpg","https://youtu.be/F7BqFYbLJeM",["etiquetauno","etiquetados","etiquetatres"],"Un nuevo gran éxito","valoracion negativa","nombre del autor de la valoracion negativa","valoracion positiva","nombre del autor de la valoracion positiva",[this.comentarioUno],"banda sonora","nombre de la banda sonora")
+];
+
 private comentarioUno = new comentario("Recomiendo la película totalmente, soy más de películas del oeste pero esta me ha encantado.", this.usuarioAndrea, "22/2/2222");
 private comentarioDos = new comentario("Fui a verla porque mi novio me obligó, pero aun así me gustó.", this.usuarioAndrea, "44/4/4444");
 private comentarioTres = new comentario("No esta mal, prefiero las de la primera saga.", this.usuarioAndrea, "55/5/5555");
@@ -53,4 +60,5 @@ private peliculasWlist= [new fichapelicula("Requiem por un sueño","6",230,"./im
   new fichapelicula("Star Wars","6",230,"./images/peliculas/ant-man.jpg","https://youtu.be/F7BqFYbLJeM",["etiquetauno","etiquetados","etiquetatres"],"Un nuevo gran éxito","valoracion negativa","nombre del autor de la valoracion negativa","valoracion positiva","nombre del autor de la valoracion positiva",[this.comentarioUno],"banda sonora","nombre de la banda sonora")
 ];
 
+private listaNueva = new lista("Mis favoritas", 45, ["comedia","contemporanea","arte"]);
 }

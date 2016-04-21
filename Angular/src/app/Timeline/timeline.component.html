@@ -210,77 +210,27 @@
                     <div class="portlet box">
                         <div class="portlet-header">
                             <div class="caption">
-                                <h2>Acción</h2></div>
+                                <h2>{{listaNueva.nombre}}</h2></div>
                         </div>
                         <div style="overflow: hidden;" class="portlet-body">
                         <div class="panel panel-blue" style="background:#FFF;">
                 <div class="panel-heading">Datos</div>
-                <div class="panel-body">
+                <div *ngFor="#lista of listaNueva" class="panel-body">
                   <div class="row">
                   <div class="col-lg-3">Valoración:   <i class="fa fa-star text-yellow fa-fw"></i><i class="fa fa-star text-yellow fa-fw"></i><i class="fa fa-star text-yellow fa-fw"></i><i class="fa fa-star text-yellow fa-fw"></i><i class="fa fa-star fa-fw"></i></div>
-                  <div class="col-lg-2">Votaciones: 14k5</div>
-                  <div class="col-lg-7">Etiquetas: <span class="badge badge-dark">Comedia negra</span>
-                              <span class="badge badge-grey">Intriga</span>
-                              <span class="badge badge-yellow">Siglo XIX</span></div>
+                  <div class="col-lg-2">Votaciones: {{lista.votaciones}}</div>
+                  <div class="col-lg-7">Etiquetas:
+                              <span *ngFor="#etiquetas of listaNueva.etiquetas" class="badge badge-yellow">{{etiquetas}}</span></div>
                   </div>
                 </div>
                 </div>
                         <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: 100%; height: 250px;">
-                            <ul class="todo-list sortable ui-sortable">
+                            <ul *ngFor="#peliculas of peliculasLista" class="todo-list sortable ui-sortable">
                                 <li class="clearfix"><span class="drag-drop"><i></i></span>
                                     <div class="todo-check pull-left">
-                                        <input type="checkbox" value=""></div>
-                                    <div class="todo-title">
-                                        Requiem por un sueño</div>
-                                    <div class="todo-actions pull-right clearfix"><a href="#" class="todo-remove"><i class="fa fa-trash-o">
-                                            </i></a>
-                                    </div>
-                                </li>
-                                <li class="clearfix"><span class="drag-drop"><i></i></span>
-                                    <div class="todo-check pull-left">
-                                        <input type="checkbox" value=""></div>
-                                    <div class="todo-title">
-                                        La cenicienta</div>
-                                    <div class="todo-actions pull-right clearfix"><a href="#" class="todo-remove"><i class="fa fa-trash-o">
-                                            </i></a>
-                                    </div>
-                                </li>
-                                <li class="clearfix"><span class="drag-drop"><i></i></span>
-                                    <div class="todo-check pull-left">
-                                        <input type="checkbox" value=""></div>
-                                    <div class="todo-title">
-                                        El mago de Oz</div>
-                                    <div class="todo-actions pull-right clearfix"><a href="#" class="todo-remove"><i class="fa fa-trash-o">
-                                            </i></a>
-                                    </div>
-                                </li>
-                                <li class="clearfix"><span class="drag-drop"><i></i></span>
-                                    <div class="todo-check pull-left">
-                                        <input type="checkbox" value=""></div>
-                                    <div class="todo-title">
-                                        Star wars</div>
-                                    <div class="todo-actions pull-right clearfix"><a href="#" class="todo-remove"><i class="fa fa-trash-o">
-                                            </i></a>
-                                    </div>
-                                </li>
-                                <li class="clearfix"><span class="drag-drop"><i></i></span>
-                                    <div class="todo-check pull-left">
-                                        <input type="checkbox" value=""></div>
-                                    <div class="todo-title">
-                                        Star wars</div>
-                                    <div class="todo-actions pull-right clearfix"><a href="#" class="todo-remove"><i class="fa fa-trash-o">
-                                            </i></a>
-                                    </div>
-                                </li>
-                                <li class="clearfix"><span class="drag-drop"><i></i></span>
-                                    <div class="todo-check pull-left">
-                                        <input type="checkbox" value=""></div>
-                                    <div class="todo-title">
-                                        Star wars</div>
-                                    <div class="todo-actions pull-right clearfix">
-                                        <a href="#" class="todo-complete"><i class="fa fa-check"></i></a><a href="#" class="todo-edit">
-                                            <i class="fa fa-edit"></i></a><a href="#" class="todo-remove"><i class="fa fa-trash-o">
-                                            </i></a>
+                                    <input type="checkbox" value=""></div>
+                                    <div class="todo-title">{{peliculas.hashtag}}</div>
+                                    <div class="todo-actions pull-right clearfix"><a href="#" class="todo-remove"><i class="fa fa-trash-o"></i></a>
                                     </div>
                                 </li>
                             </ul>
