@@ -18,51 +18,15 @@
     <div class="page-content">
         <div id="tab-general">
             <div id="sum_box" class="row mbl">
-                <div class="col-sm-6 col-md-3">
+                <div *ngFor="#encabezado of peliculasEncabezado" class="col-sm-6 col-md-3">
                     <div class="panel profit db mbm">
                         <div class="panel-body">
                             <h4 class="value">
                                 <span data-counter="" data-start="10" data-end="50" data-step="1" data-duration="0">
-                                </span><span class="label label-orange">{{fichapeliculaUno.hashtag}}</span></h4>
+                                </span><span class="label label-orange">{{encabezado.hashtag}}</span></h4>
                                 <br>
                             <p class="description">
-                                {{fichapeliculaUno.descripcion}}</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-3">
-                    <div class="panel profit db mbm">
-                        <div class="panel-body">
-                            <h4 class="value">
-                                <span data-counter="" data-start="10" data-end="50" data-step="1" data-duration="0">
-                                </span><span class="label label-orange">{{fichapeliculaDos.hashtag}}</span></h4>
-                                <br>
-                            <p class="description">
-                                {{fichapeliculaDos.hashtag}}</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-3">
-                    <div class="panel profit db mbm">
-                        <div class="panel-body">
-                            <h4 class="value">
-                                <span data-counter="" data-start="10" data-end="50" data-step="1" data-duration="0">
-                                </span><span class="label label-green">{{fichapeliculaTres.hashtag}}</span></h4>
-                                <br>
-                            <p class="description">
-                                {{fichapeliculaTres.hashtag}}</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-3">
-                    <div class="panel profit db mbm">
-                        <div class="panel-body">
-                            <h4 class="value">
-                                <span data-counter="" data-start="10" data-end="50" data-step="1" data-duration="0">
-                                </span><span class="label label-grey">{{fichapeliculaCuatro.hashtag}}</span></h4>
-                                <br>
-                            <p class="description">
-                                {{fichapeliculaCuatro.hashtag}}</p>
+                                {{encabezado.descripcion}}</p>
                         </div>
                     </div>
                 </div>
@@ -85,7 +49,7 @@
                                 <div class="note note-danger"><h5 class="box-heading">{{fichapeliculaCinco.vnegativa}}</h5>
                                     <p>{{fichapeliculaCinco.vnegautor}}</p></div>
                                     <div class="note note-success"><h5 class="box-heading">{{fichapeliculaCinco.vpositiva}}</h5>
-                                    <p>{{{fichapeliculaCinco.vpostautor}}}</p></div>
+                                    <p>{{fichapeliculaCinco.vpostautor}}</p></div>
                               </div>
                           </div>
                         </div>
@@ -138,35 +102,23 @@
                         <div class="portlet-body">
                             <div class="chat-scroller">
                                 <ul class="chats">
-                                    <li class="in">
+                                    <li *ngFor="#comentarios of todosComentariosIn" class="in">
                                         <img src="images/avatar/48.jpg" class="avatar img-responsive" />
                                         <div class="message">
-                                            <span class="chat-arrow"></span><a href="#" class="chat-name">{{comentarioUno.usuario.nombre}}</a>&nbsp;<span
-                                                class="chat-datetime">{{comentarioUno.fecha}}</span><span class="chat-body">{{comentarioUno.texto}}</span></div>
+                                            <span class="chat-arrow"></span><a href="#" class="chat-name">{{comentarios.usuario.nombre}}</a>&nbsp;<span
+                                                class="chat-datetime">{{comentarios.fecha}}</span><span class="chat-body">{{comentarios.texto}}</span></div>
                                     </li>
-                                    <li class="out">
+                                    <li *ngFor="#comentarios of todosComentariosOut" class="out">
                                         <img src="images/avatar/48.jpg" class="avatar img-responsive" />
                                         <div class="message">
-                                            <span class="chat-arrow"></span><a href="#" class="chat-name">{{comentarioUno.usuario.nombre}}</a>&nbsp;<span
-                                                class="chat-datetime">{{comentarioUno.fecha}}</span><span class="chat-body">{{comentarioUno.texto}}</span></div>
-                                    </li>
-                                    <li class="in">
-                                        <img src="images/avatar/48.jpg" class="avatar img-responsive" />
-                                        <div class="message">
-                                            <span class="chat-arrow"></span><a href="#" class="chat-name">{{comentarioUno.usuario.nombre}}</a>&nbsp;<span
-                                                class="chat-datetime">{{comentarioUno.fecha}}</span><span class="chat-body">{{comentarioUno.texto}}</span></div>
-                                    </li>
-                                    <li class="out">
-                                        <img src="images/avatar/48.jpg" class="avatar img-responsive" />
-                                        <div class="message">
-                                            <span class="chat-arrow"></span><a href="#" class="chat-name">{{comentarioUno.usuario.nombre}}</a>&nbsp;<span
-                                                class="chat-datetime">{{comentarioUno.fecha}}</span><span class="chat-body">{{comentarioUno.texto}}</span></div>
+                                            <span class="chat-arrow"></span><a href="#" class="chat-name">{{comentarios.usuario.nombre}}</a>&nbsp;<span
+                                                class="chat-datetime">{{comentarios.fecha}}</span><span class="chat-body">{{comentarios.texto}}</span></div>
                                     </li>
                                 </ul>
                             </div>
                             <div class="chat-form">
                                 <div class="input-group">
-                                    <input id="input-chat" type="text" placeholder="#BradPitt..." class="form-control" /><span
+                                    <input id="input-chat" type="text" placeholder="{{fichapeliculaUno.hashtag}}..." class="form-control" /><span
                                         id="btn-chat" class="input-group-btn">
                                         <button type="button" class="btn btn-green">
                                             <i class="fa fa-check"></i>
@@ -187,11 +139,11 @@
                         </div>
                         <div style="overflow: hidden;" class="portlet-body">
                             <ul class="todo-list sortable">
-                                <li class="clearfix"><span class="drag-drop"><i></i></span>
+                                <li *ngFor="#pelicula of peliculasRecomendadas" class="clearfix"><span class="drag-drop"><i></i></span>
                                     <div class="todo-check pull-left">
                                         <input type="checkbox" value="" /></div>
-                                    <div *ngFor="#hashtag of fichapeliculaTodo" classclass="todo-title">
-                                        {{hashtag}}</div>
+                                    <div classclass="todo-title">
+                                        {{pelicula.hashtag}}</div>
                                     <div class="todo-actions pull-right clearfix">
                                         <a href="#" class="todo-complete"><i class="fa fa-check"></i></a><a href="#" class="todo-remove"><i class="fa fa-trash-o">
                                             </i></a>
@@ -209,67 +161,12 @@
                         </div>
                         <div style="overflow: hidden;" class="portlet-body">
                         <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: 100%; height: 250px;">
-                            <ul class="todo-list sortable">
+                            <ul *ngFor="#peliculas of peliculasWlist"class="todo-list sortable">
                                 <li class="clearfix"><span class="drag-drop"><i></i></span>
                                     <div class="todo-check pull-left">
                                         <input type="checkbox" value="" /></div>
                                     <div class="todo-title">
-                                        Requiem por un sueño</div>
-                                    <div class="todo-actions pull-right clearfix">
-                                        <a href="#" class="todo-complete"><i class="fa fa-check"></i></a><a href="#" class="todo-edit">
-                                            <i class="fa fa-edit"></i></a><a href="#" class="todo-remove"><i class="fa fa-trash-o">
-                                            </i></a>
-                                    </div>
-                                </li>
-                                <li class="clearfix"><span class="drag-drop"><i></i></span>
-                                    <div class="todo-check pull-left">
-                                        <input type="checkbox" value="" /></div>
-                                    <div class="todo-title">
-                                        La cenicienta</div>
-                                    <div class="todo-actions pull-right clearfix">
-                                        <a href="#" class="todo-complete"><i class="fa fa-check"></i></a><a href="#" class="todo-edit">
-                                            <i class="fa fa-edit"></i></a><a href="#" class="todo-remove"><i class="fa fa-trash-o">
-                                            </i></a>
-                                    </div>
-                                </li>
-                                <li class="clearfix"><span class="drag-drop"><i></i></span>
-                                    <div class="todo-check pull-left">
-                                        <input type="checkbox" value="" /></div>
-                                    <div class="todo-title">
-                                        El mago de Oz</div>
-                                    <div class="todo-actions pull-right clearfix">
-                                        <a href="#" class="todo-complete"><i class="fa fa-check"></i></a><a href="#" class="todo-edit">
-                                            <i class="fa fa-edit"></i></a><a href="#" class="todo-remove"><i class="fa fa-trash-o">
-                                            </i></a>
-                                    </div>
-                                </li>
-                                <li class="clearfix"><span class="drag-drop"><i></i></span>
-                                    <div class="todo-check pull-left">
-                                        <input type="checkbox" value="" /></div>
-                                    <div class="todo-title">
-                                        Star wars</div>
-                                    <div class="todo-actions pull-right clearfix">
-                                        <a href="#" class="todo-complete"><i class="fa fa-check"></i></a><a href="#" class="todo-edit">
-                                            <i class="fa fa-edit"></i></a><a href="#" class="todo-remove"><i class="fa fa-trash-o">
-                                            </i></a>
-                                    </div>
-                                </li>
-                                <li class="clearfix"><span class="drag-drop"><i></i></span>
-                                    <div class="todo-check pull-left">
-                                        <input type="checkbox" value="" /></div>
-                                    <div class="todo-title">
-                                        Star wars</div>
-                                    <div class="todo-actions pull-right clearfix">
-                                        <a href="#" class="todo-complete"><i class="fa fa-check"></i></a><a href="#" class="todo-edit">
-                                            <i class="fa fa-edit"></i></a><a href="#" class="todo-remove"><i class="fa fa-trash-o">
-                                            </i></a>
-                                    </div>
-                                </li>
-                                <li class="clearfix"><span class="drag-drop"><i></i></span>
-                                    <div class="todo-check pull-left">
-                                        <input type="checkbox" value="" /></div>
-                                    <div class="todo-title">
-                                        Star wars</div>
+                                        {{peliculas.hashtag}}</div>
                                     <div class="todo-actions pull-right clearfix">
                                         <a href="#" class="todo-complete"><i class="fa fa-check"></i></a><a href="#" class="todo-edit">
                                             <i class="fa fa-edit"></i></a><a href="#" class="todo-remove"><i class="fa fa-trash-o">
