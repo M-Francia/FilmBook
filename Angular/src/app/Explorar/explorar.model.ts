@@ -1,7 +1,14 @@
+
+import {fichapelicula} from '../Fichapelicula/fichapelicula.model';
+
 export class explorar{
-  foto:string;
-  pelicula:string;
-  descripcion:string;
+  peliculas:fichapelicula[];
   fecha:string;
-  likes:string;
+  likes:number;
+
+constructor(peliculas:fichapelicula[], fecha:string, likes:number){
+  this.peliculas=peliculas;
+  this.fecha=fecha;
+  this.likes=likes;
+}
 }

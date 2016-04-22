@@ -38,10 +38,11 @@
                         <div id="generalTabContent" class="tab-content responsive">
                             <div id="abril" class="tab-pane fade in active">
                                 <div class="row">
-                                    <div class="col-lg-3">
-                                        <p>Viernes, 01 Abril 2016</p>
-                                        <img src="images/novedades/altamira.jpg" width="200" height="200" class="img-responsive" />
-                                        <h4 href="#">Altamira <small><br>(Hugh Hudson)</small></h4>
+                                    <p>{{novedadesAbril.fecha}}</p>
+                                    <div *ngFor="#novedad of novedadesAbril.peliculas" class="col-lg-3">
+
+                                        <img src="{{novedad.imagen}}" width="200" height="200" class="img-responsive" />
+                                        <h4 href="#">{{novedad.titulo}} <small><br>{{novedad.hashtag}}</small></h4>
                                         <div class="form-group">
                                             <div class="rating">
                                                 <label for="quality-5">

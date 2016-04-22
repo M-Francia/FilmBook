@@ -23,7 +23,7 @@
                         <div class="portlet-header">
                           <div class="row">
                               <div class="col-lg-6">
-                                  <h1 class="box-heading">{{fichapelicula.hashtag}}</h1>
+                                  <h1 class="box-heading">{{fichapelicula.titulo}}</h1>
                               </div>
                               <div class="col-lg-6">
                                   <div class="col-lg-6">
@@ -73,8 +73,7 @@
                                       <li *ngFor="#comentarios of fichapelicula.comentario" class="in">
                                           <img src="{{comentarios.usuario.foto}}" class="avatar img-responsive">
                                           <div class="message">
-                                              <span class="chat-arrow"></span><a href="#" class="chat-name">{{comentarios.usuario.nombre}}</a>&nbsp;
-                                              <span class="chat-datetime">{{comentarios.fecha}}</span><span class="chat-body">{{comentarios.texto}}</span>
+                                              <span class="chat-arrow"></span><a href="#" class="chat-name">{{comentarios.usuario.nombre}}</a>&nbsp;<span class="chat-datetime">{{comentarios.fecha}}</span><span class="chat-body">{{comentarios.texto}}</span>
                                           </div>
                                       </li>
 

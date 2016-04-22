@@ -23,14 +23,14 @@
                         <div class="portlet-body">
                           <div class="row">
                             <div class="col-lg-3 col-md-3">
-                              <img src={{usuario.foto}} width="150" height="150">
+                              <img src={{usuarioAndrea.foto}} width="150" height="150">
                             </div>
                             <div class="col-lg-9">
-                              <h2 class="box-heading">{{usuario.nombre}}</h2>
+                              <h2 class="box-heading">{{usuarioAndrea.nombre}}</h2>
                               <div class="row">
                                 <div class="col-lg-12">
-                                  <h5 class="box-heading">{{usuario.frase}}</h5>
-                                            <h1 class="box-heading">{{usuario.seguidores}}k</h1>
+                                  <h5 class="box-heading">{{usuarioAndrea.frase}}</h5>
+                                            <h1 class="box-heading">{{usuarioAndrea.seguidores}}k</h1>
                                          </div>
                                     </div>
                             </div>
@@ -45,7 +45,7 @@
                     <div class="panel panel-yellow">
                       <div class="panel-heading"><h2 align="center" class="box-heading">REPUTACIÓN</h2></div>
                       <div class="panel-body pan">
-                        <h1 align="center" class="box-heading">{{usuario.valoracion}}/10</h1>
+                        <h1 align="center" class="box-heading">{{usuarioAndrea.valoracion}}/10</h1>
                                 <div class="row mbl">
                                     <div class="col-lg-offset-1 col-lg-10">
                                         <h5 class="box-heading">Votar</h5>
@@ -65,28 +65,25 @@
                    </div>
               </div>
             </div>
-              // A PARTIR DE AQUI SE SUPONE QUE SE CARGARIA CON LA PARTE DE FICHATECNICA
+
             <div class="panel panel-red">
               <div class="panel-heading">
                   <div class="caption">
-                      <a href="fichapelicula.html"><h1 class="box-heading">Recomiendo: #HatefulEight</h1></a>
+                      <a href="fichapelicula.html"><h1 class="box-heading">Recomiendo: {{recomendacion.pelicula.titulo}}</h1></a>
                   </div>
               </div>
               <div class="panel-body">
                 <div class="row mbl">
                     <div class="col-lg-5 col-md-5">
-                        <iframe width="360" height="203" src="https://www.youtube.com/embed/gnRbXn4-Yis?autoplay=1&amp;loop=1&amp;rel=0&amp;showinfo=0" frameborder="0" allowfullscreen=""></iframe>
+                        <iframe width="360" height="203" src="{{recomendacion.pelicula.trailer}}" frameborder="0" allowfullscreen=""></iframe>
                         <h5>Etiquetas:</h5>
-                        <span class="badge badge-red">Western</span>
-                        <span class="badge badge-dark">Comedia negra</span>
-                        <span class="badge badge-grey">Intriga</span>
-                        <span class="badge badge-yellow">Siglo XIX</span>
+                        <span *ngFor="#etiquetas of recomendacion.pelicula.etiqueta" class="badge badge-yellow">{{etiquetas}}</span>
                     </div>
                     <div class="col-lg-7">
                             <div class="note note-success"><h5 class="box-heading">Lo bueno: </h5>
-                            <p>Hacia mucho tiempo que no veia una pelicula así</p></div>
+                            <p>recomendacion.comentariopositivo</p></div>
                             <div class="note note-danger"><h5 class="box-heading">Lo malo: </h5>
-                                  <p>La podrian haber acotado un poco</p></div>
+                                  <p>recomendacion.comentarionegativo</p></div>
                           <div class="rating">
                                 <label for="quality-5">
                                       <i class="fa fa-star"></i>
@@ -103,7 +100,7 @@
                                 <label for="quality-1">
                                     <i class="fa fa-star text-yellow"></i>
                                 </label>
-                                Mario la valora con:
+                                {{usuarioAndrea.nombre}} la valora con:
                             </div>
                       </div>
                 </div>
@@ -114,49 +111,28 @@
                 <div class="panel panel-green">
                         <div class="panel-heading">
                           <div class="row">
-                          <div class="col-lg-8"> <h1 class="box-heading">Lista: Top 10</h1></div>
-                          <div class="col-lg-4"><h1 class="box-heading">500 Seguidores</h1></div>
+                          <div class="col-lg-8"> <h1 class="box-heading">Lista: {{listaTopDiez.nombre}}</h1></div>
+                          <div class="col-lg-4"><h1 class="box-heading">{{listaTopDiez.seguidores}} Seguidores</h1></div>
                           </div>
                         </div>
                            <div class="row text-center divider">
                         <div class="panel-body">
                                 <div class="row">
-                                <div class="col-lg-3 col-sm-6 col-md-3">
-                                   <div class="caption"><h4>Angry birds</h4>
-                                    <div class="thumbnail"><img src="images/novedades/angry.jpg" heidth="100" width="150">
+                                <div *ngFor="#lista of listaTopDiez.peliculas" class="col-lg-3 col-sm-6 col-md-3">
+                                   <div class="caption"><h4>{{listaTopDiez.titulo}}</h4>
+                                    <div class="thumbnail"><img src="{{listaTopDiez.imagen}}" heidth="100" width="150">
                                     </div>
                                     <p><a href="Fichatecnica.html" role="button" class="btn btn-primary">Ir a su ficha técnica</a>&nbsp;</p>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 col-sm-6 col-md-3">
-                                    <div class="caption"><h4>Altamira</h4>
-                                    <div class="thumbnail"><img src="images/novedades/altamira.jpg" heidth="100" width="150">
-                                    </div>
-                                    <p><a href="Fichatecnica.html" role="button" class="btn btn-primary">Ir a su ficha técnica</a>&nbsp;</p>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-sm-6 col-md-3">
-                                    <div class="caption"><h4>Eddie</h4>
-                                    <div class="thumbnail"><img src="images/novedades/eddie.jpg" heidth="100" width="150">
-                                    </div>
-                                    <p><a href="Fichatecnica.html" role="button" class="btn btn-primary">Ir a su ficha técnica</a>&nbsp;</p>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-sm-6 col-md-3">
-                                    <div class="caption"><h4>Julieta</h4>
-                                    <div class="thumbnail"><img src="images/novedades/julieta.jpg" heidth="100" width="150">
-                                    </div>
-                                    <p><a href="Fichatecnica.html" role="button" class="btn btn-primary">Ir a su ficha técnica</a>&nbsp;</p>
-                                    </div>
-                                </div>
+
                                     </div>
                                     <br>
                                     <div class="row">
                                         <div class="col-lg-3">Valoración:   <i class="fa fa-star text-yellow fa-fw"></i><i class="fa fa-star text-yellow fa-fw"></i><i class="fa fa-star text-yellow fa-fw"></i><i class="fa fa-star text-yellow fa-fw"></i><i class="fa fa-star fa-fw"></i></div>
-                                        <div class="col-lg-2">Votaciones: 14k5</div>
-                                        <div class="col-lg-7">Etiquetas: <span class="badge badge-dark">Comedia negra</span>
-                                                        <span class="badge badge-grey">Intriga</span>
-                                                        <span class="badge badge-yellow">Siglo XIX</span></div>
+                                        <div class="col-lg-2">Votaciones: {{listaTopDiez.votaciones}}</div>
+                                        <div  class="col-lg-7">Etiquetas:
+                                                        <span *ngFor="#etiqueta of listaTopDiez.etiquetas" class="badge badge-yellow">{{etiqueta}}</span></div>
                                     </div>
                           </div>
                         </div>
@@ -191,18 +167,26 @@
                     <div class="panel panel-grey">
                             <div class="panel-heading">
                                 <div class="row">
-                                <div class="col-lg-8"> <h3 class="box-heading">Otras listas</h3></div>
+                                <div class="col-lg-8"> <h3 class="box-heading">WatchList</h3></div>
                                 </div>
                             </div>
-                            <div class="panel-body">
-                              <div class="list-group"><a href="#" class="list-group-item active"><h4 class="list-group-item-heading">List group item heading</h4>
+                            <div style="overflow: hidden;" class="portlet-body">
+                                    <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: 100%; height: 250px;">
+                                        <ul class="todo-list sortable">
+                                              <li *ngFor="#peliculas of peliculasWlist" class="clearfix"><span class="drag-drop"><i></i></span>
+                                                  <div class="todo-check pull-left">
+                                                      <input type="checkbox" value="" /></div>
+                                                  <div class="todo-title">
+                                                      {{peliculas.titulo}}</div>
+                                                  <div class="todo-actions pull-right clearfix">
+                                                      <a href="#" class="todo-complete"><i class="fa fa-check"></i></a><a href="#" class="todo-edit">
+                                                          <i class="fa fa-edit"></i></a><a href="#" class="todo-remove"><i class="fa fa-trash-o">
+                                                          </i></a>
+                                                  </div>
+                                              </li>
+                                          </ul>
 
-                                <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p></a><a href="#" class="list-group-item"><h4 class="list-group-item-heading">List group item heading</h4>
-
-                                <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p></a><a href="#" class="list-group-item"><h4 class="list-group-item-heading">List group item heading</h4>
-
-                                <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p></a></div>
-                            </div>
+                              </div>
                     </div>
                 </div>
             </div>

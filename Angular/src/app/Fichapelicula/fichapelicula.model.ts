@@ -1,8 +1,10 @@
 import {comentario} from './comentario.model';
 import {usuario} from './usuario.model';
+import {hashtag} from './hashtag.model';
 
 export class fichapelicula{
-    hashtag: string;
+    titulo: string;
+    hashtag:hashtag[];
     puntuacion: string;
     like: number;
     imagen: string;
@@ -17,7 +19,8 @@ export class fichapelicula{
     bso: string;
     nombrebso:string;
 
-    constructor(h:string, p:string, l:number, i:string, t:string, e:string[], d:string, vn:string, vna:string, vp:string, vpa:string,c:comentario[], bso:string, n:string){
+  constructor(titulo:string, h:hashtag[], p:string, l:number, i:string, t:string, e:string[], d:string, vn:string, vna:string, vp:string, vpa:string,c:comentario[], bso:string, n:string){
+      this.titulo=titulo;
       this.hashtag=h;
       this.puntuacion=p;
       this.like=l;

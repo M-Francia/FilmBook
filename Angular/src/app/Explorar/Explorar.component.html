@@ -65,17 +65,17 @@
                                             <div data-control-type="pagination" data-control-name="paging" data-control-action="paging" class="jplist-pagination"></div>
                                         </div>
                                         <div class="box text-shadow">
-                                            <table class="demo-tbl">
+                                            <table *ngFor="#peliculas of explorar" class="demo-tbl">
                                               <tr class="tbl-item">
                                                   <!--<img/>-->
-                                                  <td class="img"><img src="{{explorar.foto}}"/></td>
+                                                  <td class="img"><img src="{{peliculas.fichapelicula.imagen}}}"/></td>
                                                   <!--<data>-->
                                                   <td class="td-block">
-                                                      <p class="date">{{explorar.fecha}}</p>
+                                                      <p class="date">{{peliculas.fecha}}</p>
                                                       <a href="#">
-                                                          <p class="title">{{explorar.pelicula}}</p>
+                                                          <p class="title">{{peliculas.fichapelicula.titulo}}</p>
                                                       </a>
-                                                      <p class="desc">{{explorar.descripcion}}</p>
+                                                      <p class="desc">{{peliculas.fichapelicula.descripcion}}</p>
                                                       <p class="like">{{explorar.likes}}</p>
                                                   </td>
                                               </tr>
