@@ -327,5 +327,47 @@
                 </div>
             </div>
         </div>
-    </div>    
-</div>
+        <div id="tab-general">
+            <div id="sum_box" class="row mbl">
+                <div class="col-sm-12 col-md-12">
+                <div class="portlet box">
+                <div class="portlet-body">
+                  <nav role="navigation" class="navbar navbar-default">
+                        <div class="container-fluid">
+                            <div class="navbar-header">
+                                <button type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                                <a class="navbar-brand">Modificar lista recomendaciones </a></div>
+                            <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
+                                <ul class="nav navbar-nav">
+                                </ul>
+                                <form role="search" class="navbar-form navbar-left">
+                                    <div class="form-group"><input type="text" placeholder="Nombre pelicula..." class="form-control"></div>
+                                    &nbsp;
+                                    <button type="submit" class="btn btn-green">Añadir</button>
+                                </form>
+                              </div>
+                        </div>
+                    </nav>
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <div style="overflow: hidden;" class="portlet-body">
+                            <ul class="todo-list sortable">
+                                <li *ngFor="#peliculas of peliculasLista" class="clearfix"><span class="drag-drop"><i></i></span>
+                                    <div classclass="todo-title">
+                                      &nbsp;&nbsp;&nbsp;&nbsp;{{peliculas.hashtag}}</div>
+                                    <div class="todo-actions pull-right clearfix">
+                                        <a href="#" class="todo-remove"><i class="fa fa-trash-o">
+                                            </i></a>
+                                    </div>
+                                </li>
+                            </ul>
+                          </div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
