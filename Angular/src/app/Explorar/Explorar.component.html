@@ -64,18 +64,18 @@
                                             <div data-type="Página {current} de {pages}" data-control-type="pagination-info" data-control-name="paging" data-control-action="paging" class="jplist-label btn btn-default"></div>
                                             <div data-control-type="pagination" data-control-name="paging" data-control-action="paging" class="jplist-pagination"></div>
                                         </div>
-                                        <div class="box text-shadow">
-                                            <table *ngFor="#peliculas of explorar" class="demo-tbl">
+                                        <div *ngFor="#peliculas of explorar.peliculas"  class="box text-shadow">
+                                            <table class="demo-tbl">
                                               <tr class="tbl-item">
                                                   <!--<img/>-->
-                                                  <td class="img"><img src="{{peliculas.fichapelicula.imagen}}}"/></td>
+                                                  <td class="img"><img src="{{peliculas.imagen}}}"/></td>
                                                   <!--<data>-->
                                                   <td class="td-block">
-                                                      <p class="date">{{peliculas.fecha}}</p>
+                                                      <p class="date">{{explorar.fecha}}</p>
                                                       <a href="#">
-                                                          <p class="title">{{peliculas.fichapelicula.titulo}}</p>
+                                                          <p class="title">{{peliculas.titulo}}</p>
                                                       </a>
-                                                      <p class="desc">{{peliculas.fichapelicula.descripcion}}</p>
+                                                      <p class="desc">{{peliculas.descripcion}}</p>
                                                       <p class="like">{{explorar.likes}}</p>
                                                   </td>
                                               </tr>
