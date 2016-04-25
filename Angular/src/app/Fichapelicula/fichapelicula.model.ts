@@ -3,8 +3,9 @@ import {usuario} from './usuario.model';
 import {hashtag} from './hashtag.model';
 
 export class fichapelicula{
+    id:number;
     titulo: string;
-    hashtag:hashtag[];
+    hashtag:hashtag[]=[];
     puntuacion: string;
     like: number;
     imagen: string;
@@ -15,13 +16,13 @@ export class fichapelicula{
     vnegautor:string;
     vpositiva: string;
     vpostautor:string;
-    comentario:comentario[];
+    comentario:comentario[]=[];
     bso: string;
     nombrebso:string;
 
-  constructor(titulo:string, h:hashtag[], p:string, l:number, i:string, t:string, e:string[], d:string, vn:string, vna:string, vp:string, vpa:string,c:comentario[], bso:string, n:string){
+  constructor(idc:number, titulo:string, p:string, l:number, i:string, t:string, e:string[], d:string, vn:string, vna:string, vp:string, vpa:string, bso:string, n:string){
+      this.id=idc;
       this.titulo=titulo;
-      this.hashtag=h;
       this.puntuacion=p;
       this.like=l;
       this.imagen=i;
@@ -32,8 +33,18 @@ export class fichapelicula{
       this.vnegautor=vna;
       this.vpositiva=vp;
       this.vpostautor=vpa;
-      this.comentario=c;
       this.bso=bso;
       this.nombrebso=n;
     }
+
+    addComentario(texto:string, usuario:string, fecha:string){
+        var comentarioc = new comentario(texto,usuario,fecha);
+        this.comentario.push(comentarioc);
+
+ }
+ addHashtag(titulo:string, descripcion:string){
+     var hashtagc = new hashtag(titulo,descripcion);
+     this.hashtag.push(hashtagc);
+
+}
 }

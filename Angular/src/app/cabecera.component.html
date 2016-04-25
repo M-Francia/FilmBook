@@ -1,7 +1,7 @@
 <div id="header-topbar-option-demo" class="page-header-topbar">
         <nav id="topbar" role="navigation" style="margin-bottom: 0;" data-step="3" class="navbar navbar-default navbar-static-top">
             <div class="navbar-header">
-                <a id="logo" [routerLink]="['Timeline']" class="navbar-brand"><span class="fa fa-rocket"></span><span class="logo-text">FilmBook</span><span style="display: none" class="logo-text-icon">µ</span></a></div>
+                <a id="logo"  class="navbar-brand"><span class="fa fa-rocket"></span><span class="logo-text">FilmBook</span><span style="display: none" class="logo-text-icon">µ</span></a></div>
             <!--Topbar-->
             <div class="topbar-main"><a id="menu-toggle" href="#" class="hidden-xs"><i class="fa fa-bars"></i></a>
                <form id="topbar-search" action="" method="" class="hidden-sm hidden-xs">
@@ -27,14 +27,14 @@
                     <form>
                        <div class="input-icon right">
                         <i class="fa fa-user"></i>
-                        <input id="user" type="text" class="form-control" placeholder="Nombre de usuario" [(ngModel)]="usuario">
+                        <input id="user" type="text" [(ngModel)]="usuario" class="form-control" placeholder="Nombre de usuario">
                         </div>
                     </form>
                     <br>
                     <form>
                        <div class="input-icon right">
                         <i class="fa fa-lock"></i>
-                        <input id="pass" type="password" class="form-control" placeholder="Contraseña" [(ngModel)]="contraseña">
+                        <input id="pass" type="password" [(ngModel)]="cpassword" class="form-control" placeholder="Contraseña">
                         </div>
                     </form>
                     <br>
@@ -47,7 +47,7 @@
                         </span>
                         <br>
                         <br>
-                        <a type="button" class="btn btn-info" href="Registro.html">Registrarme</a>
+                        <a type="button" class="btn btn-info">Registrarme</a>
                     </div>
                 </div>
             </div>
@@ -55,9 +55,8 @@
         </div>
         <li *ngIf="isActive" class="dropdown topbar-user"><a data-hover="dropdown" href="#" class="dropdown-toggle"><img src="images/avatar/48.jpg" alt="" class="img-responsive img-circle"/>&nbsp;<span class="hidden-xs">Mario Francia</span>&nbsp;<span class="caret"></span></a>
             <ul class="dropdown-menu dropdown-user pull-right">
-              //COMPROBAR QUE NO ES CON CLICK Y QUE ES UN ENRUTAMIENTO
-                <li><a href="editarperfil.html"><i class="fa fa-user" (click)="editarperfil()"></i>Editar perfil</a></li>
-                <li><a href="index.html"><i class="fa fa-key" (click)="cerrarsesion()"></i>Cerrar sesión</a></li>
+                <li><a ><i class="fa fa-user"></i>Editar perfil</a></li>
+                <li><a ><i class="fa fa-key"></i>Cerrar sesión</a></li>
             </ul>
         </li>
     </div>

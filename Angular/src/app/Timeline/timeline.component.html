@@ -6,7 +6,7 @@
                 Timeline</div>
         </div>
         <ol class="breadcrumb page-breadcrumb pull-right">
-            <li><i class="fa fa-home"></i>&nbsp;<a href="dashboard.html">Home</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
+            <li><i class="fa fa-home"></i>&nbsp;<a click="goToInicio()">Home</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
             <li class="hidden"><a href="#">Timeline</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
             <li class="active">Timeline</li>
         </ol>
@@ -16,17 +16,17 @@
     <!--END TITLE & BREADCRUMB PAGE-->
     <!--BEGIN CONTENT-->
     <div class="page-content">
-        <div id="tab-general">
-            <div id="sum_box" class="row mbl">
-                <div *ngFor="#etiqueta of etiquetas" class="col-sm-6 col-md-3">
-                    <div class="panel profit db mbm">
+        <div  id="tab-general">
+          <div id="sum_box" class="row mbl">
+                <div class="col-sm-6 col-md-3">
+                  <div *ngFor="#pelicula of peliculas" class="panel profit db mbm">
                         <div class="panel-body">
                             <h4 class="value">
                                 <span data-counter="" data-start="10" data-end="50" data-step="1" data-duration="0">
-                                </span><span class="label label-orange">{{etiqueta.titulo}}</span></h4>
+                                </span><span class="label label-orange">{{pelicula.titulo}}</span></h4>
                                 <br>
                             <p class="description">
-                                {{etiqueta.descripcion}}</p>
+                                {{pelicula.descripcion}}</p>
                         </div>
                     </div>
                 </div>
@@ -36,20 +36,20 @@
                 <div class="portlet box">
                         <div class="portlet-header">
                             <div class="caption">
-                                <a href="fichapelicula.html"><h1>{{fichapelicula.titulo}}</h1></a></div>
+                                <a href="fichapelicula.html"><h1>{{pelicula.titulo}}</h1></a></div>
                         </div>
                         <div class="portlet-body">
                           <div class="row mbl">
                             <div class="col-lg-5 col-md-5">
                               <iframe width="360" height="203" src="{{fichapelicula.trailer}}" frameborder="0" allowfullscreen></iframe>
                               <h5>Etiquetas:</h5>
-                              <span *ngFor="#etiqueta of fichapelicula.etiqueta" class="badge badge-red">{{etiqueta}}</span>
+                              <span *ngFor="#etiqueta of peliculas.etiqueta" class="badge badge-red">{{etiqueta}}</span>
                               </div>
                             <div class="col-lg-7">
-                                <div class="note note-danger"><h5 class="box-heading">{{fichapelicula.vnegativa}}</h5>
-                                    <p>{{fichapelicula.vnegautor}}</p></div>
-                                    <div class="note note-success"><h5 class="box-heading">{{fichapelicula.vpositiva}}</h5>
-                                    <p>{{fichapelicula.vpostautor}}</p></div>
+                                <div class="note note-danger"><h5 class="box-heading">{{pelicula.vnegativa}}</h5>
+                                    <p>{{pelicula.vnegautor}}</p></div>
+                                    <div class="note note-success"><h5 class="box-heading">{{pelicula.vpositiva}}</h5>
+                                    <p>{{pelicula.vpostautor}}</p></div>
                               </div>
                           </div>
                         </div>
@@ -61,20 +61,20 @@
                 <div class="portlet box">
                         <div class="portlet-header">
                             <div class="caption">
-                                <a href="fichapelicula.html"><h1>{{fichapeliculaDos.titulo}}</h1></a></div>
+                                <a><h1>{{pelicula.titulo}}</h1></a></div>//[routerLink]="['Fichapelicula',{nombre:pelicula.titulo}]"
                         </div>
                         <div class="portlet-body">
                           <div class="row mbl">
                             <div class="col-lg-5 col-md-5">
-                              <iframe width="360" height="203" src="{{fichapeliculaDos.trailer}}" frameborder="0" allowfullscreen></iframe>
+                              <iframe width="360" height="203" src="{{fichapelicula.trailer}}" frameborder="0" allowfullscreen></iframe>
                               <h5>Etiquetas:</h5>
-                              <span *ngFor="#etiqueta of fichapeliculaDos.etiqueta" class="badge badge-red">{{etiqueta}}</span>
+                              <span *ngFor="#etiqueta of peliculas.etiqueta" class="badge badge-red">{{etiqueta}}</span>
                               </div>
                             <div class="col-lg-7">
-                                <div class="note note-danger"><h5 class="box-heading">{{fichapeliculaDos.vnegativa}}</h5>
-                                    <p>{{fichapeliculaDos.vnegautor}}</p></div>
-                                    <div class="note note-success"><h5 class="box-heading">{{fichapeliculaDos.vpositiva}}</h5>
-                                    <p>{{fichapeliculaDos.vpostautor}}</p></div>
+                                <div class="note note-danger"><h5 class="box-heading">{{peliculas.vnegativa}}</h5>
+                                    <p>{{peliculas.vnegautor}}</p></div>
+                                    <div class="note note-success"><h5 class="box-heading">{{peliculas.vpositiva}}</h5>
+                                    <p>{{peliculas.vpostautor}}</p></div>
                               </div>
                           </div>
                         </div>
@@ -90,7 +90,7 @@
                       </div>
                       <div style="overflow: hidden;" class="portlet-body">
                           <ul class="todo-list sortable">
-                              <li *ngFor="#pelicula of peliculasRecomendadas" class="clearfix"><span class="drag-drop"><i></i></span>
+                              <li *ngFor="#pelicula of etiquetas" class="clearfix"><span class="drag-drop"><i></i></span>
                                   <div class="todo-check pull-left">
                                       <input type="checkbox" value="" /></div>
                                   <div classclass="todo-title">
@@ -114,7 +114,7 @@
                         <div class="portlet-body">
                             <div class="chat-scroller">
                                 <ul class="chats">
-                                    <li *ngFor="#comentarios of fichapelicula.comentario" class="in">
+                                    <li *ngFor="#comentarios of peliculas.comentario" class="in">
                                         <img src="{{comentarios.usuario.foto}}" class="avatar img-responsive">
                                         <div class="message">
                                             <span class="chat-arrow"></span><a href="#" class="chat-name">{{comentarios.usuario.nombre}}</a>&nbsp;<span

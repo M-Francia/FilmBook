@@ -34,27 +34,36 @@
                             <form action="#">
                                 <div class="form-body pal">
                                     <div class="form-group">
+                                      <span *ngIf="!noUtilizado() && usuario!=''" class="glyphicon glyphicon-remove" aria-hidden="true"> Usuario no disponible</span>
+                                      <span *ngIf="noUtilizado() && usuario!=''" class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                                      <br/>
                                         <div class="input-icon right">
                                             <i class="fa fa-user"></i>
-                                            <input id="inputName" type="text" placeholder="Nombre de usuario" class="form-control">
+                                            <input id="inputName" type="text" [(ngModel)]="usuario" placeholder="Nombre de usuario" class="form-control">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="input-icon right">
                                             <i class="fa fa-envelope"></i>
-                                            <input id="inputEmail" type="text" placeholder="Email" class="form-control">
+                                            <input id="inputEmail" type="text"[(ngModel)]="email" placeholder="Email" class="form-control">
                                         </div>
                                     </div>
                                     <div class="form-group">
+                                      <span *ngIf="!contraseñasIguales() && contr2!=''" class="glyphicon glyphicon-remove" aria-hidden="true"> Las contraseñas no coinciden</span>
+                                      <span *ngIf="contraseñasIguales() && contr2!=''" class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                                      <br>
                                         <div class="input-icon right">
                                             <i class="fa fa-lock"></i>
-                                            <input id="inputPassword" type="password" placeholder="Contraseña" class="form-control">
+                                            <input id="inputPassword" type="password" [(ngModel)]="contr1"  placeholder="Contraseña" class="form-control">
                                         </div>
                                     </div>
                                     <div class="form-group">
+                                      <span *ngIf="!contraseñasIguales() && contr1!=''" class="glyphicon glyphicon-remove" aria-hidden="true"> Las contraseñas no coinciden</span>
+                                      <span *ngIf="contraseñasIguales() && contr1!=''" class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                                      <br>
                                         <div class="input-icon right">
                                             <i class="fa fa-lock"></i>
-                                            <input id="inputConfirmPassword" type="password" placeholder="Contraseña" class="form-control">
+                                            <input id="inputConfirmPassword" type="password" [(ngModel)]="contr2" placeholder="Repetir contraseña" class="form-control">
                                         </div>
                                     </div>
                                     <hr>
@@ -69,7 +78,7 @@
                                 <br>
                                 <br>
                                 <div class="form-actions text-right pal">
-                                    <button type="submit" class="btn btn-grey">
+                                    <button type="submit" class="btn btn-grey" (click)="registrar()" [disabled]="!posibleRegistro()">
                                         Aceptar</button>
                                 </div>
                                 </div>

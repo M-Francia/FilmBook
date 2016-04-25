@@ -22,15 +22,16 @@
                     <div class="portlet box">
                         <div class="portlet-header">
                           <div class="row">
+                            <a ></a>
                               <div class="col-lg-6">
-                                  <h1 class="box-heading">{{fichapelicula.titulo}}</h1>
+                                  <h1 class="box-heading">{{peliculas.titulo}}</h1>
                               </div>
                               <div class="col-lg-6">
                                   <div class="col-lg-6">
-                                      <h1 align="center" class="box-heading">{{fichapelicula.puntuacion}}/10</h1>
+                                      <h1 align="center" class="box-heading">{{peliculas.puntuacion}}/10</h1>
                                   </div>
                                   <div class="col-lg-6">
-                                      <h2 align="center">{{fichapelicula.like}}k</h2>
+                                      <h2 align="center">{{peliculas.like}}k</h2>
                                       <button align="right" class="btn btn-yellow btn-block" (click)="like()"><span class="fa fa-plus-circle"></span>&nbsp; LIKE</button>
                                   </div>
                               </div>
@@ -39,21 +40,21 @@
                         <div class="portlet-body">
                             <div class="row mbl">
                             <div class="col-lg-4">
-                                    <img align="center" src="{{fichapelicula.imagen}}" height="250" class="img-responsive">
+                                    <img align="center" src="{{peliculas.imagen}}" height="250" class="img-responsive">
                                 </div>
                                 <div class="col-lg-8 col-md-8">
-                                    <iframe width="600" height="360" src="{{fichapelicula.trailer}}" frameborder="0" allowfullscreen=""></iframe>
+                                    <iframe width="600" height="360" src="{{peliculas.trailer}}" frameborder="0" allowfullscreen=""></iframe>
                                     <h5>Etiquetas:</h5>
-                                    <span *ngFor="#etiquetas of fichapelicula.etiqueta" class="badge badge-red">{{etiquetas}}</span>
+                                    <span *ngFor="#etiquetas of peliculas.etiqueta" class="badge badge-red">{{etiquetas}}</span>
                                 </div>
                             </div>
                                 <div class="row mbl">
                                     <div class="col-lg-12">
-                                    <div class="note note-info"><h5 class="box-heading">{{fichapelicula.descripcion}}</h5></div>
-                                    <div class="note note-danger"><h5 class="box-heading">{{fichapelicula.vnegativa}}</h5>
-                                        <p>{{fichapelicula.vnegautor}}</p></div>
-                                        <div class="note note-success"><h5 class="box-heading">{{fichapelicula.vpositiva}}</h5>
-                                        <p>{{fichapelicula.vpostautor}}</p></div>
+                                    <div class="note note-info"><h5 class="box-heading">{{peliculas.descripcion}}</h5></div>
+                                    <div class="note note-danger"><h5 class="box-heading">{{peliculas.vnegativa}}</h5>
+                                        <p>{{peliculas.vnegautor}}</p></div>
+                                        <div class="note note-success"><h5 class="box-heading">{{peliculas.vpositiva}}</h5>
+                                        <p>{{peliculas.vpostautor}}</p></div>
                                     </div>
                                 </div>
                             </div>

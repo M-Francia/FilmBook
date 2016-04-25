@@ -5,6 +5,7 @@ import {comentario} from '../Fichapelicula/comentario.model';
 import {usuario} from '../Fichapelicula/usuario.model';
 import {hashtag} from '../Fichapelicula/hashtag.model';
 import {lista} from '../Perfil/lista.model';
+import {FichapeliculaService} from '../service/fichapelicula.service';
 
 
 
@@ -15,30 +16,15 @@ import {lista} from '../Perfil/lista.model';
 
 export class TimelineComponent {
 
-private etiquetas = [new hashtag("#BratPitt","Nueva pelicula"), new hashtag("#Quentin", "Spotlight no merecia el oscar"),
-new hashtag("BlackMirror", "White Christmas"), new hashtag("#AntMan","Muy graciosa")];
+  private fichapelicula: fichapelicula[] ;
 
-private etiquetaPrincipal = new hashtag("#Quentin", "Spotlight no merecia el oscar");
+  constructor(private fichapeliculaService : FichapeliculaService){}
 
-private comentarioUno = new comentario("Recomiendo la película totalmente, soy más de películas del oeste pero esta me ha encantado.", this.usuarioAndrea, "22/2/2222");
-private comentarioDos = new comentario("Fui a verla porque mi novio me obligó, pero aun así me gustó.", this.usuarioAndrea, "44/4/4444");
-private comentarioTres = new comentario("No esta mal, prefiero las de la primera saga.", this.usuarioAndrea, "55/5/5555");
-
-private usuarioAndrea = new usuario("app/images/peliculas/gato.jpg","userAndrea","andrea@hotmail.com","contraseña111", "La vida es maravillosa","345","4");
-
-private fichapelicula= new fichapelicula("#HatefulEight",[this.etiquetaPrincipal],"8,4",480,"app/images/novedades/altamira.jpg","https://i.ytimg.com/vi_webp/gnRbXn4-Yis/sddefault.webp",["Comedia","Intriga","Siglo XIX","Western"],
-"The Hateful Eight es una película estadounidense dirigida por Quentin Tarantino, estrenada en Estados Unidos en 2015.Se trata de un western que mezcla elementos de cine de misterio y comedia negra.",
-"La película límite, contradictoria y extremadamente virtuosa de un director condenado a ser siempre él mismo. (...) una exhibición tan florida como irrenunciable; tan cargante como hipnótica (...) Tarantino más 'tarantinizado' que nunca.","Luis Martínez: Diario El Mundo",
-"Sobredosis de Tarantino. Bendito banquete para unos, empacho casi letal para los otros. (...)","Diario La Vanguardia",[this.comentarioUno, this.comentarioDos, this.comentarioTres],"https://i.ytimg.com/vi_webp/qm82JgUkAt4/hqdefault.webp","El despertar de la fuerza");
-
-private fichapeliculaDos = new fichapelicula("#hashtag2 ",[this.etiquetaPrincipal],"6",230,"./images/peliculas/ant-man.jpg","https://youtu.be/F7BqFYbLJeM",
-["etiquetauno","etiquetados","etiquetatres"],"descripcion numero  2","valoracion negativa 2","nombre del autor de la valoracion negativa 2",
-"valoracion positiva 2","nombre del autor de la valoracion positiva 2",[this.comentarioUno],"banda sonora 2","nombre de la banda sonora 2");
-
-
-private peliculasRecomendadas = [new fichapelicula("Black Mirror",[this.etiquetaPrincipal],"6",230,"./images/peliculas/ant-man.jpg","https://youtu.be/F7BqFYbLJeM",["etiquetauno","etiquetados","etiquetatres"],"The Hateful Eight es una película estadounidense dirigida por Quentin Tarantino, estrenada en Estados Unidos en 2015.","valoracion negativa","nombre del autor de la valoracion negativa","valoracion positiva","nombre del autor de la valoracion positiva",[this.comentarioUno],"banda sonora","nombre de la banda sonora"),
-  new fichapelicula("El club de los poetas muertos ",[this.etiquetaPrincipal],"6",230,"./images/peliculas/ant-man.jpg","https://youtu.be/F7BqFYbLJeM",["etiquetauno","etiquetados","etiquetatres"],"descripcion numero  2","valoracion negativa 2","nombre del autor de la valoracion negativa 2","valoracion positiva 2","nombre del autor de la valoracion positiva 2",[this.comentarioUno],"banda sonora 2","nombre de la banda sonora 2"),
-  new fichapelicula("Leon the professional",[this.etiquetaPrincipal],"6",230,"./images/peliculas/ant-man.jpg","https://youtu.be/F7BqFYbLJeM",["etiquetauno","etiquetados","etiquetatres"],"The Hateful Eight es una película estadounidense dirigida por Quentin Tarantino, estrenada en Estados Unidos en 2015.","valoracion negativa","nombre del autor de la valoracion negativa","valoracion positiva","nombre del autor de la valoracion positiva",[this.comentarioUno],"banda sonora","nombre de la banda sonora")
-];
+  ngOnInit(){
+    this.fichapeliculaService.getPeliculas().subscribe(
+      peliculas => this.fichapelicula = peliculas,
+      error => console.log(error)
+    );
+  }
 
 }

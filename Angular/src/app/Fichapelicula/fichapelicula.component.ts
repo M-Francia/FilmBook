@@ -4,29 +4,34 @@ import {fichapelicula} from './fichapelicula.model';
 import {comentario} from './comentario.model';
 import {usuario} from './usuario.model';
 import {hashtag} from './hashtag.model';
+import {FichapeliculaService} from '../service/fichapelicula.service';
+import {ComentariosService} from '../service/comentarios.service';
+import {RouteParams, Router} from 'angular2/router';
 
 @Component({
   selector: 'fichapelicula',
   templateUrl: 'app/Fichapelicula/fichapelicula.component.html',
+  directives:[ROUTER_DIRECTIVES],
+  providers:[FichapeliculaService]
 })
 
 export class FichaPeliculaComponent {
 
-private etiquetas = new hashtag("#HatefulEight","Gran pelicula");
+  private peliculas: fichapelicula;
+  constructor(private fichapeliculaService : FichapeliculaService,private _routeParams:RouteParams){
 
-private usuarioAndrea = new usuario("./images/peliculas/gato.jpg","userAndrea","andrea@hotmail.com","contraseña111", "La vida es maravillosa","345","4");
+  }
 
-private comentarioUno = new comentario("Recomiendo la película totalmente, soy más de películas del oeste pero esta me ha encantado.", this.usuarioAndrea, "22/2/2222");
-private comentarioDos = new comentario("Fui a verla porque mi novio me obligó, pero aun así me gustó.", this.usuarioAndrea, "44/4/4444");
-private comentarioTres = new comentario("No esta mal, prefiero las de la primera saga.", this.usuarioAndrea, "55/5/5555");
-
-private fichapelicula= new fichapelicula("Hate ful Eight",[this.etiquetas],"8,4",480,"app/images/novedades/altamira.jpg","https://i.ytimg.com/vi_webp/gnRbXn4-Yis/sddefault.webp",["Comedia","Intriga","Siglo XIX","Western"],
-"The Hateful Eight es una película estadounidense dirigida por Quentin Tarantino, estrenada en Estados Unidos en 2015.Se trata de un western que mezcla elementos de cine de misterio y comedia negra.",
-"La película límite, contradictoria y extremadamente virtuosa de un director condenado a ser siempre él mismo. (...) una exhibición tan florida como irrenunciable; tan cargante como hipnótica (...) Tarantino más 'tarantinizado' que nunca.","Luis Martínez: Diario El Mundo",
-"Sobredosis de Tarantino. Bendito banquete para unos, empacho casi letal para los otros. (...)","Diario La Vanguardia",[this.comentarioUno, this.comentarioDos, this.comentarioTres],"https://i.ytimg.com/vi_webp/qm82JgUkAt4/hqdefault.webp","El despertar de la fuerza");
+  ngOnInit(){
+    let id=+this._routeParams.get("id");
+    this.fichapeliculaService.getPelicula(id).subscribe(
+      peliculas => this.peliculas = peliculas,
+      error => console.log(error)
+    )
+  }
 
   like(){
-    this.fichapelicula.like=this.fichapelicula.like+1;
+    //this.fichapeliculaService.LikePelicula(this.peliculas.titulo);
   }
   enviar(){
 
@@ -38,7 +43,9 @@ private fichapelicula= new fichapelicula("Hate ful Eight",[this.etiquetas],"8,4"
   añadirwl(){
 
   }
-  añadirlista(){
+  añadirlista(usuario:usuario,pelicula:fichapelicula){
+  //  this.fichapeliculaService.getUsuario(usuario).addPelicula(pelicula.arraywathlist);
+    //le paso el usuario y la pelicula que es get usuario.addPelicula(w);
 
   }
   recomendar(){

@@ -26,7 +26,7 @@
                     <div class="col-lg-12">
                         <ul id="generalTab" class="nav nav-tabs responsive">
                             <li class="active"><a href="#abril" data-toggle="tab">Abril</a></li>
-                            <li><a href="#mayo" data-toggle="tab">Mayo</a></li>
+                            <li><a data-toggle="tab">Mayo</a></li> <!--[routerLink] = ['Novedades,{mes:mayo}']-->
                             <li><a href="#junio" data-toggle="tab">Junio</a></li>
                             <li><a href="#julio" data-toggle="tab">Julio</a></li>
                             <li><a href="#agosto" data-toggle="tab">Agosto</a></li>
@@ -38,11 +38,10 @@
                         <div id="generalTabContent" class="tab-content responsive">
                             <div id="abril" class="tab-pane fade in active">
                                 <div class="row">
-                                    <p>{{novedadesAbril.fecha}}</p>
-                                    <div *ngFor="#novedad of novedadesAbril.peliculas" class="col-lg-3">
-
-                                        <img src="{{novedad.imagen}}" width="200" height="200" class="img-responsive" />
-                                        <h4 href="#">{{novedad.titulo}} <small><br>{{novedad.hashtag}}</small></h4>
+                                    <p>{{novedad.fecha}}</p>
+                                    <div class="col-lg-3">
+                                        <img src="{{novedad.caratula}}" width="200" height="200" class="img-responsive" />
+                                        <h4> <small>{{novedad.titulo}}</small></h4>
                                         <div class="form-group">
                                             <div class="rating">
                                                 <label for="quality-5">

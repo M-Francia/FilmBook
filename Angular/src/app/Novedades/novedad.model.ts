@@ -3,12 +3,14 @@ import {fichapelicula} from '../Fichapelicula/fichapelicula.model';
 
 export class novedad{
   fecha:string;
-  peliculas:fichapelicula;
+  caratula:string;
+  titulo:string;
   valoracion: string;
 
-  constructor(fecha:string, peliculas:fichapelicula, valoracion:string){
+  constructor(fecha:string, caratula:string,titulo:string, valoracion:string){
       this.fecha=fecha;
-      this.peliculas=peliculas;
+      this.caratula=caratula;
+      this.titulo=titulo;
       this.valoracion=valoracion;
 
   }

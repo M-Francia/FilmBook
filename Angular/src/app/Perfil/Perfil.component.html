@@ -23,14 +23,14 @@
                         <div class="portlet-body">
                           <div class="row">
                             <div class="col-lg-3 col-md-3">
-                              <img src={{usuarioAndrea.foto}} width="150" height="150">
+                              <img src={{perfil.foto}} width="150" height="150">
                             </div>
                             <div class="col-lg-9">
-                              <h2 class="box-heading">{{usuarioAndrea.nombre}}</h2>
+                              <h2 class="box-heading">{{perfil.nombre}}</h2>
                               <div class="row">
                                 <div class="col-lg-12">
-                                  <h5 class="box-heading">{{usuarioAndrea.frase}}</h5>
-                                            <h1 class="box-heading">{{usuarioAndrea.seguidores}}k</h1>
+                                  <h5 class="box-heading">{{perfil.frase}}</h5>
+                                            <h1 class="box-heading">{{perfil.seguidores}}k</h1>
                                          </div>
                                     </div>
                             </div>
@@ -45,7 +45,7 @@
                     <div class="panel panel-yellow">
                       <div class="panel-heading"><h2 align="center" class="box-heading">REPUTACIÓN</h2></div>
                       <div class="panel-body pan">
-                        <h1 align="center" class="box-heading">{{usuarioAndrea.valoracion}}/10</h1>
+                        <h1 align="center" class="box-heading">{{usuarios.valoracion}}/10</h1>
                                 <div class="row mbl">
                                     <div class="col-lg-offset-1 col-lg-10">
                                         <h5 class="box-heading">Votar</h5>
@@ -100,7 +100,7 @@
                                 <label for="quality-1">
                                     <i class="fa fa-star text-yellow"></i>
                                 </label>
-                                {{usuarioAndrea.nombre}} la valora con:
+                                {{usuario.nombre}} la valora con:
                             </div>
                       </div>
                 </div>
@@ -122,7 +122,7 @@
                                    <div class="caption"><h4>{{listaTopDiez.titulo}}</h4>
                                     <div class="thumbnail"><img src="{{listaTopDiez.imagen}}" heidth="100" width="150">
                                     </div>
-                                    <p><a href="Fichatecnica.html" role="button" class="btn btn-primary">Ir a su ficha técnica</a>&nbsp;</p>
+                                    <p><a [routerLink]="['Fichapelicula', {id: peliculas.id}]" role="button" class="btn btn-primary">Ir a su ficha técnica</a>&nbsp;</p>
                                     </div>
                                 </div>
 
