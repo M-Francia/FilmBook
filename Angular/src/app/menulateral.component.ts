@@ -12,24 +12,32 @@ export class MenuLateralComponent {
     //status:{isopen:boolean} = {isopen: false};
     //disabled:boolean =false;
 
-    constructor(private _router:Router){}
+    constructor(private router:Router){}
 
     goToInicio(){
-    this._router.navigate(['Timeline']);
+      let link =['Timeline'];
+     this.router.navigate(link);
   }
     goToNovedades(){
-    this._router.navigate(['Novedades']);
+      let link =['Novedades'];
+     this.router.navigate(link);
   }
     goToPerfil(){
-    this._router.navigate(['Perfil']);
-    }
+      let link =['Perfil'];
+     this.router.navigate(link);
+   }
+
     goToFichapelicula(){
-    this._router.navigate(['Fichapelicula']);
+      let link =['Fichapelicula'];
+     this.router.navigate(link);
     }
     goToExplorar(){
-    this._router.navigate(['Explorar']);
+      let link =['Explorar'];
+     this.router.navigate(link);
   }
     goToAdmin(){
-    this._router.navigate(['Administracion']);
+      let link =['Administracion'];
+     this.router.navigate(link);
   }
+
 }

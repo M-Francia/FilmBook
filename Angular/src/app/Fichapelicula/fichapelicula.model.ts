@@ -37,14 +37,17 @@ export class fichapelicula{
       this.nombrebso=n;
     }
 
-    addComentario(texto:string, usuario:string, fecha:string){
-        var comentarioc = new comentario(texto,usuario,fecha);
-        this.comentario.push(comentarioc);
+    addComentario(texto:string, usuario:usuario, fecha:string){
+        var comentario = new comentario(texto,usuario,fecha);
+        this.comentario.push(comentario);
 
- }
- addHashtag(titulo:string, descripcion:string){
-     var hashtagc = new hashtag(titulo,descripcion);
-     this.hashtag.push(hashtagc);
+   }
+   addHashtag(titulo:string, descripcion:string){
+       var hashtagc = new hashtag(titulo,descripcion);
+       this.hashtag.push(hashtagc);
+     }
+     addLike(like: fichapelicula){
+      this.like++;
+    }
 
-}
 }

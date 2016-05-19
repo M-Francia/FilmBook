@@ -31,6 +31,7 @@ export class AdministracionComponent{
       this.peliculas = new fichapelicula(undefined,'','',undefined,'','',undefined,'','','','','','','');
       this.nuevapelicula = true;
     }
+    console.log(this.peliculas);
 
   }
 

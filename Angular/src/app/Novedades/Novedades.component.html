@@ -2,7 +2,7 @@
     <div id="title-breadcrumb-option-demo" class="page-title-breadcrumb">
         <div class="page-header pull-left">
             <div class="page-title">
-                Novedades</div>
+                Novedades de los próximos 3 meses</div>
         </div>
         <ol class="breadcrumb page-breadcrumb pull-right">
             <li><i class="fa fa-home"></i>&nbsp;<a href="dashboard.html">Home</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
@@ -16,82 +16,68 @@
     <div class="page-content">
         <div id="tab-general">
             <div class="row mbl">
-                <div class="col-lg-12">
-                    <div class="col-md-12">
-                        <div id="area-chart-spline" style="width: 100%; height: 300px; display: none;">
+              <div class="col-lg-12">
+                <div class="panel panel-red">
+                        <div class="panel-heading">
+                          <div class="row">
+                          <div class="col-lg-4"> <h2 class="box-heading">Mayo</h2></div>
+                          </div>
                         </div>
+                        <div class="row">
+                            <p>{{novedad.fecha}}</p>
+                            <div class="col-lg-3">
+                                <img src="{{novedad.caratula}}" width="200" height="200" class="img-responsive" />
+                                <h4> <small>{{novedad.titulo}}</small></h4>
+                                <div class="form-group">
+                                  <h3 align="center" class="box-heading">{{peliculas.puntuacion}}/10</h3>
+                                </div>
+                            </div>
                     </div>
-                </div>
-                <div class="col-lg-12">
-                    <div class="col-lg-12">
-                        <ul id="generalTab" class="nav nav-tabs responsive">
-                            <li class="active"><a href="#abril" data-toggle="tab">Abril</a></li>
-                            <li><a data-toggle="tab">Mayo</a></li> <!--[routerLink] = ['Novedades,{mes:mayo}']-->
-                            <li><a href="#junio" data-toggle="tab">Junio</a></li>
-                            <li><a href="#julio" data-toggle="tab">Julio</a></li>
-                            <li><a href="#agosto" data-toggle="tab">Agosto</a></li>
-                            <li><a href="#septiembre" data-toggle="tab">Septiembre</a></li>
-                            <li><a href="#octubre" data-toggle="tab">Octubre</a></li>
-                            <li><a href="#noviembre" data-toggle="tab">Noviembre</a></li>
-                            <li><a href="#diciembre" data-toggle="tab">Diciembre</a></li>
-                        </ul>
-                        <div id="generalTabContent" class="tab-content responsive">
-                            <div id="abril" class="tab-pane fade in active">
-                                <div class="row">
-                                    <p>{{novedad.fecha}}</p>
-                                    <div class="col-lg-3">
-                                        <img src="{{novedad.caratula}}" width="200" height="200" class="img-responsive" />
-                                        <h4> <small>{{novedad.titulo}}</small></h4>
-                                        <div class="form-group">
-                                            <div class="rating">
-                                                <label for="quality-5">
-                                                    <i class="fa fa-star"></i>
-                                                </label>
-                                                <label for="quality-4">
-                                                    <i class="fa fa-star"></i>
-                                                </label>
-                                                <label for="quality-3">
-                                                    <i class="fa fa-star"></i>
-                                                </label>
-                                                <label for="quality-2">
-                                                    <i class="fa fa-star text-yellow"></i>
-                                                </label>
-                                                <label for="quality-1">
-                                                    <i class="fa fa-star text-yellow"></i>
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                            </div>
-                            <div id="mayo" class="tab-pane fade">
-
-                            </div>
-                            <div id="junio" class="tab-pane fade">
-
-                            </div>
-                            <div id="julio" class="tab-pane fade">
-
-                            </div>
-                            <div id="agosto" class="tab-pane fade">
-
-                            </div>
-                            <div id="septiembre" class="tab-pane fade">
-
-                            </div>
-                            <div id="octubre" class="tab-pane fade">
-
-                            </div>
-                            <div id="noviembre" class="tab-pane fade">
-
-                            </div>
-                            <div id="diciembre" class="tab-pane fade">
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                  </div>
             </div>
-        </div>
+            </div>
+            <div class="row mbl">
+              <div class="col-lg-12">
+                <div class="panel panel-red">
+                        <div class="panel-heading">
+                          <div class="row">
+                          <div class="col-lg-4"> <h2 class="box-heading">Junio</h2></div>
+                          </div>
+                        </div>
+                        <div class="row">
+                            <p>{{novedad.fecha}}</p>
+                            <div class="col-lg-3">
+                                <img src="{{novedad.caratula}}" width="200" height="200" class="img-responsive" />
+                                <h4> <small>{{novedad.titulo}}</small></h4>
+                                <div class="form-group">
+                                  <h3 align="center" class="box-heading">{{peliculas.puntuacion}}/10</h3>
+                                </div>
+                            </div>
+                    </div>
+                  </div>
+            </div>
+            </div>
+            <div class="row mbl">
+              <div class="col-lg-12">
+                <div class="panel panel-red">
+                        <div class="panel-heading">
+                          <div class="row">
+                          <div class="col-lg-4"> <h2 class="box-heading">Julio</h2></div>
+                          </div>
+                        </div>
+                        <div class="row">
+                            <p>{{novedad.fecha}}</p>
+                            <div class="col-lg-3">
+                                <img src="{{novedad.caratula}}" width="200" height="200" class="img-responsive" />
+                                <h4> <small>{{novedad.titulo}}</small></h4>
+                                <div class="form-group">
+                                    <h3 align="center" class="box-heading">{{peliculas.puntuacion}}/10</h3>
+                                </div>
+                            </div>
+                    </div>
+                  </div>
+            </div>
+            </div>
     </div>
     <!--Final contenido-->
 </div>

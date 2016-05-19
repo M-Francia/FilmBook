@@ -18,6 +18,10 @@ import {RouteParams, Router} from 'angular2/router';
 export class FichaPeliculaComponent {
 
   private peliculas: fichapelicula;
+  public texto: string;
+  public usuario:usuario;
+  public fecha:string;
+
   constructor(private fichapeliculaService : FichapeliculaService,private _routeParams:RouteParams){
 
   }
@@ -29,6 +33,7 @@ export class FichaPeliculaComponent {
       error => console.log(error)
     )
   }
+
 
   like(){
     //this.fichapeliculaService.LikePelicula(this.peliculas.titulo);

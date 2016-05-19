@@ -30,11 +30,9 @@ import {UsuariosService} from './service/usuarios.service';
     {path: '/timeline', name: 'Timeline', component:TimelineComponent,useAsDefault:true},
     {path: '/explorar', name: 'Explorar', component:ExplorarComponent},
     {path: '/perfil/:id', name: 'Perfil', component:PerfilComponent},
-    {path: '/admnistracion', name: 'Administracion', component:AdministracionComponent},
+    {path: '/administracion', name: 'Administracion', component:AdministracionComponent},
     {path: '/editarperfil', name: 'EditarPerfil', component:EditarPerfilComponent},
     {path: '/registro', name: 'Registro', component:RegistroComponent},
-
-
 ])
 
 export class AppComponent {

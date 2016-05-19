@@ -64,33 +64,17 @@
                                             <div data-type="Página {current} de {pages}" data-control-type="pagination-info" data-control-name="paging" data-control-action="paging" class="jplist-label btn btn-default"></div>
                                             <div data-control-type="pagination" data-control-name="paging" data-control-action="paging" class="jplist-pagination"></div>
                                         </div>
-<<<<<<< HEAD
                                         <div class="box text-shadow">
-                                            <table *ngFor="#pelicula of explorar" class="demo-tbl">
-                                              <tr class="tbl-item">
+                                            <table class="demo-tbl">
+                                              <tr *ngFor="#pelicula of explorar" class="tbl-item">
                                                   <!--<img/>-->
-                                                  <td class="img"><img src="{{pelicula.peliculas.imagen}}}"/></td>
+                                                  <td class="img"><img src="{{pelicula.peliculas.imagen}}" height="100" width="100"/></td>
                                                   <!--<data>-->
-                                                  <td class="td-block">
+                                                  <td  class="td-block">
                                                       <p class="date">{{pelicula.fecha}}</p>
-                                                      <p class="title"><a>{{pelicula.peliculas.titulo}}</a></p>
+                                                      <p class="title"><a [routerLink]="['Fichapelicula', {id: pelicula.id}]">{{pelicula.peliculas.titulo}}</a></p>
                                                       <p class="desc">{{pelicula.peliculas.descripcion}}</p>
                                                       <p class="like">{{pelicula.likes}}</p>
-=======
-                                        <div *ngFor="#peliculas of explorar.peliculas"  class="box text-shadow">
-                                            <table class="demo-tbl">
-                                              <tr class="tbl-item">
-                                                  <!--<img/>-->
-                                                  <td class="img"><img src="{{peliculas.imagen}}}"/></td>
-                                                  <!--<data>-->
-                                                  <td class="td-block">
-                                                      <p class="date">{{explorar.fecha}}</p>
-                                                      <a href="#">
-                                                          <p class="title">{{peliculas.titulo}}</p>
-                                                      </a>
-                                                      <p class="desc">{{peliculas.descripcion}}</p>
-                                                      <p class="like">{{explorar.likes}}</p>
->>>>>>> origin/master
                                                   </td>
                                               </tr>
                                             </table>

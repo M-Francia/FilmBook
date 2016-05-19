@@ -8,7 +8,6 @@ import {RouteParams, Router} from 'angular2/router';
 @Component({
   selector: 'novedades',
   templateUrl: 'app/Novedades/Novedades.component.html',
-  providers: [NovedadesService]
 })
 
 export class NovedadesComponent {

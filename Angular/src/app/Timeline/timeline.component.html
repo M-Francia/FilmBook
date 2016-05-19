@@ -16,11 +16,11 @@
     <!--END TITLE & BREADCRUMB PAGE-->
     <!--BEGIN CONTENT-->
     <div class="page-content">
-        <div  id="tab-general">
+        <div id="tab-general">
           <div id="sum_box" class="row mbl">
-                <div class="col-sm-6 col-md-3">
-                  <div *ngFor="#pelicula of peliculas" class="panel profit db mbm">
-                        <div class="panel-body">
+                <div *ngFor="#pelicula of fichapelicula" class="col-sm-6 col-md-3">
+                  <div class="panel profit db mbm">
+                        <div  class="panel-body">
                             <h4 class="value">
                                 <span data-counter="" data-start="10" data-end="50" data-step="1" data-duration="0">
                                 </span><span class="label label-orange">{{pelicula.titulo}}</span></h4>
@@ -31,50 +31,27 @@
                     </div>
                 </div>
             </div>
-            <div class="row mbl">
+            <div *ngFor="#pelicula of fichapelicula" class="row mbl">
               <div class="col-lg-12 col-md-12">
                 <div class="portlet box">
                         <div class="portlet-header">
                             <div class="caption">
-                                <a href="fichapelicula.html"><h1>{{pelicula.titulo}}</h1></a></div>
+                                <a [routerLink]="['Fichapelicula',{id:pelicula.id}]"><h1>{{pelicula.titulo}}</h1></a></div>
                         </div>
                         <div class="portlet-body">
                           <div class="row mbl">
                             <div class="col-lg-5 col-md-5">
-                              <iframe width="360" height="203" src="{{fichapelicula.trailer}}" frameborder="0" allowfullscreen></iframe>
+                              <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" src="{{pelicula.trailer}}" allowfullscreen></iframe>
+                              </div>
                               <h5>Etiquetas:</h5>
-                              <span *ngFor="#etiqueta of peliculas.etiqueta" class="badge badge-red">{{etiqueta}}</span>
+                              <span *ngFor="#etiquetas of fichapelicula.etiqueta" class="badge badge-red">{{etiquetas}}</span>
                               </div>
                             <div class="col-lg-7">
                                 <div class="note note-danger"><h5 class="box-heading">{{pelicula.vnegativa}}</h5>
                                     <p>{{pelicula.vnegautor}}</p></div>
                                     <div class="note note-success"><h5 class="box-heading">{{pelicula.vpositiva}}</h5>
                                     <p>{{pelicula.vpostautor}}</p></div>
-                              </div>
-                          </div>
-                        </div>
-                   </div>
-              </div>
-            </div>
-            <div class="row mbl">
-              <div class="col-lg-12 col-md-12">
-                <div class="portlet box">
-                        <div class="portlet-header">
-                            <div class="caption">
-                                <a><h1>{{pelicula.titulo}}</h1></a></div>//[routerLink]="['Fichapelicula',{nombre:pelicula.titulo}]"
-                        </div>
-                        <div class="portlet-body">
-                          <div class="row mbl">
-                            <div class="col-lg-5 col-md-5">
-                              <iframe width="360" height="203" src="{{fichapelicula.trailer}}" frameborder="0" allowfullscreen></iframe>
-                              <h5>Etiquetas:</h5>
-                              <span *ngFor="#etiqueta of peliculas.etiqueta" class="badge badge-red">{{etiqueta}}</span>
-                              </div>
-                            <div class="col-lg-7">
-                                <div class="note note-danger"><h5 class="box-heading">{{peliculas.vnegativa}}</h5>
-                                    <p>{{peliculas.vnegautor}}</p></div>
-                                    <div class="note note-success"><h5 class="box-heading">{{peliculas.vpositiva}}</h5>
-                                    <p>{{peliculas.vpostautor}}</p></div>
                               </div>
                           </div>
                         </div>
@@ -90,10 +67,10 @@
                       </div>
                       <div style="overflow: hidden;" class="portlet-body">
                           <ul class="todo-list sortable">
-                              <li *ngFor="#pelicula of etiquetas" class="clearfix"><span class="drag-drop"><i></i></span>
+                              <li *ngFor="#pelicula of recomendadas" class="clearfix"><span class="drag-drop"><i></i></span>
                                   <div class="todo-check pull-left">
                                       <input type="checkbox" value="" /></div>
-                                  <div classclass="todo-title">
+                                  <div [routerLink]="['Fichapelicula',{id:recomendadas.id}]" classclass="todo-title">
                                       {{pelicula.titulo}}</div>
                                   <div class="todo-actions pull-right clearfix">
                                       <a href="#" class="todo-complete"><i class="fa fa-check"></i></a><a href="#" class="todo-remove"><i class="fa fa-trash-o">
@@ -114,11 +91,11 @@
                         <div class="portlet-body">
                             <div class="chat-scroller">
                                 <ul class="chats">
-                                    <li *ngFor="#comentarios of peliculas.comentario" class="in">
+                                    <li *ngFor="#comentarios of fichapelicula.comentario" class="in">
                                         <img src="{{comentarios.usuario.foto}}" class="avatar img-responsive">
                                         <div class="message">
                                             <span class="chat-arrow"></span><a href="#" class="chat-name">{{comentarios.usuario.nombre}}</a>&nbsp;<span
-                                            class="chat-datetime">{{comentarios.fecha}}</span><span class="chat-body">{{comentario.texto}}</span></div>
+                                            class="chat-datetime">{{comentarios.fecha}}</span><span class="chat-body">{{comentarios.texto}}</span></div>
                                     </li>
 
                                 </ul>

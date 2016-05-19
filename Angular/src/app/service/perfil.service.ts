@@ -11,7 +11,7 @@ export class PerfilService{
 private usuario: usuario;
 
   getUsuario(){
-      return this.usuario;
+      return withObserver(this.usuario);
   }
 
   getNombreUsuario(){

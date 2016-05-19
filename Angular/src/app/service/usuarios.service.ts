@@ -16,7 +16,7 @@ private usuarios =[
 ];
 
 getUsuarios(){
-    return this.usuarios;
+    return withObserver(this.usuarios);
 }
 
 addUsuarios(usuario : usuario){

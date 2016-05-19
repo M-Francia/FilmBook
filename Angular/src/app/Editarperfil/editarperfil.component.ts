@@ -1,6 +1,11 @@
 import {Component,Input,Output,EventEmitter,View} from 'angular2/core';
-import {RouteConfig,ROUTER_DIRECTIVES} from 'angular2/router';
+import {RouteConfig,ROUTER_DIRECTIVES,Router,RouteParams} from 'angular2/router';
 import {fichapelicula} from '../Fichapelicula/fichapelicula.model';
+import {PerfilService} from '../service/perfil.service';
+import {UsuariosService} from '../service/usuarios.service';
+import {Observable} from 'rxjs/Observable';
+import {withObserver} from '../utils';
+import {usuario} from '../Fichapelicula/usuario.model.ts';
 
 
 @Component({
@@ -10,11 +15,90 @@ import {fichapelicula} from '../Fichapelicula/fichapelicula.model';
 
 export class EditarPerfilComponent{
 
-//  private peliculasLista = [new Pelicula("Dos tontos muy tontos","6",230,"./images/peliculas/ant-man.jpg","https://youtu.be/F7BqFYbLJeM",["etiquetauno","etiquetados","etiquetatres"],"The Hateful Eight es una película estadounidense dirigida por Quentin Tarantino, estrenada en Estados Unidos en 2015.","valoracion negativa","nombre del autor de la valoracion negativa","valoracion positiva","nombre del autor de la valoracion positiva",[],"banda sonora","nombre de la banda sonora"),
-//  new Pelicula("La vida es bella","6",230,"./images/peliculas/ant-man.jpg","https://youtu.be/F7BqFYbLJeM",["etiquetauno","etiquetados","etiquetatres"],"The Hateful Eight es una película estadounidense dirigida por Quentin Tarantino, estrenada en Estados Unidos en 2015.","valoracion negativa","nombre del autor de la valoracion negativa","valoracion positiva","nombre del autor de la valoracion positiva",[],"banda sonora","nombre de la banda sonora")];
+   private usuarios:usuario [];
+   private nusuario:usuario;
+   private nombre="";
+   private viejaPass="";
+   private nuevaPass="";
+   private nuevaPassc="";
+   private frase="";
+   private foto="";
+   private pass="";
+   colapsado = true;
+   mostrarFallo = false;
+   mostrarAcierto = false;
 
-cambiarFoto(){}
-//showPeliculas(){
-  //console.log(this.peliculasLista.hashtag);
-//}
-}
+  constructor(private perfilservice: PerfilService, private usuariosservice:UsuariosService ){}
+
+  ngOnInit(){
+  // this.nusuario = this.perfilservice.getUsuario(id);
+   this.nombre=this.nusuario.nombre;
+   this.frase=this.nusuario.frase;
+   this.foto=this.nusuario.foto;
+   this.pass=this.nusuario.contraseña;
+   //this.usuarios = this.usuariosservice.getUsuarios();
+ }
+
+
+ passCorrecto(){
+   return this.viejaPass==this.pass;
+ }
+
+ passIguales(){
+   return this.nuevaPass== this.nuevaPassc;
+ }
+
+ cambiarFoto(){
+   this.colapsado=false;
+ }
+
+ noCogido(){
+   var cogido= true;
+   for(var usuario of this.usuarios){
+     if(usuario.nombre==this.nombre){
+       cogido=false;
+       break;
+     }
+   }
+   return cogido || this.nombre==this.nusuario.nombre;
+ }
+ cambiarDatos(nuevousuario:usuario){
+   if(this.viejaPass==this.pass){
+     if(this.nuevaPass==this.nuevaPassc){
+       if(this.nuevaPass==''){
+         this.nusuario.contraseña=this.pass;
+       }else{
+         this.nusuario.contraseña=this.nuevaPass;
+       }
+       this.nusuario.foto=this.foto;
+       this.nusuario.nombre=this.nombre;
+       this.nusuario.frase=this.frase;
+       this.mostrarAlert(true);
+     }else{
+       this.mostrarAlert(false);
+     }
+   }else{
+     this.mostrarAlert(false);
+
+   }
+ }
+ noMostrarAlert(){
+     this.mostrarFallo=false;
+     this.mostrarAcierto=false;
+ }
+ mostrarAlert(mostrar:boolean){
+     if(mostrar){
+         this.mostrarAcierto=true;
+     }else{
+         this.mostrarFallo=true;
+     }
+ }
+ getStyles(){
+   return {
+     'display':this.colapsado? 'none':'block'
+   }
+ }
+ setFoto(img:string){
+   this.foto=img;
+ }
+ }

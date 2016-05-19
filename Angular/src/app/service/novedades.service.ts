@@ -4,10 +4,8 @@ import {novedad} from '../Novedades/novedad.model.ts'
 
 @Injectable()
 export class NovedadesService{
-  private año: novedad[][]=[this.peliculas,this.peliculas,this.peliculas,this.peliculas];
-  constructor(private novedadesService : NovedadesService){
-
-  }
+  private año: novedad[][]=[this.peliculas,this.peliculas,this.peliculas,this.peliculas,this.peliculas,this.peliculas,this.peliculas,
+                            this.peliculas,this.peliculas,this.peliculas,this.peliculas,this.peliculas];
 
   private peliculas = [
     new novedad("Viernes, 01 Abril 2016","app/images/novedades/altamira.jpg","Altamira (Hugh Hudson)","8,4"),

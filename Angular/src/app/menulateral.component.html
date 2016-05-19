@@ -7,21 +7,21 @@
                         <div class="icon-bg bg-orange"></div>
                     </i><span class="menu-title">Timeline</span></a>
                     </li>
-                        <li><a  (click)="goToNovedades()" ><i class="fa fa-send-o fa-fw">
+                        <li><a (click)="goToNovedades()"><i class="fa fa-send-o fa-fw">
                         <div class="icon-bg bg-green"></div>
-                    </i><span class="menu-title">Novedades</span></a>
+                    </i><span  class="menu-title">Novedades</span></a>
                         </li>
-                        <li><li><a  (click)="goToExplorar()" ><i class="fa fa-search">
+                        <li><li><a (click)="goToExplorar()" ><i class="fa fa-search">
                         <div class="icon-bg bg-violet"></div>
                     </i><span class="menu-title">Explorar</span></a>
                         </li>
-                        <li><a><i (click)="goToPerfil()" class="fa fa-user">
+                        <li><a (click)="goToPerfil()"><i class="fa fa-user">
                         //[routerLink]="['Perfil',{nombre:this.PerfilService.getUsuario().nombre}]"
                         <div class="icon-bg bg-blue"></div>
                     </i><span class="menu-title">Perfil</span></a>
                         </li>
-                        //*ngIf="isActive"
-                        <li><a  [routerLink]="Administracion" ><i class="fa fa-user">
+                        //*ngIf="isActive" [routerLink]="Administracion"
+                        <li><a (click)="goToAdmin()"><i class="fa fa-user">
                         <div class="icon-bg bg-blue"></div>
                     </i><span class="menu-title">Administración</span></a>
                         </li>

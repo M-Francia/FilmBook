@@ -27,14 +27,14 @@
                     <form>
                        <div class="input-icon right">
                         <i class="fa fa-user"></i>
-                        <input id="user" type="text" [(ngModel)]="usuario" class="form-control" placeholder="Nombre de usuario">
+                        <input id="user" type="text" [(ngModel)]="nombrelogin" class="form-control" placeholder="Nombre de usuario">
                         </div>
                     </form>
                     <br>
                     <form>
                        <div class="input-icon right">
                         <i class="fa fa-lock"></i>
-                        <input id="pass" type="password" [(ngModel)]="cpassword" class="form-control" placeholder="Contraseña">
+                        <input id="pass" type="password" [(ngModel)]="contrasenialogin" class="form-control" placeholder="Contraseña">
                         </div>
                     </form>
                     <br>
@@ -47,7 +47,7 @@
                         </span>
                         <br>
                         <br>
-                        <a type="button" class="btn btn-info">Registrarme</a>
+                        <a (click)="goToRegistrar()" type="button" class="btn btn-info">Registrarme</a>
                     </div>
                 </div>
             </div>
@@ -55,7 +55,7 @@
         </div>
         <li *ngIf="isActive" class="dropdown topbar-user"><a data-hover="dropdown" href="#" class="dropdown-toggle"><img src="images/avatar/48.jpg" alt="" class="img-responsive img-circle"/>&nbsp;<span class="hidden-xs">Mario Francia</span>&nbsp;<span class="caret"></span></a>
             <ul class="dropdown-menu dropdown-user pull-right">
-                <li><a ><i class="fa fa-user"></i>Editar perfil</a></li>
+                <li><a (click)="goToEditarPerfil"(><i class="fa fa-user"></i>Editar perfil</a></li>
                 <li><a ><i class="fa fa-key"></i>Cerrar sesión</a></li>
             </ul>
         </li>

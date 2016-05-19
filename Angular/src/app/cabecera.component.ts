@@ -12,23 +12,23 @@ import {PerfilService} from './service/perfil.service';
 })
 export class CabeceraComponent  {
 
-  nombre = "";
-  contraseña = "";
+  nombrelogin = "";
+  contrasenialogin = "";
   usuario:usuario;
   mostrarAcierto=false;
 
-  private usuarios:usuario [];
+  private usuarios:usuario[];
 
   constructor(private _router:Router, private perfilService:PerfilService, private usuariosService:UsuariosService){}
 
     ngOnInit(){
-        this.usuarios = this.usuariosService.getUsuarios();
+      //  this.usuarios = this.usuariosService.getUsuarios();
     }
     log(){
-
         for(var usuario of this.usuarios){
-            if (usuario.nombre==this.nombre && usuario.contraseña== this.contraseña){
+            if (usuario.nombre==this.nombrelogin && usuario.contraseña== this.contrasenialogin){
                 this.usuario=usuario;
+                console.log(this.usuario);
                 this.perfilService.setUsuario(this.usuario);
                 break;
             }
@@ -36,11 +36,11 @@ export class CabeceraComponent  {
       }
 
       perfilActual(){
-       this.usuario = this.perfilService.getUsuario();
+      // this.usuario = this.perfilService.getUsuario();
        return this.perfilService.getUsuario()!=undefined;
    }
-   isAdmin(){
-       this.usuario = this.perfilService.getUsuario();
+  /* isAdmin(){
+//       this.usuario = this.perfilService.getUsuario();
 
        return this.perfilActual() && this.usuario.nombre == 'admin';
    }
@@ -48,5 +48,32 @@ export class CabeceraComponent  {
        this.usuario=undefined;
        this.perfilService.setUsuario(undefined);
        this.mostrarAcierto=false;
-   }
+   }*/
+/*
+   currentActive(){
+      this.usuario = this.perfilService.getUsuario();
+      return this.perfilService.getUsuario()!=undefined;
+  }
+  isAdmin(){
+      this.currentUser = this.currentUserService.getCurrentUser();
+
+      return this.currentActive() && this.currentUser.nombre == 'admin';
+  }
+  cerrarSesion(){
+      this.currentUser=undefined;
+      this.currentUserService.setUser(undefined);
+      this.mostrarAcierto=false;
+      this.usuario="";
+      this.pass="";
+      this._router.navigate(['Main']);
+  }*/
+
+   goToRegistrar(){
+     let link =['Registro'];
+    this._router.navigate(link);
+ }
+ goToEditarPerfil(){
+   let link =['Editarperfil'];
+  this._router.navigate(link);
+}
 }

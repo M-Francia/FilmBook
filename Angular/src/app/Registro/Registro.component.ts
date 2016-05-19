@@ -5,7 +5,7 @@ import {usuario} from '../Fichapelicula/usuario.model';
 
 @Component({
   selector: 'registro',
-  templateUrl: 'app/Registro/Registro.component.html'
+  templateUrl: 'app/Registro/registro.component.html'
 })
 
 export class RegistroComponent {
