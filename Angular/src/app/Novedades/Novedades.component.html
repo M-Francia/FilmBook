@@ -5,8 +5,8 @@
                 Novedades de los próximos 3 meses</div>
         </div>
         <ol class="breadcrumb page-breadcrumb pull-right">
-            <li><i class="fa fa-home"></i>&nbsp;<a href="dashboard.html">Home</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
-            <li class="hidden"><a href="#">Novedades</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
+            <li><i class="fa fa-home"></i>&nbsp;<a click="goToInicio()">Home</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
+            <li class="hidden">Novedades&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
             <li class="active">Novedades</li>
         </ol>
         <div class="clearfix">
@@ -17,22 +17,24 @@
         <div id="tab-general">
             <div class="row mbl">
               <div class="col-lg-12">
-                <div class="panel panel-red">
+                <div  class="panel panel-red">
                         <div class="panel-heading">
                           <div class="row">
                           <div class="col-lg-4"> <h2 class="box-heading">Mayo</h2></div>
                           </div>
                         </div>
+                        <div class="form-body pal">
                         <div class="row">
-                            <p>{{novedad.fecha}}</p>
-                            <div class="col-lg-3">
-                                <img src="{{novedad.caratula}}" width="200" height="200" class="img-responsive" />
-                                <h4> <small>{{novedad.titulo}}</small></h4>
+                            <div *ngFor="#pelicula of primermesnovedades"  class="col-lg-4">
+                                <p>{{pelicula.fecha}}</p>
+                                <img src="{{pelicula.caratula}}" width="200" height="200" class="img-responsive" />
+                                <h4 > <small>{{pelicula.titulo}}</small></h4>
                                 <div class="form-group">
-                                  <h3 align="center" class="box-heading">{{peliculas.puntuacion}}/10</h3>
+                                  <h3 align="center" class="box-heading">{{pelicula.valoracion}}/10</h3>
                                 </div>
                             </div>
-                    </div>
+                          </div>
+                        </div>
                   </div>
             </div>
             </div>
@@ -44,14 +46,16 @@
                           <div class="col-lg-4"> <h2 class="box-heading">Junio</h2></div>
                           </div>
                         </div>
+                        <div class="form-body pal">
                         <div class="row">
-                            <p>{{novedad.fecha}}</p>
-                            <div class="col-lg-3">
-                                <img src="{{novedad.caratula}}" width="200" height="200" class="img-responsive" />
-                                <h4> <small>{{novedad.titulo}}</small></h4>
+                            <div *ngFor="#pelicula of segundomesnovedades" class="col-lg-4">
+                              <p>{{pelicula.fecha}}</p>
+                                <img src="{{pelicula.caratula}}" width="200" height="200" class="img-responsive" />
+                                <h4> <small>{{pelicula.titulo}}</small></h4>
                                 <div class="form-group">
-                                  <h3 align="center" class="box-heading">{{peliculas.puntuacion}}/10</h3>
+                                  <h3 align="center" class="box-heading">{{pelicula.valoracion}}/10</h3>
                                 </div>
+                            </div>
                             </div>
                     </div>
                   </div>
@@ -65,14 +69,16 @@
                           <div class="col-lg-4"> <h2 class="box-heading">Julio</h2></div>
                           </div>
                         </div>
+                        <div class="form-body pal">
                         <div class="row">
-                            <p>{{novedad.fecha}}</p>
-                            <div class="col-lg-3">
-                                <img src="{{novedad.caratula}}" width="200" height="200" class="img-responsive" />
-                                <h4> <small>{{novedad.titulo}}</small></h4>
+                            <div *ngFor="#pelicula of tercermesnovedades" class="col-lg-4">
+                              <p>{{pelicula.fecha}}</p>
+                                <img src="{{pelicula.caratula}}" width="200" height="200" class="img-responsive" />
+                                <h4> <small>{{pelicula.titulo}}</small></h4>
                                 <div class="form-group">
-                                    <h3 align="center" class="box-heading">{{peliculas.puntuacion}}/10</h3>
+                                    <h3 align="center" class="box-heading">{{pelicula.valoracion}}/10</h3>
                                 </div>
+                            </div>
                             </div>
                     </div>
                   </div>

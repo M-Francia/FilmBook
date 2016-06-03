@@ -1,6 +1,10 @@
 import {Component,Output,EventEmitter,View} from 'angular2/core';
 import {ROUTER_DIRECTIVES,} from 'angular2/router';
 import {RouteParams, Router} from 'angular2/router';
+import {CabeceraComponent} from './cabecera.component.ts';
+import {UsuariosService} from './service/usuarios.service';
+import {PerfilService} from './service/perfil.service';
+import {usuario} from './Fichapelicula/usuario.model';
 
 
 @Component({
@@ -11,8 +15,10 @@ import {RouteParams, Router} from 'angular2/router';
 export class MenuLateralComponent {
     //status:{isopen:boolean} = {isopen: false};
     //disabled:boolean =false;
+    currentUser:usuario;
 
-    constructor(private router:Router){}
+
+    constructor(private router:Router, private usuariosService:UsuariosService, private perfilService:PerfilService){}
 
     goToInicio(){
       let link =['Timeline'];
@@ -23,7 +29,8 @@ export class MenuLateralComponent {
      this.router.navigate(link);
   }
     goToPerfil(){
-      let link =['Perfil'];
+      let link =['Perfil',{nombre:this.perfilService.getCurrentUser().nombre}];
+      //[routerLink]="['Perfil',{nombre:this.PerfilService.getUsuario().nombre}]"
      this.router.navigate(link);
    }
 
@@ -39,5 +46,14 @@ export class MenuLateralComponent {
       let link =['Administracion'];
      this.router.navigate(link);
   }
+
+  currentActive(){
+    this.currentUser = this.usuariosService.getCurrentUser();
+    return this.usuariosService.getCurrentUser()!=undefined;
+}
+adminActive(){
+  this.currentUser = this.usuariosService.getCurrentUser();
+  return this.currentActive() && this.currentUser.nombre == 'admin';
+}
 
 }

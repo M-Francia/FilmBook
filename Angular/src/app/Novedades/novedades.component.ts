@@ -3,6 +3,7 @@ import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
 import {novedad} from '../Novedades/novedad.model';
 import {NovedadesService} from '../service/novedades.service';
 import {RouteParams, Router} from 'angular2/router';
+import {FichapeliculaService} from '../service/fichapelicula.service';
 
 
 @Component({
@@ -12,15 +13,28 @@ import {RouteParams, Router} from 'angular2/router';
 
 export class NovedadesComponent {
 
-    private novedades: novedad[];
-    private mes:string;
-    private año: novedad[][];
-constructor(private novedadesService : NovedadesService,private _router:Router, routeParams:RouteParams){}
+    private primermesnovedades: novedad[];
+    private segundomesnovedades: novedad[];
+    private tercermesnovedades: novedad[];
+
+constructor(private router:Router,private novedadesService : NovedadesService,private _routeParams:RouteParams){}
 
 ngOnInit(){
-  this.novedades = this.novedadesService.getNovedades(this.mes);//añadir parametro bien
+  this.novedadesService.getPrimermesPeliculas().subscribe(
+    peliculas => this.primermesnovedades = peliculas,
+    error => console.log(error))
+
+  this.novedadesService.getSegundomesPeliculas().subscribe(
+    peliculas => this.segundomesnovedades = peliculas,
+    error => console.log(error))
+
+  this.novedadesService.getTercermesPeliculas().subscribe(
+    peliculas => this.tercermesnovedades = peliculas,
+    error => console.log(error))
+  }
+
+  goToInicio(){
+    let link =['Timeline'];
+   this.router.navigate(link);
 }
-
-
-
 }

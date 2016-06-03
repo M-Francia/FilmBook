@@ -8,10 +8,14 @@
                     <div class="input-icon right text-white"><a href="#"><i class="fa fa-search"></i></a><input type="text" placeholder="Buscar aquí..." class="form-control text-white"/></div>
                 </form>
                 <ul class="nav navbar navbar-top-links navbar-right mbn">
-                    <li class="dropdown"><a data-hover="dropdown" href="#" class="dropdown-toggle"><i class="fa fa-bell fa-fw"></i><span class="badge badge-green">3</span></a>
+                    <li>
+                    <a *ngIf="currentActive()">
+                      <a ><img src={{currentUser.foto}} class="img-responsive img-circle"/>&nbsp;<span>{{currentUser.nombre}}</span>&nbsp;</a>
+                    </a>
                     </li>
                     <li>
-                       <a id="logeo" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="modal" data-target="#myModal">Login</a>
+                       <a *ngIf="!currentActive()" id="logeo" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="modal" data-target="#myModal">Login</a>
+                        <a *ngIf="currentActive()"  (click)="cerrarSesion()" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="modal">Cerrar sesión</a>
                     </li>
                 </ul>
             </div>
@@ -38,7 +42,7 @@
                         </div>
                     </form>
                     <br>
-                    <button type="button" id="login" (click)="log()">Aceptar</button>&nbsp;&nbsp;&nbsp;
+                    <button type="button" id="login" data-dismiss="modal" (click)="compareTo()">Aceptar</button>&nbsp;&nbsp;&nbsp;
                     <label class="record"><input type="checkbox">  Recordarme</label>
                     <hr>
                     <div class="reg">
@@ -53,10 +57,4 @@
             </div>
           </div>
         </div>
-        <li *ngIf="isActive" class="dropdown topbar-user"><a data-hover="dropdown" href="#" class="dropdown-toggle"><img src="images/avatar/48.jpg" alt="" class="img-responsive img-circle"/>&nbsp;<span class="hidden-xs">Mario Francia</span>&nbsp;<span class="caret"></span></a>
-            <ul class="dropdown-menu dropdown-user pull-right">
-                <li><a (click)="goToEditarPerfil"(><i class="fa fa-user"></i>Editar perfil</a></li>
-                <li><a ><i class="fa fa-key"></i>Cerrar sesión</a></li>
-            </ul>
-        </li>
     </div>

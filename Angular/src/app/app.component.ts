@@ -29,7 +29,7 @@ import {UsuariosService} from './service/usuarios.service';
     {path: '/novedades', name: 'Novedades', component:NovedadesComponent},
     {path: '/timeline', name: 'Timeline', component:TimelineComponent,useAsDefault:true},
     {path: '/explorar', name: 'Explorar', component:ExplorarComponent},
-    {path: '/perfil/:id', name: 'Perfil', component:PerfilComponent},
+    {path: '/perfil/:nombre', name: 'Perfil', component:PerfilComponent},
     {path: '/administracion', name: 'Administracion', component:AdministracionComponent},
     {path: '/editarperfil', name: 'EditarPerfil', component:EditarPerfilComponent},
     {path: '/registro', name: 'Registro', component:RegistroComponent},
@@ -37,13 +37,6 @@ import {UsuariosService} from './service/usuarios.service';
 
 export class AppComponent {
 
-  private pelicula ;
-  private usuario = "";
-  private esUsuario = false;
 
-	usuarioActivo(myuser:string){
-		this.usuario = myuser;
-    this.esUsuario = !this.esUsuario;
-  }
 
 	}

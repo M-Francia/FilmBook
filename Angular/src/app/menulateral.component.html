@@ -15,16 +15,25 @@
                         <div class="icon-bg bg-violet"></div>
                     </i><span class="menu-title">Explorar</span></a>
                         </li>
+                        <a *ngIf="currentActive()">
                         <li><a (click)="goToPerfil()"><i class="fa fa-user">
                         //[routerLink]="['Perfil',{nombre:this.PerfilService.getUsuario().nombre}]"
                         <div class="icon-bg bg-blue"></div>
                     </i><span class="menu-title">Perfil</span></a>
                         </li>
-                        //*ngIf="isActive" [routerLink]="Administracion"
+                        </a>
+                        <a *ngIf="adminActive()">
                         <li><a (click)="goToAdmin()"><i class="fa fa-user">
                         <div class="icon-bg bg-blue"></div>
                     </i><span class="menu-title">Administración</span></a>
                         </li>
+                      </a>
+                        <a *ngIf="currentActive()">
+                        <li><a (click)="goToEditarPerfil()"><i class="fa fa-th-list fa-fw">
+                            <div class="icon-bg bg-blue"></div>
+                        </i><span class="menu-title">Editar perfil</span></a>
+                        </li>
+                        </a>
                 </ul>
             </div>
         </nav>

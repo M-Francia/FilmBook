@@ -25,15 +25,15 @@ private peliculas = [
   ];
 
   private recomendadas = [
-    new fichapelicula(0,"Hermanísimas","8,4",480,"app/images/novedades/altamira.jpg","https://www.youtube.com/embed/gnRbXn4-Yis",["Comedia","Intriga","Siglo XIX","Western"],
+    new fichapelicula(3,"Hermanísimas","8,4",480,"app/images/novedades/altamira.jpg","https://www.youtube.com/embed/gnRbXn4-Yis",["Comedia","Intriga","Siglo XIX","Western"],
     "The Hateful Eight es una película estadounidense dirigida por Quentin Tarantino, estrenada en Estados Unidos en 2015.Se trata de un western que mezcla elementos de cine de misterio y comedia negra.",
     "La película límite, contradictoria y extremadamente virtuosa de un director condenado a ser siempre él mismo. (...) una exhibición tan florida como irrenunciable; tan cargante como hipnótica (...) Tarantino más 'tarantinizado' que nunca.","Luis Martínez: Diario El Mundo",
     "Sobredosis de Tarantino. Bendito banquete para unos, empacho casi letal para los otros. (...)","Diario La Vanguardia","https://www.youtube.com/watch?v=gnRbXn4-Yis","El despertar de la fuerza"),
-    new fichapelicula(1,"Kiki, el amor se hace","8,4",480,"app/images/novedades/altamira.jpg","https://www.youtube.com/embed/gnRbXn4-Yis",["Comedia","Intriga","Siglo XIX","Western"],
+    new fichapelicula(4,"Kiki, el amor se hace","8,4",480,"app/images/novedades/altamira.jpg","https://www.youtube.com/embed/gnRbXn4-Yis",["Comedia","Intriga","Siglo XIX","Western"],
     "The Hateful Eight es una película estadounidense dirigida por Quentin Tarantino, estrenada en Estados Unidos en 2015.Se trata de un western que mezcla elementos de cine de misterio y comedia negra.",
     "La película límite, contradictoria y extremadamente virtuosa de un director condenado a ser siempre él mismo. (...) una exhibición tan florida como irrenunciable; tan cargante como hipnótica (...) Tarantino más 'tarantinizado' que nunca.","Luis Martínez: Diario El Mundo",
     "Sobredosis de Tarantino. Bendito banquete para unos, empacho casi letal para los otros. (...)","Diario La Vanguardia","https://www.youtube.com/watch?v=gnRbXn4-Yis","El despertar de la fuerza"),
-    new fichapelicula(2,"Angry birds","8,4",480,"app/images/novedades/altamira.jpg","https://www.youtube.com/embed/gnRbXn4-Yis",["Comedia","Intriga","Siglo XIX","Western"],
+    new fichapelicula(5,"Angry birds","8,4",480,"app/images/novedades/altamira.jpg","https://www.youtube.com/embed/gnRbXn4-Yis",["Comedia","Intriga","Siglo XIX","Western"],
     "The Hateful Eight es una película estadounidense dirigida por Quentin Tarantino, estrenada en Estados Unidos en 2015.Se trata de un western que mezcla elementos de cine de misterio y comedia negra.",
     "La película límite, contradictoria y extremadamente virtuosa de un director condenado a ser siempre él mismo. (...) una exhibición tan florida como irrenunciable; tan cargante como hipnótica (...) Tarantino más 'tarantinizado' que nunca.","Luis Martínez: Diario El Mundo",
     "Sobredosis de Tarantino. Bendito banquete para unos, empacho casi letal para los otros. (...)","Diario La Vanguardia","https://www.youtube.com/watch?v=gnRbXn4-Yis","El despertar de la fuerza")
@@ -56,6 +56,11 @@ getPeliculas(){
       let pelicula = this.peliculas.filter(h => h.id === +id)[0]
     return withObserver(pelicula);
   }
+
+  getPeliculaRecomendada(id: number | string){
+    let pelicula = this.recomendadas.filter(h => h.id === +id)[0]
+    return withObserver(pelicula);
+}
 
 
   savePelicula(pelicula: fichapelicula){

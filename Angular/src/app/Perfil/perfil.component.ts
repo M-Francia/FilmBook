@@ -19,8 +19,8 @@ export class PerfilComponent {
 
   }
   ngOnInit(){
-    let id=+this._routeParams.get("id");
-    this.usuariosservice.getUsuario(id).subscribe(
+    let nombre=+this._routeParams.get("nombre");
+    this.usuariosservice.getUsuario(nombre).subscribe(
       usuario => this.perfil = usuario,
       error => console.log(error)
     )

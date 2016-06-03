@@ -1,7 +1,5 @@
 import {Injectable} from 'angular2/core';
 import {usuario} from '../Fichapelicula/usuario.model.ts';
-import {Observable} from 'rxjs/Observable';
-import {withObserver} from '../utils';
 
 
 @Injectable()
@@ -10,16 +8,16 @@ export class PerfilService{
 
 private usuario: usuario;
 
-  getUsuario(){
-      return withObserver(this.usuario);
+  getCurrentUser(){
+      return this.usuario;
   }
 
   getNombreUsuario(){
     return this.usuario.nombre;
   }
 //asigna el usuario
-  setUsuario(usuario: usuario){
-       this.usuario=usuario;
+  setUsuario(cUser: usuario){
+       this.usuario=cUser;
   }
 }
 

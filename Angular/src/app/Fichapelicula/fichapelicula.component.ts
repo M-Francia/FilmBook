@@ -30,8 +30,11 @@ export class FichaPeliculaComponent {
     let id=+this._routeParams.get("id");
     this.fichapeliculaService.getPelicula(id).subscribe(
       peliculas => this.peliculas = peliculas,
-      error => console.log(error)
-    )
+      error => console.log(error))
+
+    this.fichapeliculaService.getPeliculaRecomendada(id).subscribe(
+      recomendadas => this.peliculas = recomendadas,
+      error => console.log(error))
   }
 
 

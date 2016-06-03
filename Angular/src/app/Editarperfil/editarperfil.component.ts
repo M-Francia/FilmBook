@@ -35,7 +35,7 @@ export class EditarPerfilComponent{
    this.nombre=this.nusuario.nombre;
    this.frase=this.nusuario.frase;
    this.foto=this.nusuario.foto;
-   this.pass=this.nusuario.contraseña;
+   this.pass=this.nusuario.contrasenia;
    //this.usuarios = this.usuariosservice.getUsuarios();
  }
 
@@ -66,9 +66,9 @@ export class EditarPerfilComponent{
    if(this.viejaPass==this.pass){
      if(this.nuevaPass==this.nuevaPassc){
        if(this.nuevaPass==''){
-         this.nusuario.contraseña=this.pass;
+         this.nusuario.contrasenia=this.pass;
        }else{
-         this.nusuario.contraseña=this.nuevaPass;
+         this.nusuario.contrasenia=this.nuevaPass;
        }
        this.nusuario.foto=this.foto;
        this.nusuario.nombre=this.nombre;
