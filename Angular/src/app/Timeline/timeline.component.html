@@ -72,12 +72,8 @@
                           <ul class="todo-list sortable">
                               <li *ngFor="#pelicula of recomendadas" class="clearfix"><span class="drag-drop"><i></i></span>
                                   <div class="todo-check pull-left">
-                                      <input type="checkbox" value="" /></div>
                                   <div [routerLink]="['Fichapelicula',{id:pelicula.id}]" classclass="todo-title">
                                       {{pelicula.titulo}}</div>
-                                  <div class="todo-actions pull-right clearfix">
-                                      <a href="#" class="todo-complete"><i class="fa fa-check"></i></a><a href="#" class="todo-remove"><i class="fa fa-trash-o">
-                                          </i></a>
                                   </div>
                               </li>
                           </ul>

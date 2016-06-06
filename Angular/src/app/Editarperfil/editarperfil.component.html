@@ -41,6 +41,13 @@
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <div class="form-group"><label class="col-sm-3 control-label">Contraseña</label>
+                                                    <div class="col-sm-9 controls">
+                                                        <div class="row">
+                                                            <div class="col-xs-9"><input id="pass" type="password" [(ngModel)]="pass" class="form-control" placeholder="Modificar contraseña"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                                 <div class="form-group"><label class="col-sm-3 control-label">Frase</label>
                                                     <div class="col-sm-9 controls">
                                                         <div class="row">
@@ -49,22 +56,10 @@
                                                     </div>
                                                 </div>
                                                 <hr>
-                                                <div class="form-group"><label class="col-sm-3 control-label">Lista principal</label>
-                                                    <div class="col-sm-9 controls">
-                                                        <div class="row">
-                                                            <div class="col-xs-9"><select class="form-control">
-                                                                <option>Gender</option>
-                                                                <option value="0">Male</option>
-                                                                <option value="1">Female</option>
-                                                                <option value="2">Other</option>
-                                                            </select></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                              </div>
                                         </div>
                                     <hr>
-                                    <button type="submit" class="btn btn-green btn-block">Añadir</button>
+                                    <button type="submit" class="btn btn-green btn-block">Modificar</button>
                                     </form>
                                 </div>
                             </div>
@@ -73,70 +68,39 @@
                 </div>
             </div>
         </div>
-        <div id="tab-general">
-            <div id="sum_box" class="row mbl">
-                <div class="col-sm-12 col-md-12">
-                    <div class="portlet box">
-                        <div class="portlet-header">
-                            <div class="caption"><h4 class="box-heading">Recomendacion</h4></div>
-                        </div>
-                        <div class="portlet-body">
-                            <div class="row mbl">
-                                <div class="col-lg-12">
-                                    <div class="mbl"></div>
-                                    <form action="#" class="form-horizontal">
-                                        <div class="row">
-                                            <div class="col-lg-6">
-                                                <div class="form-group"><label class="col-sm-3 control-label">Pelicula</label>
-                                                    <div class="col-sm-9 controls">
-                                                        <div class="row">
-                                                          <div class="panel-body pan">
-                                                          <select class="form-control">
-                                                            <option *ngFor="#pelis of peliculasLista" >{{pelis.hashtag}}</option>
-                                                          </select>
-                                                          </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group"><label class="col-sm-3 control-label">Valoracion</label>
-                                                    <div class="col-sm-9 controls">
-                                                        <div class="row">
-                                                            <div class="col-xs-9"><input type="email" placeholder="email@yourcompany.com" class="form-control"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-6">
-                                                <div class="alert alert-success"><strong>Positivo</strong></div>
-                                                <div class="form-group"><label class="col-sm-3 control-label">Critica</label>
-
-                                                    <div class="col-sm-9 controls">
-                                                        <div class="row">
-                                                            <div class="col-xs-9"><textarea rows="3" class="form-control"></textarea></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="alert alert-danger"><strong>Negativo</strong></div>
-                                                <div class="form-group"><label class="col-sm-3 control-label">Critica</label>
-
-                                                    <div class="col-sm-9 controls">
-                                                        <div class="row">
-                                                            <div class="col-xs-9"><textarea rows="3" class="form-control"></textarea></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    <hr>
-                                    <button type="submit" class="btn btn-green btn-block">Añadir</button>
-                                    </form>
+              <div id="tab-general">
+                  <div id="sum_box" class="row mbl">
+                      <div class="col-sm-12 col-md-12">
+                      <div class="portlet box">
+                      <div class="portlet-body">
+                        <nav role="navigation" class="navbar navbar-default">
+                              <div class="container-fluid">
+                                  <div class="navbar-header">
+                                      <button type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                                      <a class="navbar-brand">Modificar recomendaciones </a></div>
+                              </div>
+                          </nav>
+                          <div class="row">
+                            <div class="col-lg-12">
+                              <div style="overflow: hidden;" class="portlet-body">
+                                  <ul class="todo-list sortable">
+                                      <li *ngFor="#peliculas of Pelicula" class="clearfix"><span class="drag-drop"><i></i></span>
+                                          <div classclass="todo-title">
+                                            &nbsp;&nbsp;&nbsp;&nbsp;{{peliculas.hashtag}}</div>
+                                          <div class="todo-actions pull-right clearfix">
+                                              <a href="#" class="todo-remove"><i class="fa fa-trash-o">
+                                                  </i></a>
+                                          </div>
+                                      </li>
+                                  </ul>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                           </div>
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
                     <div id="tab-general">
                         <div id="sum_box" class="row mbl">
                             <div class="col-sm-12 col-md-12">
@@ -146,16 +110,7 @@
                                     <div class="container-fluid">
                                         <div class="navbar-header">
                                             <button type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-                                            <a class="navbar-brand">Modificar lista TOP10 </a></div>
-                                        <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
-                                            <ul class="nav navbar-nav">
-                                            </ul>
-                                            <form role="search" class="navbar-form navbar-left">
-                                                <div class="form-group"><input type="text" placeholder="Nombre pelicula..." class="form-control"></div>
-                                                &nbsp;
-                                                <button type="submit" class="btn btn-green">Añadir</button>
-                                            </form>
-                                          </div>
+                                            <a class="navbar-brand">Modificar lista películas favoritas </a></div>
                                     </div>
                                 </nav>
                                 <div class="row">
@@ -179,6 +134,39 @@
                          </div>
                        </div>
                      </div>
+                     <div id="tab-general">
+                         <div id="sum_box" class="row mbl">
+                             <div class="col-sm-12 col-md-12">
+                             <div class="portlet box">
+                             <div class="portlet-body">
+                               <nav role="navigation" class="navbar navbar-default">
+                                     <div class="container-fluid">
+                                         <div class="navbar-header">
+                                             <button type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                                             <a class="navbar-brand">Modificar amigos </a></div>
+                                     </div>
+                                 </nav>
+                                 <div class="row">
+                                   <div class="col-lg-12">
+                                     <div style="overflow: hidden;" class="portlet-body">
+                                         <ul class="todo-list sortable">
+                                             <li *ngFor="#peliculas of peliculasLista" class="clearfix"><span class="drag-drop"><i></i></span>
+                                                 <div classclass="todo-title">
+                                                   &nbsp;&nbsp;&nbsp;&nbsp;{{peliculas.hashtag}}</div>
+                                                 <div class="todo-actions pull-right clearfix">
+                                                     <a href="#" class="todo-remove"><i class="fa fa-trash-o">
+                                                         </i></a>
+                                                 </div>
+                                             </li>
+                                         </ul>
+                                       </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
               </div>
     <!--END CONTENT-->
 </div>

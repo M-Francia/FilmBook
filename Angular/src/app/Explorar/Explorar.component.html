@@ -29,28 +29,9 @@
                             <div class="panel">
                                 <div class="panel-body">
                                     <div id="grid-layout-table-1" class="box jplist">
-                                        <div class="jplist-ios-button"><i class="fa fa-sort"></i>Lista</div>
+                                        <h3><b>Lista de películas</b></h3>
+                                        <br>
                                         <div class="jplist-panel box panel-top">
-                                            <button type="button" data-control-type="reset" data-control-name="reset" data-control-action="reset" class="jplist-reset-btn btn btn-default">Resetear<i class="fa fa-share mls"></i></button>
-                                            <div data-control-type="drop-down" data-control-name="paging" data-control-action="paging" class="jplist-drop-down form-control">
-                                                <ul class="dropdown-menu">
-                                                    <li><span data-number="3"> 3 por página</span></li>
-                                                    <li><span data-number="5"> 5 por página</span></li>
-                                                    <li><span data-number="10" data-default="true"> 10 por página</span></li>
-                                                    <li><span data-number="all"> Ver todo </span></li>
-                                                </ul>
-                                            </div>
-                                            <div data-control-type="drop-down" data-control-name="sort" data-control-action="sort" data-datetime-format="{month}/{day}/{year}" class="jplist-drop-down form-control">
-                                                <ul class="dropdown-menu">
-                                                    <li><span data-path="default">Ordenar por: </span></li>
-                                                    <li><span data-path=".title" data-order="asc" data-type="text" data-default="true">Título A-Z</span></li>
-                                                    <li><span data-path=".title" data-order="desc" data-type="text">Título Z-A</span></li>
-                                                    <li><span data-path=".desc" data-order="asc" data-type="text">Descripción A-Z</span></li>
-                                                    <li><span data-path=".desc" data-order="desc" data-type="text">Descripción Z-A</span></li>
-                                                    <li><span data-path=".date" data-order="asc" data-type="datetime">Fecha asc</span></li>
-                                                    <li><span data-path=".date" data-order="desc" data-type="datetime">Fecha desc</span></li>
-                                                </ul>
-                                            </div>
                                             <div class="text-filter-box">
                                                 <div class="input-group"><span class="input-group-addon"><i class="fa fa-search"></i></span>
                                                     <input data-path=".title" type="text" value="" placeholder="Buscar por título" data-control-type="textbox" data-control-name="title-filter" data-control-action="filter" class="form-control" />
@@ -61,50 +42,20 @@
                                                     <input data-path=".desc" type="text" value="" placeholder="Buscar descrip." data-control-type="textbox" data-control-name="desc-filter" data-control-action="filter" class="form-control" />
                                                 </div>
                                             </div>
-                                            <div data-type="Página {current} de {pages}" data-control-type="pagination-info" data-control-name="paging" data-control-action="paging" class="jplist-label btn btn-default"></div>
-                                            <div data-control-type="pagination" data-control-name="paging" data-control-action="paging" class="jplist-pagination"></div>
                                         </div>
-                                        <div class="box text-shadow">
-                                            <table class="demo-tbl">
-                                              <tr *ngFor="#pelicula of explorar" class="tbl-item">
-                                                  <!--<img/>-->
-                                                  <td class="img"><img src="{{pelicula.peliculas.imagen}}" height="100" width="100"/></td>
-                                                  <!--<data>-->
-                                                  <td  class="td-block">
-                                                      <p class="date">{{pelicula.fecha}}</p>
-                                                      <p class="title"><a [routerLink]="['Fichapelicula', {id: pelicula.id}]">{{pelicula.peliculas.titulo}}</a></p>
+                                        <div class="panel-body">
+                                          <table *ngFor="#pelicula of explorar" class="table table-hover table-bordered">
+                                            <thead>
+                                              <tr>
+                                                <th>
+                                                <img src="{{pelicula.peliculas.imagen}}" height="100" width="100"/></th>
+                                                    <th>  <p class="date">{{pelicula.fecha}}</p>
+                                                      <p class="title"><a >{{pelicula.peliculas.titulo}}</a></p>
                                                       <p class="desc">{{pelicula.peliculas.descripcion}}</p>
-                                                      <p class="like">{{pelicula.likes}}</p>
-                                                  </td>
+                                                      <p class="like">{{pelicula.likes}}</p></th>
                                               </tr>
+                                            </thead>
                                             </table>
-                                        </div>
-                                        <div class="box jplist-no-results text-shadow align-center">
-                                            <p>No se encuentran resultados</p>
-                                        </div>
-                                        <div class="jplist-ios-button"><i class="fa fa-sort"></i>Lista</div>
-                                        <div class="jplist-panel box panel-bottom">
-                                            <div data-control-type="drop-down" data-control-name="paging" data-control-action="paging" data-control-animate-to-top="true" class="jplist-drop-down form-control">
-                                                <ul class="dropdown-menu">
-                                                    <li><span data-number="3"> 3 por página</span></li>
-                                                    <li><span data-number="5"> 5 por página </span></li>
-                                                    <li><span data-number="10" data-default="true"> 10 por página</span></li>
-                                                    <li><span data-number="all"> Ver todo</span></li>
-                                                </ul>
-                                            </div>
-                                            <div data-control-type="drop-down" data-control-name="sort" data-control-action="sort" data-control-animate-to-top="true" data-datetime-format="{month}/{day}/{year}" class="jplist-drop-down form-control">
-                                                <ul class="dropdown-menu">
-                                                    <li><span data-path="default">Ordenar por: </span></li>
-                                                    <li><span data-path=".title" data-order="asc" data-type="text" data-default="true">Título A-Z</span></li>
-                                                    <li><span data-path=".title" data-order="desc" data-type="text">Título Z-A</span></li>
-                                                    <li><span data-path=".desc" data-order="asc" data-type="text">Descripción A-Z</span></li>
-                                                    <li><span data-path=".desc" data-order="desc" data-type="text">Descripción Z-A</span></li>
-                                                    <li><span data-path=".date" data-order="asc" data-type="datetime">Fecha asc</span></li>
-                                                    <li><span data-path=".date" data-order="desc" data-type="datetime">Fecha desc</span></li>
-                                                </ul>
-                                            </div>
-                                            <div data-type="{start} - {end} de {all}" data-control-type="pagination-info" data-control-name="paging" data-control-action="paging" class="jplist-label btn btn-default"></div>
-                                            <div data-control-type="pagination" data-control-name="paging" data-control-action="paging" data-control-animate-to-top="true" class="jplist-pagination"></div>
                                         </div>
                                     </div>
                                 </div>
